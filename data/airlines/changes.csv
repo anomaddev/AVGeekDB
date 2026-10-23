@@ -1,0 +1,412 @@
+key,field,old_value,new_value,source_url,reason
+AIT|Airest,callsign,,AIREST CARGO,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Airest'
+AFX|Airfreight Express,iata,,5Z,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Airfreight Express'
+AXI|Aeron International Airlines,callsign,,AIR FREIGHTER,https://en.wikipedia.org/wiki/List_of_airline_codes,"filled from Wikipedia entry 'Aeron International Airlines, Inc.'"
+AVR|Active Aero Charter,callsign,,ACTIVE AERO,https://en.wikipedia.org/wiki/List_of_airline_codes,"filled from Wikipedia entry 'Active Aero Charter, Inc.'"
+ASR|All Star Airlines,callsign,,ALL STAR,https://en.wikipedia.org/wiki/List_of_airline_codes,"filled from Wikipedia entry 'All Star Airlines, Inc.'"
+ABG|Abakan-Avia,iata,,RL,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Abakan-Avia'
+AES|ACES Colombia,iata,,VX,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'ACES Colombia'
+AES|ACES Colombia,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+DHI|Adam Air,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+ADR|Adria Airways,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct as of September 2019
+ARF|Aero Flight,callsign,Aero Fox,AERO FOX,,callsign case normalised to uppercase convention
+ARF|Aero Flight,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+ANS|Andes Lineas Aereas,iata,,OY,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Andes Líneas Aéreas'
+AEB|Aero Benin,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+VIV|Aeroenlaces Nacionales,iata,,VB,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Aeroenlaces Nacionales'
+PLI|Aeroper,callsign,Aeroperu,AEROPERU,,callsign case normalised to uppercase convention
+PLI|Aeroper,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+ESB|Aerosaba,callsign,AEROSABA,AEREOSABA,https://en.wikipedia.org/wiki/List_of_airline_codes,callsign spelling corrected per Wikipedia
+AEW|Aerosvit Airlines,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+TON|Aero Tanala,callsign,AEROTANALA,AEROTONALA,https://en.wikipedia.org/wiki/List_of_airline_codes,callsign spelling corrected per Wikipedia
+TNO|Aerotransporte de Carga Union,iata,,6R,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Aerotransporte de Carga Union'
+ABB|African Business and Transportations,callsign,AFRICAN BUSINESS-,AFRICAN BUSINESS,https://en.wikipedia.org/wiki/List_of_airline_codes,callsign spelling corrected per Wikipedia
+EGU|Eagle Aviation,iata,,H7,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Eagle Air'
+ADW|Air Andaman,iata,,2Y,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Air Andaman'
+ASZ|Astrakhan Airlines,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+BGD|Air Bangladesh,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+BER|Air Berlin,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+BON|B&H Airlines,callsign,Air Bosna,AIR BOSNA,,callsign case normalised to uppercase convention
+ABL|Air Busan,callsign,Air Busan,AIR BUSAN,,callsign case normalised to uppercase convention
+AHO|Air Hamburg (AHO),callsign,Air Hamburg,AIR HAMBURG,,callsign case normalised to uppercase convention
+AIE|Air Inuit,iata,,3H,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Air Inuit'
+KHA|Kitty Hawk Aircargo,iata,,KR,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Kitty Hawk Aircargo'
+AMI|Air Maldives,iata,,L6,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Air Maldives'
+MLI|Air Mali,iata,,L9,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Air Mali'
+MKG|Air Mekong,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+MHS|Air Memphis,iata,,E9,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Air Memphis'
+TAH|Air Moorea,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+RNE|Air Salone,iata,,2O,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Air Salone'
+SBK|Air Srpska,callsign,Air Srpska,AIR SRPSKA,,callsign case normalised to uppercase convention
+RSI|Air Sunshine,iata,,YI,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Air Sunshine'
+VUN|Air Ivoire,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+AIR|Airlift International,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+MSA|Mistral Air,iata,,M4,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Mistral Air'
+AXC|Indochina Airlines,iata,,VP,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Indochina Airlines'
+AXC|Indochina Airlines,callsign,Airspup,AIRSPUP,,callsign case normalised to uppercase convention
+AXC|Indochina Airlines,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+DRD|Air Madrid,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+AZA|Alitalia,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+ALV|Alas de Venezuela,iata,,VH,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Aeropostal Alas de Venezuela'
+AMT|ATA Airlines,iata,,TZ,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'ATA Airlines'
+AMT|ATA Airlines,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+AAA|Ansett Australia,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+SHY|Sky Airlines,iata,,ZY,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Sky Airlines'
+ABV|Antrak Air,iata,,O4,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Antrak Air'
+FGL|Futura Gael,callsign,Applewood,APPLEWOOD,,callsign case normalised to uppercase convention
+RNV|Armavia,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,"Wikipedia comment: defunct, ICAO code no longer allocated"
+RME|Armenian Airlines,iata,,R3,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Armenian Airlines'
+JAA|Japan Asia Airways,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+AYZ|Atlant-Soyuz Airlines,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+BMM|Atlas Blue,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+UJX|AtlasGlobal Ukraine,callsign,Atlas Ukraine,ATLAS UKRAINE,,callsign case normalised to uppercase convention
+AUB|Augsburg Airways,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+XME|Australian air Express,iata,,XM,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Australian airExpress'
+AVE|Avensa,callsign,Avensa,AVENSA,,callsign case normalised to uppercase convention
+AEH|Aviaexpress,callsign,Avex,AVEX,,callsign case normalised to uppercase convention
+AZI|Azzurra Air,iata,,ZS,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Azzurra Air'
+BMI|bmibaby,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+BDR|Badr Airlines,iata,,J4,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Badr Airlines'
+ZTT|ZABAIKAL AIRLINES,callsign,BAIKAL ,BAIKAL,,whitespace normalisation
+BGH|BH Air,iata,,8H,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'BH Air'
+BTL|Baltia Air Lines,iata,,BQ,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Baltia Air Lines'
+AJC|Bar Harbor Airlines,iata,,QO,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Bar Harbor Airlines'
+LAJ|British Mediterranean Airways,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+BGA|Airbus Transport International,iata,,4Y,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Airbus Transport International'
+BGA|Airbus Transport International,callsign,BELOUGA,BELUGA,https://en.wikipedia.org/wiki/List_of_airline_codes,callsign spelling corrected per Wikipedia
+APW|Arrow Air,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+SBU|Saint Barth Commuter,iata,,PV,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'St Barth Commuter'
+BJK|Atlantic Airlines,iata,,EX,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Atlantic Airlines'
+BCI|Blue Islands,iata,,SI,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Blue Islands'
+BPA|Blue Panorama Airlines,callsign,BLUE PANOROMA,BLUE PANORAMA,https://en.wikipedia.org/wiki/List_of_airline_codes,callsign spelling corrected per Wikipedia
+JIA|PSA Airlines,iata,,OH,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'PSA Airlines'
+BSJ|Blue Swann Aviation,callsign,BLUE SWANN,BLUE SWAN,https://en.wikipedia.org/wiki/List_of_airline_codes,callsign spelling corrected per Wikipedia
+BWG|Blue Wings,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+BOV|Boliviana de Aviacion (OB),iata,,OB,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Boliviana de Aviación'
+BUB|Air Bourbon,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+BNF|Braniff International Airways,callsign,Braniff,BRANIFF,,callsign case normalised to uppercase convention
+BHL|Bristow Helicopters,iata,,UH,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Bristow Helicopters'
+BRT|British Regional Airlines,iata,,TH,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'British Regional Airlines'
+BHA|Buddha Air,iata,,U4,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Buddha Air'
+BUC|Bulgarian Air Charter,iata,,H6,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'European Air Charter'
+BUN|Buryat Airlines Aircompany,iata,,BU,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Buryat Airlines Aircompany'
+CDN|Canadian Airlines,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: Defunct
+KHC|Kitty Hawk Airways,iata,,2K,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Kitty Hawk Airways'
+IBL|IBL Aviation,iata,,0C,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'IBL Aviation'
+HXA|China Express Airlines,iata,,G5,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'China Express Airlines'
+CXN|China Southwest Airlines,iata,,SZ,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'China Southwest Airlines'
+ETN|Chim-Nir Aviation,callsign,CHMINIR,CHIMNIR,https://en.wikipedia.org/wiki/List_of_airline_codes,callsign spelling corrected per Wikipedia
+ECC|Crossair Europe,callsign,Cigogne,CIGOGNE,,callsign case normalised to uppercase convention
+RUS|Cirrus Airlines,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: Defunct
+TRS|AirTran Airways,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,"Wikipedia comment: defunct, last flight 12/30/2014, now part of Southwest Airlines"
+JAC|Japan Air Commuter,iata,,3X,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Japan Air Commuter'
+CPZ|Compass Airlines,callsign,Compass Rose,COMPASS ROSE,,callsign case normalised to uppercase convention
+CND|Aero Continente Dominicana,iata,,9D,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Aero Continente Dominicana'
+CIX|City Connexion Airlines,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: Defunct
+CAI|Corendon Airlines,iata,,XC,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Corendon Airlines'
+COY|Coyne Aviation,iata,,7C,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Coyne Aviation'
+CRQ|Air Creebec,iata,,YN,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Air Creebec'
+CYD|Access Air,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+DNM|Denim Air,iata,,J7,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Denim Air'
+DNM|Denim Air,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: Defunct
+UDN|Dniproavia,iata,,Z6,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Dniproavia'
+DLA|Air Dolomiti,callsign,DOLOMOTI,DOLOMITI,https://en.wikipedia.org/wiki/List_of_airline_codes,callsign spelling corrected per Wikipedia
+DOA|Dominicana de Aviaci,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+DMO|Domodedovo Airlines,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+EPA|Shenzhen Donghai Airlines,iata,,DZ,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Donghai Airlines'
+EEZ|Eurofly,iata,,GJ,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Eurofly'
+ESR|Eastar Jet,callsign,Eastar,EASTAR,,callsign case normalised to uppercase convention
+WEN|WestJet Encore,callsign,Encore,ENCORE,,callsign case normalised to uppercase convention
+ENY|Envoy Air,iata,,MQ,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Envoy Air'
+ENY|Envoy Air,callsign,Envoy,ENVOY,,callsign case normalised to uppercase convention
+SMK|Semeyavia,iata,,E8,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Semeyavia'
+MMZ|EuroAtlantic Airways,iata,,MM,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'EuroAtlantic Airways'
+SWU|Swiss European Air Lines,iata,,LZ,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Swiss Global Air Lines'
+EJA|NetJets,iata,,1I,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'NetJets'
+AXL|Air Exel,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+ACE|Race Cargo Airlines,callsign,Fastcargo,FASTCARGO,,callsign case normalised to uppercase convention
+FLE|Flair Airlines,iata,,F8,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Flair Airlines'
+KFA|Kelowna Flightcraft Air Charter,iata,,KW,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Kelowna Flightcraft Air Charter'
+FLT|Flightline,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+FWL|Florida West International Airways,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,"Wikipedia comment: Merged into Atlas Air Worldwide Holdings.Defunct as of 28 February 2017, IATA co"
+FYH|Flyhy Cargo Airlines,iata,,W3,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Flyhy Cargo Airlines'
+AEU|Astraeus,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,"Wikipedia comment: defunct, ICAO code no longer allocated"
+IAD|Fly Wex,iata,,6P,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Fly Wex'
+FGC|Departmento De Agricultura De La Generalitat De Cataluna,callsign,FORESTALES,FORESTALS,https://en.wikipedia.org/wiki/List_of_airline_codes,callsign spelling corrected per Wikipedia
+UPA|Air Foyle,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,"Wikipedia comment: defunct, ICAO code no longer allocated"
+FOM|Freedom Air,iata,,SJ,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Freedom Air'
+FHY|Free Bird Airlines,iata,,FH,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Freebird Airlines'
+AOM|AOM French Airlines,callsign,French Lines,FRENCH LINES,,callsign case normalised to uppercase convention
+FPO|Europe Airpost,iata,,5O,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Europe Airpost'
+GNF|Gandalf Airlines,callsign,Gandalf,GANDALF,,callsign case normalised to uppercase convention
+LTF|Lufttaxi Fluggesellschaft,callsign,Garfield,GARFIELD,,callsign case normalised to uppercase convention
+AGX|Aviogenex,iata,,JJ,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Aviogenex'
+AGX|Aviogenex,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+GHA|Ghana Airways,iata,,GH,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Ghana Airways'
+GLR|Central Mountain Air,iata,,9M,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Central Mountain Air'
+GLJ|Global Jet Austria,callsign,GLOBAL AUSTRIA,GLOBAL JET AUSTRIA,https://en.wikipedia.org/wiki/List_of_airline_codes,callsign spelling corrected per Wikipedia
+GSM|Flyglobespan,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+UIA|Uni Air,callsign,Glory,GLORY,,callsign case normalised to uppercase convention
+GMR|Golden Myanmar Airlines,iata,,Y5,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Golden Myanmar Airlines'
+GMR|Golden Myanmar Airlines,callsign,Golden Myanmar,GOLDEN MYANMAR,,callsign case normalised to uppercase convention
+GPD|Tradewind Aviation,iata,,TJ,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Tradewind Aviation'
+FJM|Fly Jamaica Airways,iata,,OJ,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Fly Jamaica Airways'
+FJM|Fly Jamaica Airways,callsign,Greenheart,GREENHEART,,callsign case normalised to uppercase convention
+FJM|Fly Jamaica Airways,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+GFA|Gulf Air,iata,,GF,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Gulf Air'
+HBH|Hebei Airlines,iata,,NS,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Hebei Airlines'
+HBH|Hebei Airlines,callsign,Hebei Air,HEBEI AIR,,callsign case normalised to uppercase convention
+HEJ|Hellas Jet,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: ceased operation in 2010
+TRQ|Turdus Airways,country,Netherland,Netherlands,,country spelling typo
+IGA|Skytaxi,iata,,TE,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Skytaxi'
+IAR|Iliamna Air Taxi,iata,,V8,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Iliamna Air Taxi'
+NTG|Servicios Intergrales De Aviacion,callsign,INTERGRALES,INTEGRALES,https://en.wikipedia.org/wiki/List_of_airline_codes,callsign spelling corrected per Wikipedia
+ISK|Intersky,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: Defunct
+VVM|Viva Macau,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+JAE|Jade Cargo International,iata,,JI,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Jade Cargo International'
+AFJ|Alliance,iata,,Y2,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Alliance Air'
+JMC|JMC Airlines,iata,,MT,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'JMC Airlines'
+PJS|Jet Aviation,iata,,PP,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Jet Aviation'
+JNA|Jin Air,callsign,Jin Air,JIN AIR,,callsign case normalised to uppercase convention
+JUB|Jubba Airways,iata,,6J,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Jubba Airways'
+KAI|Kaiser Air,iata,,KI,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'KaiserAir'
+KDA|Kendell Airlines,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+MYT|MyTravel Airways,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,"Wikipedia comment: Defunct, callsign now used by Thomas Cook Airlines"
+KEY|Key Airlines,iata,,ZN,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Key Airlines'
+LYM|Key Lime Air,iata,,KG,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Key Lime Air'
+KZW|Khalifa Airways,iata,,K6,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Khalifa Airways'
+KFR|Kingfisher Airlines,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: Defunct Since 2012 IATA Code transferred to Tigerair Taiwan
+KNX|Knighthawk Air Express,iata,,4I,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Knighthawk Air Express'
+KNA|Knight Air,iata,,KY,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Kunming Airlines'
+KMR|Western Pacific Airlines,iata,,W7,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Western Pacific Airlines'
+KJC|Krasnojarsky Airlines,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+KRI|Krylo Airlines,callsign,Krylo,KRYLO,,callsign case normalised to uppercase convention
+DSM|LAN Argentina,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: Ceased operations in 2020
+LCO|LAN Cargo,iata,,UC,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'LATAM Cargo Chile'
+LKN|Lankair,callsign,Lankair,LANKAIR,,callsign case normalised to uppercase convention
+LTC|LatCharter,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+LNK|Airlink,iata,,4Z,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Airlink'
+LIL|FlyLal,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+LOG|Logan Air,iata,,LM,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Loganair'
+LHN|Express One International,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+LKE|Lucky Air,iata,,8L,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Lucky Air'
+MAK|MAT Macedonian Airlines,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: Defunct
+MAC|Malta Air Charter,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: Defunct?
+MDA|Mandarin Airlines,callsign,Mandarin,MANDARIN,,callsign case normalised to uppercase convention
+CT|Civil Air Transport,callsign,Mandarin,MANDARIN,,callsign case normalised to uppercase convention
+MPJ|MAP-Management and Planung,iata,,AQ,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'MAP-Management and Planung'
+SKV|Sky Regional Airlines,callsign,Maple,MAPLE,,callsign case normalised to uppercase convention
+MRK|Markair,iata,,BF,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'MarkAir'
+RGL|Regional Air Lines,iata,,FN,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Regional Air Lines'
+MVL|Mavial Magadan Airlines,callsign,Mavial,MAVIAL,,callsign case normalised to uppercase convention
+MYI|Mayair,iata,,7M,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Mayair'
+BIE|Air Mediterranee,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+MKN|Mekong Airlines,iata,,M8,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Mekong Airlines'
+TCF|Shuttle America,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: Defunct; Merged into Republic Airways on 31 January 2017
+BMA|bmi,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+MON|Monarch Airlines,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct October 2017
+ZTF|Mongolian International Air Lines ,name,Mongolian International Air Lines ,Mongolian International Air Lines,,whitespace normalisation
+ZTF|Mongolian International Air Lines,callsign,Mongol_AIr ,Mongol_AIr,,whitespace normalisation
+MNT|Montserrat Airways,iata,,5M,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Montserrat Airways'
+UWW|LSM International ,name,LSM International ,LSM International,,whitespace normalisation
+YZZ|LSM AIRLINES ,name,LSM AIRLINES ,LSM AIRLINES,,whitespace normalisation
+YZZ|LSM AIRLINES,callsign,Moscow frog ,Moscow frog,,whitespace normalisation
+NMB|Air Namibia,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+NJS|National Jet Systems,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunctacquired by Qantas
+NMA|Nesma Airlines,iata,,NE,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Nesma Airlines'
+NIA|Nile Air,callsign,NILEBIRD,NILE BIRD,https://en.wikipedia.org/wiki/List_of_airline_codes,callsign spelling corrected per Wikipedia
+NRL|Nolinor Aviation,iata,,N5,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Nolinor Aviation'
+NDC|FlyNordic,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+NWS|NordWind Airlines,iata,,N4,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Nordwind Airlines'
+NLH|Norwegian Long Haul AS,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: subsidiary of Norwegian Air Shuttle (Ceased operations 2021)
+NEE|Northeast Airlines,iata,,NE,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Northeast Airlines'
+NWA|Northwest Airlines,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunctmerged with Delta Air Lines
+IBK|Norwegian Air International (D8),active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: subsidiary of Norwegian Air Shuttle (Ceased operations 2021)
+ANG|Air Niugini,callsign,NUIGINI,NIUGINI,https://en.wikipedia.org/wiki/List_of_airline_codes,callsign spelling corrected per Wikipedia
+OHK|Oasis Hong Kong Airlines,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: Defunct
+JJP|Jetstar Japan ,name,Jetstar Japan ,Jetstar Japan,,whitespace normalisation
+JJP|Jetstar Japan,iata,,GK,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Jetstar Japan'
+PSC|Pascan Aviation,iata,,P6,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Pascan Aviation'
+PTB|Passaredo Transportes Aereos,iata,,P3,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Passaredo Transportes Aéreos'
+PPW|Royal Phnom Penh Airways,iata,,RL,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Royal Phnom Penh Airways'
+PBD|Pobeda,iata,,DP,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Pobeda'
+PVG|Privilege Style L,iata,,P6,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Privilege Style'
+PFZ|Propflight Air Services,iata,,P0,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Proflight Zambia'
+PSV|Servicios Aereos Profesionales,iata,,5S,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Servicios Aéreos Profesionales'
+QGA|Windrose Air,iata,,7W,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Windrose Air'
+IFA|FAI Airservice,callsign,RED ANGLE,RED ANGEL,https://en.wikipedia.org/wiki/List_of_airline_codes,callsign spelling corrected per Wikipedia
+AWW|Air Wales,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,"Wikipedia comment: defunct, ICAO code no longer allocated"
+RSP|Jet Suite,callsign,Red Stripe,REDSTRIPE,https://en.wikipedia.org/wiki/List_of_airline_codes,callsign spelling corrected per Wikipedia
+REP|Regional Paraguaya,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: Defunct
+RLX|Go2Sky,iata,,6G,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Go2Sky'
+ESK|SkyEurope,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+RAZ|Rijnmond Air Services,country,Netherland,Netherlands,,country spelling typo
+VLM|VLM Airlines,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+LJJ|Luchsh Airlines ,name,Luchsh Airlines ,Luchsh Airlines,,whitespace normalisation
+RYA|Ryan Air Services,iata,,7S,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Ryan Air Services'
+RYN|Ryan International Airlines,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct 2013
+SAX|Sabah Air,iata,,SA,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Sabah Air'
+XLK|Safarilink Aviation,iata,,F2,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Safarilink Aviation'
+STN|RAF St Athan,country,UNited Kingdom,United Kingdom,,country spelling typo
+SAM|SAM Colombia,iata,,MM,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'SAM Colombia'
+SHU|Sakhalinskie Aviatrassy (SAT),iata,,HZ,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Sakhalinskie Aviatrassy (SAT)'
+SAH|Sayakhat Airlines,iata,,W7,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Sayakhat Airlines'
+HTA|Helitrans,iata,,9I,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Helitrans'
+CNO|SAS Braathens,iata,,SK,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'SAS Braathens'
+SSF|Severstal,iata,,D2,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Severstal Air Company'
+SSX|Lynx Aviation (L3/SSX),iata,,L4,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Lynx Aviation'
+SSX|Lynx Aviation (L3/SSX),callsign,Shasta,SHASTA,,callsign case normalised to uppercase convention
+SRH|Siem Reap Airways,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: Defunct; Ceased operations on 1 December 2008
+SBM|Sky Bahamas,iata,,Q7,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'SkyBahamas'
+SKX|Skyways Express,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: Ceased operations 2012; Operations continue as Avia Express
+SKT|Skystar Airways,iata,,XT,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'SkyStar Airways'
+SSV|Skyservice Airlines,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+UZS|Samarkand Airways,iata,,C7,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Samarkand Airways'
+SOX|Solid Air,country,Netherland,Netherlands,,country spelling typo
+SOP|Solinair,iata,,ZS,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Solinair'
+SPI|South Pacific Island Airways,iata,,HK,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'South Pacific Island Airways'
+SPI|South Pacific Island Airways,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: Defunct; Ceased operations in 1987
+SOU|Southern Airways,iata,,9X,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Southern Airways'
+SWD|Southern Winds Airlines,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: Defunct; Ceased operations 5 December 2005
+WER|AeroWorld ,name,AeroWorld ,AeroWorld,,whitespace normalisation
+JKK|Spanair,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+SPR|Provincial Airlines,iata,,PB,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Provincial Airlines'
+TFN|Norwegian Aviation College,callsign,SPRIT,SPIRIT,https://en.wikipedia.org/wiki/List_of_airline_codes,callsign spelling corrected per Wikipedia
+SBO|Stabo Air,iata,,4E,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Stabo Air'
+SRL|Swedline Express,callsign,Starline,STARLINE,,callsign case normalised to uppercase convention
+SNB|Sterling Airlines,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: Defunct; Ceased operations on 29 October 2008
+JSH|Jetstream Air,callsign,STREAM-AIR,STREAM AIR,https://en.wikipedia.org/wiki/List_of_airline_codes,callsign spelling corrected per Wikipedia
+SNK|Southeast Airlines (Sun Jet International),iata,,SL,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Southeast Airlines (Sun Jet International)'
+SSQ|Sunstate Airlines,iata,,QF,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Sunstate Airlines'
+WOW|Air Southwest,iata,,SZ,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Air Southwest'
+WOW|Air Southwest,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+SWX|Swazi Express Airways,iata,,Q4,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Swazi Express Airways'
+SCL|Switfair Cargo,iata,,W3,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Switfair Cargo'
+SWQ|Swift Air (Interstate Equipment Leasing),iata,,WQ,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Swift Air (Interstate Equipment Leasing)'
+SR|Swissair,callsign,Swissair,SWISSAIR,,callsign case normalised to uppercase convention
+SR|Swissair,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: Defunct; Ceased operations 31 March 2002
+TQN|Taquan Air Services,iata,,K3,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Taquan Air Services'
+VNZ|Tbilaviamsheni,iata,,L6,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Tbilaviamsheni'
+TLW|Teamline Air,callsign,Teamline,TEAMLINE,,callsign case normalised to uppercase convention
+TVJ|Thai Vietjet Air,iata,,VZ,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Thai Vietjet Air'
+TCW|Thomas Cook Airlines,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: Defunct
+TNA|TransAsia Airways,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+TBA|Transbrasil,iata,,TR,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Transbrasil'
+TLP|Tulip Air,country,Netherland,Netherlands,,country spelling typo
+TWB|Tway Airlines,callsign,TWAY AIR,TWAYAIR,https://en.wikipedia.org/wiki/List_of_airline_codes,callsign spelling corrected per Wikipedia
+UGA|Uganda Airlines,iata,,U7,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Air Uganda'
+USH|US Helicopter,iata,,UH,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'US Helicopter'
+MVA|Mississippi Valley Airways,iata,,XV,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Mississippi Valley Airlines'
+VSP|VASP,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+VES|Vieques Air Link,iata,,V4,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Vieques Air Link'
+VJC|VietJet Air,iata,,VJ,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Vietjet Air'
+VPA|VIP Air,iata,,9V,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Vipair Airlines'
+VEX|Virgin Express,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+WSG|Wasaya Airways,iata,,WT,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Wasaya Airways'
+WDL|WDL Aviation,iata,,WD,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'WDL Aviation'
+SRR|Star Air,iata,,DJ,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Star Air'
+WIL|Aero Air,iata,,WI,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Aero Air'
+WIA|Windward Islands Airways International,country,Netherland,Netherlands,,country spelling typo
+WAJ|AirAsia Japan,iata,,DJ,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'AirAsia Japan'
+WAJ|AirAsia Japan,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+WZZ|Wizz Air,callsign,WIZZ AIR,WIZZAIR,https://en.wikipedia.org/wiki/List_of_airline_codes,callsign spelling corrected per Wikipedia
+DHK|DHL Air,iata,,D0,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'DHL Air Limited'
+UMK|Yuzhmashavia,iata,,2N,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Yuzhmashavia'
+OOM|Zoom Airlines,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,"Wikipedia comment: defunct, ICAO Code and callsign no longer allocated"
+XSR|Executive AirShare,callsign,,AIRSHARE,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Executive Flight Services'
+XOJ|XOJET,callsign,,EXOJET,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'XOJet'
+XAA|Aeronautical Radio Inc,callsign,,ROCKFISH,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Aeronautical Radio Inc'
+WYT|2 Sqn No 1 Elementary Flying Training School,callsign,,WYTON,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry '2 Sqn No 1 Elementary Flying Training School'
+WSF|West African Airlines,iata,,WZ,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'West African Airlines'
+WCW|West Caribbean Airways,iata,,YH,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'West Caribbean Airways'
+WCW|West Caribbean Airways,callsign,,WEST,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'West Caribbean Airways'
+VVC|VivaColombia,callsign,,VIVA AIR COLOMBIA,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Viva Air Colombia'
+VTI|Air Vistara,callsign,,VISTARA,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Vistara'
+VOE|VOLOTEA Airways,callsign,,VOLOTEA,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Volotea'
+VIM|Air VIA,callsign,,CRYSTAL,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Air VIA'
+UBG|US-Bangla Airlines,iata,,BS,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'US-Bangla Airlines'
+UBG|US-Bangla Airlines,callsign,,BANGLA STAR,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'US-Bangla Airlines'
+TFU|213 Flight Unit,callsign,,THJY,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry '213th Flight Unit'
+TEZ|Tez Jet Airlines,iata,,K9,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'TezJet'
+TEZ|Tez Jet Airlines,callsign,,TEZJET,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'TezJet'
+SRN|Sprintair,iata,,P8,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'SprintAir'
+SRN|Sprintair,callsign,,SPRINTAIR,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'SprintAir'
+SPM|Air Saint Pierre,callsign,,SAINT-PIERRE,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Air Saint Pierre'
+SJO|Spring Airlines Japan,callsign,,JEY SPRING,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Spring Airlines Japan'
+SCH|CHC Airways,callsign,,SCHREINER,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'CHC Airways'
+RLK|Air Nelson,iata,,NZ,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Air Nelson'
+RLK|Air Nelson,callsign,,NELSON,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Air Nelson'
+RBG|Air Arabia Egypt,callsign,,ARABIA EGYPT,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Air Arabia Egypt'
+RAR|Air Rarotonga,callsign,,AIR RAROTONGA,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Air Rarotonga'
+PZY|Zapolyarie Airlines,callsign,,ZAPOLYARYE,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Zapolyarye Airline Company'
+PTE|Aero Copter,callsign,,AERO-COP,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Aero Copter'
+NYT|Yeti Airlines ,name,Yeti Airlines ,Yeti Airlines,,whitespace normalisation
+NYT|Yeti Airlines,iata,,YT,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Yeti Airlines'
+NYT|Yeti Airlines,callsign,,YETI AIRLINES,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Yeti Airlines'
+NOC|Norcopter,callsign,,NORCOPTER,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Norcopter'
+NCR|National Air Cargo,callsign,,NATIONAL CARGO,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'National Air Cargo dba National Airlines'
+MSC|Air Cairo,iata,,SM,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Air Cairo'
+MSC|Air Cairo,callsign,,AIR CAIRO,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Air Cairo'
+MIC|Mint Airways,callsign,,MINT AIRWAYS,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Mint Airways'
+MEP|Midwest Airlines,callsign,,MIDEX,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Midwest Airlines'
+LUR|Atlantis European Airways,callsign,,ATLANTIS,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Atlantis European Airways'
+LUR|Atlantis European Airways,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+LTY|Liberty Airways,callsign,,SKYDECK,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Liberty Air'
+LFA|Air Alfa,iata,,H7,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Air Alfa'
+LFA|Air Alfa,callsign,,AIR ALFA,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Air Alfa'
+LAV|AlbaStar,iata,,AP,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'AlbaStar'
+LAV|AlbaStar,callsign,,ALBASTAR,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'AlbaStar'
+KLS|Kal Star Aviation,iata,,KD,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Kalstar Aviation'
+KLS|Kal Star Aviation,callsign,,KALSTAR,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Kalstar Aviation'
+KHK|Kharkiv Airlines,callsign,,SUNRAY,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Kharkiv Airlines'
+KAR|Kar-Air,iata,,IK,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Ikar'
+KAR|Kar-Air,callsign,,IKAR,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Ikar'
+JEC|Jett8 Airlines Cargo,callsign,,TAIPAN,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Jett8 Airlines Cargo'
+JCI|Jordan International Air Cargo,iata,,J4,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Jordan International Air Cargo'
+IWD|Iberworld,callsign,,IBERWORLD,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Iberworld'
+IRC|Iran Aseman Airlines,callsign,,ASEMAN,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Iran Aseman Airlines'
+IRB|Iranair Tours,iata,,B9,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Iran Airtour'
+IRB|Iranair Tours,callsign,,AIRTOUR,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Iran Airtour'
+IBS|Iberia Express,callsign,,IBEREXPRESS,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Iberia Express'
+IBB|Binter Canarias,callsign,,BINTER,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Binter Canarias'
+HZA|Horizon Airlines,callsign,,HORIZON,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Horizon Airlines'
+HZA|Horizon Airlines,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+HCW|Star1 Airlines,callsign,,STAR1,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Star1 Airlines'
+HCW|Star1 Airlines,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+HCC|Holidays Czech Airlines,iata,,HC,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Holidays Czech Airlines'
+HCC|Holidays Czech Airlines,callsign,,CZECH HOLIDAYS,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Holidays Czech Airlines'
+HAY|Hamburg Airways,callsign,,HAMBURG AIRWAYS,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Hamburg Airways'
+HAY|Hamburg Airways,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+GLP|Globus,callsign,,GLOBUS,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Globus Airlines'
+GCR|Tianjin Airlines,iata,,GS,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Tianjin Airlines'
+GCR|Tianjin Airlines,callsign,,BO HAI,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Tianjin Airlines'
+FWQ|Flight West Airlines,callsign,,UNITY,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Flight West'
+FOS|Formosa Airlines,active,TRUE,FALSE,https://en.wikipedia.org/wiki/List_of_airline_codes,Wikipedia comment: defunct
+FEG|FlyEgypt,iata,,FT,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'FlyEgypt'
+FEG|FlyEgypt,callsign,,SKY EGYPT,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'FlyEgypt'
+FDB|Fly Dubai,callsign,,SKYDUBAI,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Flydubai'
+FAB|First Air,callsign,,FIRST AIR,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'First Air'
+EMU|East Asia Airlines,iata,,E3,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'East Asia Airlines'
+EMU|East Asia Airlines,callsign,,EAST ASIA,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'East Asia Airlines'
+EAQ|Eastern Australia Airlines,iata,,QF,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Eastern Australia Airlines'
+EAQ|Eastern Australia Airlines,callsign,,EASTERN,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Eastern Australia Airlines'
+DYA|Dynamic Airways,callsign,,DYNAMIC AIR,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Dynamic Airways'
+CSX|Choice Airways,callsign,,CHOICE AIR,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Choice Airways'
+CCB|CARICOM AIRWAYS (BARBADOS) INC.,callsign,,DOLPHIN,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Caricom Airways'
+BUU|Baikotovitchestrian Airlines ,name,Baikotovitchestrian Airlines ,Baikotovitchestrian Airlines,,whitespace normalisation
+BTQ|Boutique Air (Priv),callsign,,BOUTIQUE,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Boutique Air'
+BMR|British Midland Regional,iata,,BM,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'BMI Regional'
+BMR|British Midland Regional,callsign,,MIDLAND,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'BMI Regional'
+BCL|British Caribbean Airways,iata,,EO,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'British Caribbean Airways'
+AXE|Air Explore,iata,,ED,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'AirExplore'
+AXE|Air Explore,callsign,,GALILEO,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'AirExplore'
+AUS|Aus-Air,callsign,,AUS-AIR,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Aus-Air'
+ATI|Aero-Tropics Air Services,callsign,,AEROTROPICS,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Aero-Tropics Air Services'
+ARU|Aruba Airlines,iata,,AG,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Aruba Airlines'
+ARU|Aruba Airlines,callsign,,ARUBA,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Aruba Airlines'
+APD|Sabre Pacific,iata,,1Z,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Sabre Pacific'
+AMV|AMC Airlines,iata,,YJ,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'AMC Airlines'
+AMV|AMC Airlines,callsign,,AMC AIRLINES,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'AMC Airlines'
+AKL|Air Kiribati,callsign,,KIRIBATI,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Air Kiribati'
+AFU|Afrinat International Airlines,callsign,,AFRINAT,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Afrinat International Airlines'
+AAT|Austrian Airtransport,callsign,,AUSTRIAN CHARTER,https://en.wikipedia.org/wiki/List_of_airline_codes,filled from Wikipedia entry 'Austrian Airtransport'
