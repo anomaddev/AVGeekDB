@@ -1,0 +1,4 @@
+icao_code,iata_code,manufacturer,model,engine_type,engine_count,wake_category,is_sample
+B77W,77W,Boeing,777-300ER (SAMPLE),jet,2,H,true
+A359,359,Airbus,A350-900 (SAMPLE),jet,2,H,true
+B38M,7M8,Boeing,737 MAX 8 (SAMPLE),jet,2,M,true

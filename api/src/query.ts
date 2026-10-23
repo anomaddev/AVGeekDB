@@ -1,0 +1,38 @@
+import type { Entity, Row } from "./types";
+
+export const FILTERS: Record<Entity, string[]> = {
+  airports: ["iata", "icao", "country", "type"],
+  airlines: ["iata", "icao", "country", "active", "hub"],
+  aircraft_types: ["icao_code", "iata_code", "manufacturer", "engine_type"],
+};
+const SEARCH_FIELDS: Record<Entity, string[]> = {
+  airports: ["name", "city", "iata", "icao", "ident"],
+  airlines: ["name", "callsign", "iata", "icao"],
+  aircraft_types: ["manufacturer", "model", "icao_code", "iata_code"],
+};
+export const MAX_LIMIT = 100;
+
+export interface QueryResult { data: Row[]; meta: { total: number; limit: number; offset: number; next_offset: number | null } }
+
+export class QueryError extends Error {}
+
+/** Shared search/filter/paginate handler. Works on in-memory rows (mock) — the Supabase-backed variant applies the same params via PostgREST. */
+export function queryRows(entity: Entity, rows: Row[], params: URLSearchParams): QueryResult {
+  const limit = params.has("limit") ? Number(params.get("limit")) : 25;
+  const offset = params.has("offset") ? Number(params.get("offset")) : 0;
+  if (!Number.isInteger(limit) || limit < 1 || limit > MAX_LIMIT) throw new QueryError(`limit must be 1-${MAX_LIMIT}`);
+  if (!Number.isInteger(offset) || offset < 0) throw new QueryError("offset must be >= 0");
+
+  let out = rows;
+  const q = params.get("q")?.toLowerCase().trim();
+  if (q) out = out.filter((r) => SEARCH_FIELDS[entity].some((f) => String(r[f] ?? "").toLowerCase().includes(q)));
+  for (const f of FILTERS[entity]) {
+    const v = params.get(f);
+    if (v == null) continue;
+    if (f === "hub") out = out.filter((r) => Array.isArray(r.hubs) && r.hubs.some((h) => h.toLowerCase() === v.toLowerCase()));
+    else out = out.filter((r) => String(r[f] ?? "").toLowerCase() === v.toLowerCase());
+  }
+  const total = out.length;
+  const data = out.slice(offset, offset + limit);
+  return { data, meta: { total, limit, offset, next_offset: offset + limit < total ? offset + limit : null } };
+}

@@ -1,0 +1,4 @@
+airline_icao,airport_icao,is_primary,is_sample
+BAW,EGLL,true,true
+ANA,RJTT,true,true
+UAL,KJFK,false,true
