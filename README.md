@@ -14,7 +14,7 @@ scripts/         export-from-supabase.ts (Supabase → data/, used by the weekly
                  build-data.ts (validate -> dist/{csv,json}, avgeekdb.sqlite, manifest.json)
                  upload-to-storage.ts (STUB: publish dist/ to Supabase Storage)
 api/             @avgeekdb/api: shared logic (key hashing/verify, per-key rate limit, query handler, data version)
-web/             Next.js 16 app: landing, /docs, /downloads, /signup, /login, /dashboard, /contribute, /admin, public API /v1/*
+web/             Next.js 16 app: landing, /docs, /downloads, /get-key, /signup, /login, /dashboard, /contribute, /admin, public API /v1/*
 web/openapi.yaml OpenAPI 3.1 spec (also served at /openapi.yaml)
 supabase/        migrations/ (Postgres schema + RLS) and seed.sql (sample rows)
 docs/ci-drafts/  GitHub Actions drafts: ci.yml, data-snapshot.yml (move to .github/workflows/)
@@ -48,7 +48,7 @@ See `/docs` or `web/openapi.yaml`.
 
 ## Deployment (planned)
 Hostinger Node.js hosting runs `npm run build && npm run start -w web`. Supabase provides Postgres, Auth (signup/login) and Storage (downloads).
-Set the env vars from `.env.example`. Signup and login use Supabase Auth (cookie session). The dashboard stores only a peppered hash of each API key. With `AVGEEKDB_MOCK=false`, `/v1` checks that hash in `api_keys`. Entity rows still come from the CSV snapshot until a Supabase data source is connected.
+Set the env vars from `.env.example`. `/get-key` issues an API key from just an email and a name: a Cloudflare Turnstile widget (`NEXT_PUBLIC_TURNSTILE_SITE_KEY`) is verified server-side against siteverify with `TURNSTILE_SECRET_KEY` in `POST /api/keys`, the plaintext key is returned once, and only its peppered hash is stored (max 3 active keys per email). Signup and login use Supabase Auth (cookie session). The dashboard stores only a peppered hash of each API key. With `AVGEEKDB_MOCK=false`, `/v1` checks that hash in `api_keys`. Entity rows still come from the CSV snapshot until a Supabase data source is connected.
 
 ## License
 - **Code:** MIT (see `LICENSE`).
