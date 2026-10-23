@@ -1,5 +1,6 @@
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 import type { KeyRecord, KeyStore } from "./keys";
+import type { Entity, Row } from "./types";
 
 function configured(value: string | undefined, placeholders: string[]): string | null {
   const trimmed = value?.trim() ?? "";
@@ -33,5 +34,61 @@ export class SupabaseKeyStore implements KeyStore {
     if (error) throw new Error(`API usage insert failed: ${error.message}`);
     const { error: touchError } = await this.client.from("api_keys").update({ last_used_at: new Date().toISOString() }).eq("id", keyId);
     if (touchError) throw new Error(`API key touch failed: ${touchError.message}`);
+  }
+}
+
+const COLUMNS: Record<Entity, string> = {
+  airports: "ident, iata, icao, name, city, country, latitude, longitude, elevation_ft, type, is_sample",
+  airlines: "id, iata, icao, name, callsign, country, active, is_sample",
+  aircraft_types: "icao_code, iata_code, manufacturer, model, engine_type, engine_count, wake_category, is_sample",
+};
+const ORDER: Record<Entity, string> = { airports: "ident", airlines: "id", aircraft_types: "icao_code" };
+const trimChars = (r: Record<string, unknown>): Row => Object.fromEntries(Object.entries(r).map(([k, v]) => [k, typeof v === "string" ? v.trim() : (v as Row[string])]));
+
+/**
+ * Reads reference tables from Supabase with a short in-memory cache, then reuses the shared queryRows filters.
+ * Fine at current table sizes; move filtering into PostgREST once tables reach tens of thousands of rows.
+ */
+export class SupabaseDataSource {
+  private cache = new Map<string, { at: number; value: unknown }>();
+  constructor(private client: SupabaseClient, private ttlMs = Number(process.env.AVGEEKDB_CACHE_MS ?? 60_000)) {}
+
+  private async cached<T>(key: string, load: () => Promise<T>): Promise<T> {
+    const hit = this.cache.get(key);
+    if (hit && Date.now() - hit.at < this.ttlMs) return hit.value as T;
+    const value = await load();
+    this.cache.set(key, { at: Date.now(), value });
+    return value;
+  }
+
+  private async all(table: string, columns: string, order: string): Promise<Record<string, unknown>[]> {
+    const out: Record<string, unknown>[] = [];
+    for (let from = 0; ; from += 1000) {
+      const { data, error } = await this.client.from(table).select(columns).order(order).range(from, from + 999);
+      if (error) throw new Error(`${table} read failed: ${error.message}`);
+      out.push(...((data ?? []) as unknown as Record<string, unknown>[]));
+      if (!data || data.length < 1000) return out;
+    }
+  }
+
+  rows(entity: Entity): Promise<Row[]> {
+    return this.cached(`rows:${entity}`, async () => {
+      const rows = await this.all(entity, COLUMNS[entity], ORDER[entity]);
+      if (entity !== "airlines") return rows.map(trimChars);
+      const hubs = await this.all("airline_hubs", "airline_id, is_primary, airports(icao, ident)", "airline_id");
+      return rows.map((r) => {
+        const own = hubs.filter((h) => h.airline_id === r.id).sort((a, b) => Number(b.is_primary === true) - Number(a.is_primary === true));
+        const { id: _id, ...rest } = r;
+        return { ...trimChars(rest), hubs: own.map((h) => { const a = h.airports as { icao: string | null; ident: string } | null; return String(a?.icao ?? a?.ident ?? "").trim(); }).filter(Boolean) };
+      });
+    });
+  }
+
+  version(): Promise<string> {
+    return this.cached("version", async () => {
+      const { data, error } = await this.client.from("data_versions").select("version").eq("is_current", true).order("created_at", { ascending: false }).limit(1).maybeSingle();
+      if (error) throw new Error(`data_versions read failed: ${error.message}`);
+      return data?.version ? String(data.version) : "unversioned";
+    });
   }
 }
