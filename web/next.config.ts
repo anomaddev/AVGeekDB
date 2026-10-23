@@ -6,6 +6,7 @@ import { join } from "node:path";
 loadEnvConfig(join(__dirname, ".."));
 
 const config: NextConfig = {
+  agentRules: false,
   // Hostinger runs only `npm run build`; standalone gives a self-contained server at .next/standalone/web/server.js.
   output: "standalone",
   transpilePackages: ["@avgeekdb/api"],
