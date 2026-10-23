@@ -24,16 +24,18 @@ export function coerceRow(entity: Dataset, raw: Record<string, string>): Row {
   return out;
 }
 
-/** Locate repo `data/` dir: $AVGEEKDB_DATA_DIR or walk up from cwd. */
+/**
+ * Locate the `data/` dir: $AVGEEKDB_DATA_DIR, else `data/` in cwd or up to two parents.
+ * Fixed candidates (no filesystem walk) keep Next's output tracing from pulling in the whole project.
+ * In the standalone bundle server.js chdirs to `.next/standalone/web`, so `../data` resolves.
+ */
 export function findDataDir(start = process.cwd()): string {
   if (process.env.AVGEEKDB_DATA_DIR) return process.env.AVGEEKDB_DATA_DIR;
-  let dir = resolve(start);
-  for (;;) {
-    if (existsSync(join(dir, "data", "airports"))) return join(dir, "data");
-    const up = dirname(dir);
-    if (up === dir) throw new Error("data/ directory not found");
-    dir = up;
+  for (const rel of ["data", "../data", "../../data"]) {
+    const dir = resolve(/* turbopackIgnore: true */ start, rel);
+    if (existsSync(join(dir, "airports"))) return dir;
   }
+  throw new Error("data/ directory not found (set AVGEEKDB_DATA_DIR)");
 }
 
 /** Raw CSV rows as stored in data/ (no joins). */
