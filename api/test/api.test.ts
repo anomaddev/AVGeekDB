@@ -20,9 +20,13 @@ describe("api", () => {
     }
   });
   it("requires a key and rejects revoked keys", async () => {
-    const { revoked, d } = deps();
+    const { key, revoked, d } = deps();
     expect((await handleEntityRequest("airports", req("/"), d)).status).toBe(401);
     expect((await handleEntityRequest("airports", req("/", "avg_nope"), d)).status).toBe(401);
+    for (const r of [await handleEntityRequest("airports", req("/"), d), await handleEntityRequest("airports", req("/", revoked), d), await handleEntityRequest("airports", req("/?limit=0", key), d)]) {
+      expect([401, 403, 400]).toContain(r.status);
+      expect(r.headers.get("cache-control")).toBe("private, no-store");
+    }
     expect((await handleEntityRequest("airports", req("/", revoked), d)).status).toBe(403);
   });
   it("searches, filters, paginates", async () => {
@@ -30,6 +34,8 @@ describe("api", () => {
     const r = await handleEntityRequest("airports", req("/?q=heathrow", key), d);
     expect(r.status).toBe(200);
     expect(r.headers.get("x-data-version")).toBe("2026.10.23-sample");
+    expect(r.headers.get("cache-control")).toBe("private, no-store");
+    expect(r.headers.get("vary")).toBeNull();
     const body = await r.json();
     expect(body.data[0].iata).toBe("LHR");
     expect(body.meta.data_version).toBe("2026.10.23-sample");
@@ -59,5 +65,18 @@ describe("api", () => {
     for (let i = 0; i < 3; i++) statuses.push((await handleEntityRequest("airlines", req("/", key), d)).status);
     expect(statuses).toEqual([200, 200, 429]);
     expect(d.store.usage).toHaveLength(3);
+  });
+});
+
+describe("pushdown sources", () => {
+  it("uses source.query when present and never queries for malformed keys", async () => {
+    const { key, d } = deps();
+    const calls: string[] = [];
+    const source = { ...d.source, async query(e: any, p: URLSearchParams) { calls.push(`${e}?${p}`); return { data: [], meta: { total: 0, limit: 25, offset: 0, next_offset: null } }; } };
+    const ok = await handleEntityRequest("airports", req("/?icao=KJFK", key), { ...d, source });
+    expect(ok.status).toBe(200);
+    expect(calls).toEqual(["airports?icao=KJFK"]);
+    expect((await handleEntityRequest("airports", req("/", "nope"), { ...d, source })).status).toBe(401);
+    expect(calls).toHaveLength(1);
   });
 });
