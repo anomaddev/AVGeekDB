@@ -33,7 +33,13 @@ components:
         data_version: { type: string }
     Error: { type: object, properties: { error: { type: string } } }
     Airport: { $ref: "../schema/airports.schema.json" }
-    Airline: { $ref: "../schema/airlines.schema.json" }
+    Airline:
+      allOf:
+        - { $ref: "../schema/airlines.schema.json" }
+        - type: object
+          required: [hubs]
+          properties:
+            hubs: { type: array, items: { type: string }, description: "Hub airport ICAO codes (primary first), from the airline_hubs join table" }
     AircraftType: { $ref: "../schema/aircraft_types.schema.json" }
   responses:
     BadRequest: { description: Invalid parameters, content: { application/json: { schema: { $ref: "#/components/schemas/Error" } } } }
@@ -57,7 +63,7 @@ paths:
   /airlines:
     get:
       summary: List/search airlines
-      parameters: [{ $ref: "#/components/parameters/q" }, { $ref: "#/components/parameters/limit" }, { $ref: "#/components/parameters/offset" }, { $ref: "#/components/parameters/iata" }, { $ref: "#/components/parameters/icao" }, { $ref: "#/components/parameters/country" }, { name: active, in: query, schema: { type: boolean } }]
+      parameters: [{ $ref: "#/components/parameters/q" }, { $ref: "#/components/parameters/limit" }, { $ref: "#/components/parameters/offset" }, { $ref: "#/components/parameters/iata" }, { $ref: "#/components/parameters/icao" }, { $ref: "#/components/parameters/country" }, { name: active, in: query, schema: { type: boolean } }, { name: hub, in: query, schema: { type: string }, description: Airport ICAO code of a hub }]
       responses:
         "200":
           description: OK

@@ -10,6 +10,7 @@ npm run dev -w web           # http://localhost:3000
 Before a PR: `npm run lint && npm run typecheck && npm test && npm run build`.
 
 ## Data changes
+Supabase is the source of truth; `data/` is overwritten by the weekly snapshot. Prefer corrections via the site's Contribute form (reviewed by editors). CSV PRs are for bootstrapping only.
 - Edit `data/<entity>/<entity>.csv`. Every row must validate against `schema/<entity>.schema.json` (`npm run data:build` fails otherwise).
 - Cite a source for every change in the PR. Only add data whose license is compatible with the project data license.
 - Bump `data/VERSION` (format `YYYY.MM.DD`) when publishing a release.

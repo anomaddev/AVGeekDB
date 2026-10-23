@@ -25,7 +25,6 @@ create table public.airlines (
   name          text not null,
   callsign      text,
   country       char(2) not null,
-  hub_airport_id bigint references public.airports(id) on delete set null,
   active        boolean not null default true,
   is_sample     boolean not null default false,
   updated_at    timestamptz not null default now()
@@ -45,6 +44,15 @@ create table public.aircraft_types (
   updated_at    timestamptz not null default now()
 );
 
+-- Relation: airline hubs (many-to-many airlines <-> airports).
+create table public.airline_hubs (
+  airline_id bigint not null references public.airlines(id) on delete cascade,
+  airport_id bigint not null references public.airports(id) on delete cascade,
+  is_primary boolean not null default false,
+  primary key (airline_id, airport_id)
+);
+create index airline_hubs_airport_idx on public.airline_hubs (airport_id);
+
 -- Relation: which airlines operate which aircraft types (fleet). Populated when sources allow.
 create table public.airline_fleet (
   airline_id       bigint not null references public.airlines(id) on delete cascade,
@@ -58,10 +66,12 @@ alter table public.airports enable row level security;
 alter table public.airlines enable row level security;
 alter table public.aircraft_types enable row level security;
 alter table public.airline_fleet enable row level security;
+alter table public.airline_hubs enable row level security;
 create policy "public read" on public.airports for select using (true);
 create policy "public read" on public.airlines for select using (true);
 create policy "public read" on public.aircraft_types for select using (true);
 create policy "public read" on public.airline_fleet for select using (true);
+create policy "public read" on public.airline_hubs for select using (true);
 
 -- API keys: only a SHA-256 hash (+pepper) is stored; plaintext shown once at creation.
 create table public.api_keys (
@@ -138,6 +148,7 @@ create policy "editor write" on public.airports       for all using (public.has_
 create policy "editor write" on public.airlines       for all using (public.has_role('editor')) with check (public.has_role('editor'));
 create policy "editor write" on public.aircraft_types for all using (public.has_role('editor')) with check (public.has_role('editor'));
 create policy "editor write" on public.airline_fleet  for all using (public.has_role('editor')) with check (public.has_role('editor'));
+create policy "editor write" on public.airline_hubs   for all using (public.has_role('editor')) with check (public.has_role('editor'));
 create policy "admin write"  on public.data_versions  for all using (public.has_role('admin'))  with check (public.has_role('admin'));
 
 -- ---------------------------------------------------------------- submissions (contributor corrections, reviewed by editors)

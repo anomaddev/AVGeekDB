@@ -2,7 +2,7 @@ import type { Entity, Row } from "./types";
 
 export const FILTERS: Record<Entity, string[]> = {
   airports: ["iata", "icao", "country", "type"],
-  airlines: ["iata", "icao", "country", "active"],
+  airlines: ["iata", "icao", "country", "active", "hub"],
   aircraft_types: ["icao_code", "iata_code", "manufacturer", "engine_type"],
 };
 const SEARCH_FIELDS: Record<Entity, string[]> = {
@@ -28,7 +28,9 @@ export function queryRows(entity: Entity, rows: Row[], params: URLSearchParams):
   if (q) out = out.filter((r) => SEARCH_FIELDS[entity].some((f) => String(r[f] ?? "").toLowerCase().includes(q)));
   for (const f of FILTERS[entity]) {
     const v = params.get(f);
-    if (v != null) out = out.filter((r) => String(r[f] ?? "").toLowerCase() === v.toLowerCase());
+    if (v == null) continue;
+    if (f === "hub") out = out.filter((r) => Array.isArray(r.hubs) && r.hubs.some((h) => h.toLowerCase() === v.toLowerCase()));
+    else out = out.filter((r) => String(r[f] ?? "").toLowerCase() === v.toLowerCase());
   }
   const total = out.length;
   const data = out.slice(offset, offset + limit);

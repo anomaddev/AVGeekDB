@@ -13,7 +13,7 @@ export default function Docs() {
       <h2>Endpoints</h2>
       <ul>
         <li><code>GET /v1/airports</code>: filters {FILTERS.airports.join(", ")}</li>
-        <li><code>GET /v1/airlines</code>: filters {FILTERS.airlines.join(", ")}</li>
+        <li><code>GET /v1/airlines</code>: filters {FILTERS.airlines.join(", ")}. Each airline includes <code>hubs</code>: an array of hub airport ICAO codes, primary first (<code>?hub=EGLL</code> filters by hub).</li>
         <li><code>GET /v1/aircraft</code>: filters {FILTERS.aircraft_types.join(", ")}</li>
       </ul>
       <p>Common params: <code>q</code> (free-text search), <code>limit</code> (1-{MAX_LIMIT}, default 25), <code>offset</code>.</p>

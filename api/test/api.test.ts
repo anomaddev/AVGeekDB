@@ -35,6 +35,10 @@ describe("api", () => {
     expect(body.meta.data_version).toBe("2026.10.23-sample");
     const p = queryRows("airlines", loadEntity("airlines"), new URLSearchParams("limit=2"));
     expect(p.data).toHaveLength(2); expect(p.meta.next_offset).toBe(2);
+    const ba = queryRows("airlines", loadEntity("airlines"), new URLSearchParams("iata=BA")).data[0];
+    expect(ba.hubs).toEqual(["EGLL"]);
+    expect(ba).not.toHaveProperty("hub_icao");
+    expect(queryRows("airlines", loadEntity("airlines"), new URLSearchParams("hub=rjtt")).data.map((r) => r.iata)).toEqual(["NH"]);
     expect(queryRows("aircraft_types", loadEntity("aircraft_types"), new URLSearchParams("manufacturer=airbus")).meta.total).toBe(1);
     expect((await handleEntityRequest("airports", req("/?limit=1000", key), d)).status).toBe(400);
   });

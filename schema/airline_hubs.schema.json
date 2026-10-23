@@ -1,0 +1,7 @@
+{ "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "airline_hubs", "title": "Airline hub (join table, placeholder schema)", "type": "object",
+  "required": ["airline_icao", "airport_icao", "is_sample"],
+  "properties": {
+    "airline_icao": {"type": "string", "pattern": "^[A-Z]{3}$", "description": "FK -> airlines.icao"},
+    "airport_icao": {"type": "string", "pattern": "^[A-Z0-9]{4}$", "description": "FK -> airports.icao"},
+    "is_primary": {"type": ["boolean","null"]}, "is_sample": {"type": "boolean"} },
+  "additionalProperties": false }
