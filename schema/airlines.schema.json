@@ -1,7 +1,8 @@
-{ "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "airlines", "title": "Airline (placeholder schema)", "type": "object",
-  "required": ["name", "country", "active", "is_sample"],
+{ "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "airlines", "title": "Airline", "type": "object",
+  "required": ["ident", "name", "country_code", "active", "major", "is_sample"],
   "properties": {
+    "ident": {"type": "string", "minLength": 1}, "name": {"type": "string"},
     "iata": {"type": ["string","null"], "pattern": "^[A-Z0-9]{2}$"}, "icao": {"type": ["string","null"], "pattern": "^[A-Z]{3}$"},
-    "name": {"type": "string"}, "callsign": {"type": ["string","null"]}, "country": {"type": "string", "pattern": "^[A-Z]{2}$"},
-    "active": {"type": "boolean"}, "is_sample": {"type": "boolean"} },
+    "callsign": {"type": ["string","null"]}, "country": {"type": ["string","null"]}, "country_code": {"type": "string", "pattern": "^[A-Z]{2}$"},
+    "active": {"type": "boolean"}, "major": {"type": "boolean"}, "is_sample": {"type": "boolean"} },
   "additionalProperties": false }

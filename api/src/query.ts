@@ -2,13 +2,13 @@ import type { Entity, Row } from "./types";
 
 export const FILTERS: Record<Entity, string[]> = {
   airports: ["iata", "icao", "country", "type"],
-  airlines: ["iata", "icao", "country", "active", "hub"],
-  aircraft_types: ["icao_code", "iata_code", "manufacturer", "engine_type"],
+  airlines: ["ident", "iata", "icao", "country", "country_code", "active", "major", "hub"],
+  aircraft_types: ["ident", "icao", "iata", "family", "manufacturer", "engine_type", "aircraft_type", "status", "in_production", "major", "cargo", "military", "is_primary"],
 };
 const SEARCH_FIELDS: Record<Entity, string[]> = {
   airports: ["name", "city", "iata", "icao", "ident"],
-  airlines: ["name", "callsign", "iata", "icao"],
-  aircraft_types: ["manufacturer", "model", "icao_code", "iata_code"],
+  airlines: ["name", "callsign", "iata", "icao", "ident"],
+  aircraft_types: ["name", "short_name", "alternate_names", "family", "manufacturer", "icao", "iata", "ident"],
 };
 export const MAX_LIMIT = 100;
 
@@ -25,7 +25,7 @@ export function queryRows(entity: Entity, rows: Row[], params: URLSearchParams):
 
   let out = rows;
   const q = params.get("q")?.toLowerCase().trim();
-  if (q) out = out.filter((r) => SEARCH_FIELDS[entity].some((f) => String(r[f] ?? "").toLowerCase().includes(q)));
+  if (q) out = out.filter((r) => SEARCH_FIELDS[entity].some((f) => (Array.isArray(r[f]) ? (r[f] as string[]).join(",") : String(r[f] ?? "")).toLowerCase().includes(q)));
   for (const f of FILTERS[entity]) {
     const v = params.get(f);
     if (v == null) continue;

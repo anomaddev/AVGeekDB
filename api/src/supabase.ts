@@ -39,8 +39,8 @@ export class SupabaseKeyStore implements KeyStore {
 
 const COLUMNS: Record<Entity, string> = {
   airports: "ident, iata, icao, name, city, country, latitude, longitude, elevation_ft, type",
-  airlines: "id, ident, name, iata, icao, callsign, country, country_code, active, major",
-  aircraft_types: "ident, icao, iata, family, name, short_name, alternate_names, manufacturer, engine_count, engine_type, aircraft_type, in_production, status, major, cargo, military, wiki_link, is_primary, wake_category",
+  airlines: "id, ident, name, iata, icao, callsign, country, country_code, active, major, is_sample",
+  aircraft_types: "ident, icao, iata, family, name, short_name, alternate_names, manufacturer, engine_count, engine_type, aircraft_type, in_production, status, major, cargo, military, wiki_link, is_primary, wake_category, is_sample",
 };
 const ORDER: Record<Entity, string> = { airports: "ident", airlines: "ident", aircraft_types: "ident" };
 const trimChars = (r: Record<string, unknown>): Row => Object.fromEntries(Object.entries(r).map(([k, v]) => [k, typeof v === "string" ? v.trim() : (v as Row[string])])) as Row;

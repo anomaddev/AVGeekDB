@@ -4,10 +4,13 @@ import { parse } from "csv-parse/sync";
 import type { Dataset, Entity, Row } from "./types";
 
 /** Column type hints used to coerce CSV strings. Keep in sync with schema/*.schema.json. */
-export const COLUMN_TYPES: Record<Dataset, Record<string, "number" | "integer" | "boolean">> = {
+export const COLUMN_TYPES: Record<Dataset, Record<string, "number" | "integer" | "boolean" | "list">> = {
   airports: { latitude: "number", longitude: "number", elevation_ft: "integer", is_sample: "boolean" },
-  airlines: { active: "boolean", is_sample: "boolean" },
-  aircraft_types: { engine_count: "integer", is_sample: "boolean" },
+  airlines: { active: "boolean", major: "boolean", is_sample: "boolean" },
+  aircraft_types: {
+    engine_count: "integer", alternate_names: "list", in_production: "boolean", major: "boolean", cargo: "boolean",
+    military: "boolean", is_primary: "boolean", is_sample: "boolean",
+  },
   airline_hubs: { is_primary: "boolean", is_sample: "boolean" },
 };
 
@@ -15,10 +18,11 @@ export function coerceRow(entity: Dataset, raw: Record<string, string>): Row {
   const out: Row = {};
   for (const [k, v] of Object.entries(raw)) {
     const t = COLUMN_TYPES[entity][k];
-    if (v === "") out[k] = null;
+    if (t === "list") out[k] = v.split(",").map((s) => s.trim()).filter(Boolean);
+    else if (v === "") out[k] = null;
     else if (t === "number") out[k] = Number(v);
     else if (t === "integer") out[k] = parseInt(v, 10);
-    else if (t === "boolean") out[k] = v === "true";
+    else if (t === "boolean") out[k] = v.toLowerCase() === "true";
     else out[k] = v;
   }
   return out;

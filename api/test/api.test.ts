@@ -40,6 +40,12 @@ describe("api", () => {
     expect(ba).not.toHaveProperty("hub_icao");
     expect(queryRows("airlines", loadEntity("airlines"), new URLSearchParams("hub=rjtt")).data.map((r) => r.iata)).toEqual(["NH"]);
     expect(queryRows("aircraft_types", loadEntity("aircraft_types"), new URLSearchParams("manufacturer=airbus")).meta.total).toBe(1);
+    const b77w = queryRows("aircraft_types", loadEntity("aircraft_types"), new URLSearchParams("icao=B77W")).data[0];
+    expect(b77w.alternate_names).toEqual(["777-300ER", "Triple Seven"]);
+    expect(b77w.is_primary).toBe(true);
+    expect(queryRows("aircraft_types", loadEntity("aircraft_types"), new URLSearchParams("q=triple")).data.map((r) => r.ident)).toEqual(["B77W"]);
+    expect(queryRows("airlines", loadEntity("airlines"), new URLSearchParams("country_code=jp")).data.map((r) => r.ident)).toEqual(["ANA"]);
+    expect(ba.major).toBe(true);
     expect((await handleEntityRequest("airports", req("/?limit=1000", key), d)).status).toBe(400);
   });
   it("rate limits per key and records usage", async () => {

@@ -1,4 +1,4 @@
-icao_code,iata_code,manufacturer,model,engine_type,engine_count,wake_category,is_sample
-B77W,77W,Boeing,777-300ER (SAMPLE),jet,2,H,true
-A359,359,Airbus,A350-900 (SAMPLE),jet,2,H,true
-B38M,7M8,Boeing,737 MAX 8 (SAMPLE),jet,2,M,true
+ident,icao,iata,family,name,short_name,alternate_names,manufacturer,engine_count,engine_type,aircraft_type,in_production,status,major,cargo,military,wiki_link,is_primary,wake_category,is_sample
+B77W,B77W,77W,777,Boeing 777-300ER (SAMPLE),777-300ER,"777-300ER,Triple Seven",Boeing,2,Turbofan,jet_aircraft,true,Operational,true,false,false,https://en.wikipedia.org/wiki/Boeing_777,true,H,true
+A359,A359,359,A350,Airbus A350-900 (SAMPLE),A350-900,A350,Airbus,2,Turbofan,jet_aircraft,true,Operational,true,false,false,https://en.wikipedia.org/wiki/Airbus_A350,true,H,true
+B38M,B38M,7M8,737 MAX,Boeing 737 MAX 8 (SAMPLE),737 MAX 8,"737-8,737 MAX",Boeing,2,Turbofan,jet_aircraft,true,Operational,true,false,false,https://en.wikipedia.org/wiki/Boeing_737_MAX,true,M,true

@@ -14,7 +14,7 @@ scripts/         export-from-supabase.ts (Supabase → data/, used by the weekly
                  build-data.ts (validate -> dist/{csv,json}, avgeekdb.sqlite, manifest.json)
                  upload-to-storage.ts (STUB: publish dist/ to Supabase Storage)
 api/             @avgeekdb/api: shared logic (key hashing/verify, per-key rate limit, query handler, data version)
-web/             Next.js 16 app: landing, /docs, /downloads, /signup, /login, /dashboard, /contribute, /admin, public API /v1/*
+web/             Next.js 16 app: landing, /docs, /downloads, /get-key, /signup, /login, /dashboard, /contribute, /admin, public API /v1/*
 web/openapi.yaml OpenAPI 3.1 spec (also served at /openapi.yaml)
 supabase/        migrations/ (Postgres schema + RLS) and seed.sql (sample rows)
 docs/ci-drafts/  GitHub Actions drafts: ci.yml, data-snapshot.yml (move to .github/workflows/)
@@ -39,12 +39,16 @@ by an audit trigger, and rows carry `updated_at` + `row_version`.
 
 ## API
 `GET /v1/airports | /v1/airlines | /v1/aircraft` with `q`, entity filters, `limit` (max 100), `offset`.
+Airline fields: `ident, name, iata, icao, callsign, country, country_code, active, major, is_sample, hubs` (filters: `ident, iata, icao, country, country_code, active, major, hub`).
+Aircraft fields: `ident, icao, iata, family, name, short_name, alternate_names[], manufacturer, engine_count, engine_type, aircraft_type, in_production, status, major, cargo, military, wiki_link, is_primary, wake_category, is_sample` (filters: `ident, icao, iata, family, manufacturer, engine_type, aircraft_type, status, in_production, major, cargo, military, is_primary`). One ICAO code can cover several variants; `is_primary` marks the main one.
+
+Load the real lists into Supabase with `npx tsx scripts/import-source-data.ts` (upserts `data/airlines/airlines_full.csv` and `data/aircraft_types/aircraft.csv` on `ident`; `--dry-run` to validate only).
 Auth header `x-api-key`. Responses include `meta.data_version` and the `x-data-version` header, plus `x-ratelimit-*` headers.
 See `/docs` or `web/openapi.yaml`.
 
 ## Deployment (planned)
 Hostinger Node.js hosting runs `npm run build && npm run start -w web`. Supabase provides Postgres, Auth (signup/login) and Storage (downloads).
-Set the env vars from `.env.example`. Signup and login use Supabase Auth (cookie session). The dashboard stores only a peppered hash of each API key. With `AVGEEKDB_MOCK=false`, `/v1` checks that hash in `api_keys`. Entity rows still come from the CSV snapshot until a Supabase data source is connected.
+Set the env vars from `.env.example`. `/get-key` issues an API key from just an email and a name: a Cloudflare Turnstile widget (`NEXT_PUBLIC_TURNSTILE_SITE_KEY`) is verified server-side against siteverify with `TURNSTILE_SECRET_KEY` in `POST /api/keys`, the plaintext key is returned once, and only its peppered hash is stored (max 3 active keys per email). Signup and login use Supabase Auth (cookie session). The dashboard stores only a peppered hash of each API key. With `AVGEEKDB_MOCK=false`, `/v1` checks that hash in `api_keys`. Entity rows still come from the CSV snapshot until a Supabase data source is connected.
 
 ## License
 - **Code:** MIT (see `LICENSE`).

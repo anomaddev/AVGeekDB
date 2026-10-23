@@ -1,4 +1,4 @@
-iata,icao,name,callsign,country,active,is_sample
-UA,UAL,United Airlines (SAMPLE),UNITED,US,true,true
-BA,BAW,British Airways (SAMPLE),SPEEDBIRD,GB,true,true
-NH,ANA,All Nippon Airways (SAMPLE),ALL NIPPON,JP,true,true
+ident,name,iata,icao,callsign,country,country_code,active,major,is_sample
+UAL,United Airlines (SAMPLE),UA,UAL,UNITED,United States,US,true,true,true
+BAW,British Airways (SAMPLE),BA,BAW,SPEEDBIRD,United Kingdom,GB,true,true,true
+ANA,All Nippon Airways (SAMPLE),NH,ANA,ALL NIPPON,Japan,JP,true,true,true

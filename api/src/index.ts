@@ -5,3 +5,4 @@ export * from "./keys";
 export * from "./rateLimit";
 export * from "./handler";
 export * from "./supabase";
+export * from "./signup";
