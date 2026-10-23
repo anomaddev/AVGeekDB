@@ -1,0 +1,35 @@
+{
+  "name": "avgeekdb",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "workspaces": [
+    "api",
+    "web"
+  ],
+  "scripts": {
+    "data:build": "tsx scripts/build-data.ts",
+    "data:upload": "tsx scripts/upload-to-storage.ts",
+    "lint": "npm run lint -w web",
+    "typecheck": "tsc -p tsconfig.json --noEmit && npm run typecheck -w web",
+    "test": "vitest run",
+    "build": "npm run data:build && npm run build -w web"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/node": "^22.0.0",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "better-sqlite3": "^11.7.0",
+    "csv-parse": "^5.6.0",
+    "csv-stringify": "^6.5.2",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  },
+  "allowScripts": {
+    "better-sqlite3@11.10.0": true,
+    "esbuild@0.28.2": true,
+    "esbuild@0.21.5": true
+  }
+}

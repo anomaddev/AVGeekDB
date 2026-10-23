@@ -1,0 +1,78 @@
+openapi: 3.1.0
+info:
+  title: AVGeekDB API
+  version: 0.1.0
+  description: Free API for aircraft types, airlines and airports. Requires an API key (x-api-key). Current data is SAMPLE only.
+  license: { name: MIT, identifier: MIT }
+servers: [{ url: "https://example.com/v1", description: "TODO: production domain" }]
+security: [{ ApiKey: [] }]
+components:
+  securitySchemes:
+    ApiKey: { type: apiKey, in: header, name: x-api-key }
+  parameters:
+    q: { name: q, in: query, schema: { type: string }, description: Case-insensitive free-text search }
+    limit: { name: limit, in: query, schema: { type: integer, minimum: 1, maximum: 100, default: 25 } }
+    offset: { name: offset, in: query, schema: { type: integer, minimum: 0, default: 0 } }
+    country: { name: country, in: query, schema: { type: string, pattern: "^[A-Z]{2}$" } }
+    iata: { name: iata, in: query, schema: { type: string } }
+    icao: { name: icao, in: query, schema: { type: string } }
+  headers:
+    DataVersion: { schema: { type: string }, description: Current dataset version }
+    RateLimitLimit: { schema: { type: integer } }
+    RateLimitRemaining: { schema: { type: integer } }
+    RateLimitReset: { schema: { type: integer }, description: Seconds until window resets }
+  schemas:
+    Meta:
+      type: object
+      required: [total, limit, offset, next_offset, data_version]
+      properties:
+        total: { type: integer }
+        limit: { type: integer }
+        offset: { type: integer }
+        next_offset: { type: [integer, "null"] }
+        data_version: { type: string }
+    Error: { type: object, properties: { error: { type: string } } }
+    Airport: { $ref: "../schema/airports.schema.json" }
+    Airline: { $ref: "../schema/airlines.schema.json" }
+    AircraftType: { $ref: "../schema/aircraft_types.schema.json" }
+  responses:
+    BadRequest: { description: Invalid parameters, content: { application/json: { schema: { $ref: "#/components/schemas/Error" } } } }
+    Unauthorized: { description: Missing or invalid key, content: { application/json: { schema: { $ref: "#/components/schemas/Error" } } } }
+    Forbidden: { description: Key revoked, content: { application/json: { schema: { $ref: "#/components/schemas/Error" } } } }
+    RateLimited: { description: Rate limit exceeded, headers: { Retry-After: { schema: { type: integer } } } }
+paths:
+  /airports:
+    get:
+      summary: List/search airports
+      parameters: [{ $ref: "#/components/parameters/q" }, { $ref: "#/components/parameters/limit" }, { $ref: "#/components/parameters/offset" }, { $ref: "#/components/parameters/iata" }, { $ref: "#/components/parameters/icao" }, { $ref: "#/components/parameters/country" }, { name: type, in: query, schema: { type: string } }]
+      responses:
+        "200":
+          description: OK
+          headers: { x-data-version: { $ref: "#/components/headers/DataVersion" }, x-ratelimit-limit: { $ref: "#/components/headers/RateLimitLimit" }, x-ratelimit-remaining: { $ref: "#/components/headers/RateLimitRemaining" }, x-ratelimit-reset: { $ref: "#/components/headers/RateLimitReset" } }
+          content: { application/json: { schema: { type: object, properties: { data: { type: array, items: { $ref: "#/components/schemas/Airport" } }, meta: { $ref: "#/components/schemas/Meta" } } } } }
+        "400": { $ref: "#/components/responses/BadRequest" }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "403": { $ref: "#/components/responses/Forbidden" }
+        "429": { $ref: "#/components/responses/RateLimited" }
+  /airlines:
+    get:
+      summary: List/search airlines
+      parameters: [{ $ref: "#/components/parameters/q" }, { $ref: "#/components/parameters/limit" }, { $ref: "#/components/parameters/offset" }, { $ref: "#/components/parameters/iata" }, { $ref: "#/components/parameters/icao" }, { $ref: "#/components/parameters/country" }, { name: active, in: query, schema: { type: boolean } }]
+      responses:
+        "200":
+          description: OK
+          headers: { x-data-version: { $ref: "#/components/headers/DataVersion" } }
+          content: { application/json: { schema: { type: object, properties: { data: { type: array, items: { $ref: "#/components/schemas/Airline" } }, meta: { $ref: "#/components/schemas/Meta" } } } } }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "429": { $ref: "#/components/responses/RateLimited" }
+  /aircraft:
+    get:
+      summary: List/search aircraft types
+      parameters: [{ $ref: "#/components/parameters/q" }, { $ref: "#/components/parameters/limit" }, { $ref: "#/components/parameters/offset" }, { name: icao_code, in: query, schema: { type: string } }, { name: iata_code, in: query, schema: { type: string } }, { name: manufacturer, in: query, schema: { type: string } }, { name: engine_type, in: query, schema: { type: string } }]
+      responses:
+        "200":
+          description: OK
+          headers: { x-data-version: { $ref: "#/components/headers/DataVersion" } }
+          content: { application/json: { schema: { type: object, properties: { data: { type: array, items: { $ref: "#/components/schemas/AircraftType" } }, meta: { $ref: "#/components/schemas/Meta" } } } } }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "429": { $ref: "#/components/responses/RateLimited" }

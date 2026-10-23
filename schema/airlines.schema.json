@@ -1,0 +1,7 @@
+{ "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "airlines", "title": "Airline (placeholder schema)", "type": "object",
+  "required": ["name", "country", "active", "is_sample"],
+  "properties": {
+    "iata": {"type": ["string","null"], "pattern": "^[A-Z0-9]{2}$"}, "icao": {"type": ["string","null"], "pattern": "^[A-Z]{3}$"},
+    "name": {"type": "string"}, "callsign": {"type": ["string","null"]}, "country": {"type": "string", "pattern": "^[A-Z]{2}$"},
+    "hub_icao": {"type": ["string","null"], "description": "FK -> airports.icao"}, "active": {"type": "boolean"}, "is_sample": {"type": "boolean"} },
+  "additionalProperties": false }

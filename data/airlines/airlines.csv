@@ -1,0 +1,4 @@
+iata,icao,name,callsign,country,hub_icao,active,is_sample
+UA,UAL,United Airlines (SAMPLE),UNITED,US,,true,true
+BA,BAW,British Airways (SAMPLE),SPEEDBIRD,GB,EGLL,true,true
+NH,ANA,All Nippon Airways (SAMPLE),ALL NIPPON,JP,RJTT,true,true

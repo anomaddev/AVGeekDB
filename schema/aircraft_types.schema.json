@@ -1,0 +1,7 @@
+{ "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "aircraft_types", "title": "Aircraft type (placeholder schema)", "type": "object",
+  "required": ["icao_code", "manufacturer", "model", "is_sample"],
+  "properties": {
+    "icao_code": {"type": "string", "pattern": "^[A-Z0-9]{2,4}$"}, "iata_code": {"type": ["string","null"]},
+    "manufacturer": {"type": "string"}, "model": {"type": "string"}, "engine_type": {"enum": ["jet","turboprop","piston","electric",null]},
+    "engine_count": {"type": ["integer","null"], "minimum": 0}, "wake_category": {"enum": ["L","M","H","J",null]}, "is_sample": {"type": "boolean"} },
+  "additionalProperties": false }
