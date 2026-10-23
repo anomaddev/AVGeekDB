@@ -1,13 +1,13 @@
 import { loadEntity, currentDataVersion } from "./dataset";
 import { queryRows, QueryError } from "./query";
 import { verifyApiKey, MemoryKeyStore, hashApiKey, DEMO_KEY, type KeyStore } from "./keys";
-import { createServiceClient, SupabaseKeyStore } from "./supabase";
+import { createServiceClient, SupabaseKeyStore, SupabaseDataSource } from "./supabase";
 import { RateLimiter } from "./rateLimit";
 import type { Entity, Row } from "./types";
 
 export interface DataSource { rows(entity: Entity): Promise<Row[]>; version(): Promise<string> }
 
-/** Mock source: bundled CSV sample data. TODO: SupabaseDataSource querying the airports/airlines/aircraft_types tables. */
+/** Mock source: bundled CSV sample data. Live mode uses SupabaseDataSource. */
 export const csvDataSource: DataSource = { async rows(e) { return loadEntity(e); }, async version() { return currentDataVersion(); } };
 
 export interface HandlerDeps { store: KeyStore; limiter: RateLimiter; source: DataSource }
@@ -19,8 +19,8 @@ export function defaultDeps(): HandlerDeps {
   if (defaults) return defaults;
   const limiter = new RateLimiter(Number(process.env.RATE_LIMIT_PER_MINUTE ?? 60));
   if (!isMock()) {
-    // Key checks use Supabase. Entity rows still come from the CSV snapshot until a SupabaseDataSource is wired.
-    defaults = { store: new SupabaseKeyStore(createServiceClient()), source: csvDataSource, limiter };
+    const client = createServiceClient();
+    defaults = { store: new SupabaseKeyStore(client), source: new SupabaseDataSource(client), limiter };
     return defaults;
   }
   const store = new MemoryKeyStore();
