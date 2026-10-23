@@ -30,6 +30,11 @@ $$;
 
 revoke all on function public.api_keys_guard_update() from public, anon, authenticated;
 
+-- has_role is security definer and only checks the current user. Signed-in
+-- users call it for the admin gate and for RLS. Anonymous clients do not.
+revoke execute on function public.has_role(public.app_role) from public, anon;
+grant execute on function public.has_role(public.app_role) to authenticated;
+
 drop trigger if exists api_keys_guard_update on public.api_keys;
 create trigger api_keys_guard_update
   before update on public.api_keys

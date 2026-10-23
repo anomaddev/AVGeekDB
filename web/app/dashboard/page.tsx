@@ -23,6 +23,8 @@ export default async function Dashboard() {
     return <main><h1>Your API keys</h1><p>Could not load keys.</p></main>;
   }
 
+  // force-dynamic page; the window is this request's time.
+  // eslint-disable-next-line react-hooks/purity
   const since = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString();
   const { data: usage, error: usageError } = await supabase
     .from("api_usage_daily")
