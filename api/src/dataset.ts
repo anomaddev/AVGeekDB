@@ -5,7 +5,7 @@ import type { Dataset, Entity, Row } from "./types";
 
 /** Column type hints used to coerce CSV strings. Keep in sync with schema/*.schema.json. */
 export const COLUMN_TYPES: Record<Dataset, Record<string, "number" | "integer" | "boolean" | "list">> = {
-  airports: { latitude: "number", longitude: "number", elevation_ft: "integer", is_sample: "boolean" },
+  airports: { latitude: "number", longitude: "number", elevation_ft: "integer", scheduled_service: "boolean", is_sample: "boolean" },
   airlines: { active: "boolean", major: "boolean", is_sample: "boolean" },
   aircraft_types: {
     engine_count: "integer", alternate_names: "list", in_production: "boolean", major: "boolean", cargo: "boolean",

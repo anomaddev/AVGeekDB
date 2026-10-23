@@ -2,11 +2,13 @@
  * Upsert the real source files into Supabase reference tables (on `ident`):
  *   data/airlines/airlines_full.csv  -> public.airlines
  *   data/aircraft_types/aircraft.csv -> public.aircraft_types
+ *   data/temp_data/airports.csv      -> public.airports (OurAirports layout; the numeric `id` column is dropped)
  * Env: SUPABASE_URL (or NEXT_PUBLIC_SUPABASE_URL), SUPABASE_SERVICE_ROLE_KEY (or AVGEEKDB_SUPABASE_SERVICE_ROLE_KEY).
  * Rows go through PostgREST, so the row-level audit trigger (change_log) and bump_row_version trigger fire as normal.
  * Note: bump_row_version sets updated_at = now() on UPDATE, so re-imports of existing rows get a fresh updated_at;
  * first-time inserts keep the file's updated_at.
- * --dry-run parses and validates without writing.
+ * --dry-run parses and validates without writing. --only=airports (comma list) limits the tables.
+ * airline_hubs is not loaded: there is no real hubs source yet (data/airline_hubs holds SAMPLE rows only).
  */
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
@@ -22,10 +24,16 @@ type Val = string | number | boolean | null | string[];
 const str = (v: string) => (v.trim() === "" ? null : v.trim());
 const bool = (v: string) => { const t = v.trim().toUpperCase(); if (t === "") return null; if (t === "TRUE") return true; if (t === "FALSE") return false; throw new Error(`bad boolean "${v}"`); };
 const int = (v: string) => { if (v.trim() === "") return null; const n = Number(v); if (!Number.isInteger(n)) throw new Error(`bad integer "${v}"`); return n; };
+const num = (v: string) => { if (v.trim() === "") return null; const n = Number(v); if (!Number.isFinite(n)) throw new Error(`bad number "${v}"`); return n; };
+const yesNo = (v: string) => { const t = v.trim().toLowerCase(); return t === "yes" ? true : t === "no" ? false : bool(v); };
+const AIRPORT_TYPES = new Set(["large_airport", "medium_airport", "small_airport", "heliport", "seaplane_base", "balloonport", "closed"]);
+const CONTINENTS = new Set(["AF", "AN", "AS", "EU", "NA", "OC", "SA"]);
+const check = (ok: boolean, msg: string) => { if (!ok) throw new Error(msg); };
 const list = (v: string) => v.split(",").map((s) => s.trim()).filter(Boolean);
 
 interface Spec { table: string; file: string; map: (r: Record<string, string>) => Record<string, Val> }
-const SPECS: Spec[] = [
+const ONLY = process.argv.find((a) => a.startsWith("--only="))?.slice(7).split(",");
+const SPECS_ALL: Spec[] = [
   {
     table: "airlines", file: "data/airlines/airlines_full.csv",
     map: (r) => ({
@@ -43,6 +51,27 @@ const SPECS: Spec[] = [
       status: str(r.status), major: bool(r.major) ?? false, cargo: bool(r.cargo) ?? false, military: bool(r.military) ?? false,
       wiki_link: str(r.wiki_link), updated_at: str(r.updated_at), is_primary: bool(r.primary) ?? false, is_sample: false,
     }),
+  },
+  {
+    table: "airports", file: "data/temp_data/airports.csv",
+    map: (r) => {
+      const row = {
+        ident: str(r.ident), type: str(r.type), name: str(r.name), latitude: num(r.latitude_deg), longitude: num(r.longitude_deg),
+        elevation_ft: int(r.elevation_ft), continent: str(r.continent), country: str(r.iso_country), iso_region: str(r.iso_region),
+        municipality: str(r.municipality), scheduled_service: yesNo(r.scheduled_service) ?? false, icao: str(r.icao_code), iata: str(r.iata_code),
+        gps_code: str(r.gps_code), local_code: str(r.local_code), home_link: str(r.home_link), wikipedia_link: str(r.wikipedia_link),
+        keywords: str(r.keywords), is_sample: false,
+      };
+      check(!!row.name, "missing name");
+      check(AIRPORT_TYPES.has(String(row.type)), `type "${row.type}" not allowed by airports_type_check`);
+      check(row.continent === null || CONTINENTS.has(row.continent), `continent "${row.continent}" not allowed`);
+      check(/^[A-Z0-9]{2}$/.test(String(row.country)), `iso_country "${row.country}" is not 2 characters`);
+      check(row.latitude !== null && row.latitude >= -90 && row.latitude <= 90, `latitude ${row.latitude} out of range`);
+      check(row.longitude !== null && row.longitude >= -180 && row.longitude <= 180, `longitude ${row.longitude} out of range`);
+      check(row.iata === null || row.iata.length <= 3, `iata_code "${row.iata}" longer than 3`);
+      check(row.icao === null || row.icao.length <= 4, `icao_code "${row.icao}" longer than 4`);
+      return row;
+    },
   },
 ];
 
@@ -62,11 +91,12 @@ async function count(table: string): Promise<number> {
 
 async function main() {
 let failed = false;
-for (const spec of SPECS) {
+for (const spec of SPECS_ALL.filter((s) => !ONLY || ONLY.includes(s.table))) {
   const raw = parse(readFileSync(join(process.cwd(), spec.file), "utf8"), { columns: true, skip_empty_lines: true }) as Record<string, string>[];
   const rows: Record<string, Val>[] = [];
   const rejected: string[] = [];
-  raw.forEach((r, i) => { try { const m = spec.map(r); if (!m.ident) throw new Error("missing ident"); rows.push(m); } catch (e) { rejected.push(`line ${i + 2} (${r.ident}): ${(e as Error).message}`); } });
+  const seen = new Set<string>();
+  raw.forEach((r, i) => { try { const m = spec.map(r); if (!m.ident) throw new Error("missing ident"); if (seen.has(String(m.ident))) throw new Error("duplicate ident"); seen.add(String(m.ident)); rows.push(m); } catch (e) { rejected.push(`line ${i + 2} (${r.ident}): ${(e as Error).message}`); } });
   if (!dryRun) {
     for (let i = 0; i < rows.length; i += BATCH) {
       const batch = rows.slice(i, i + BATCH);

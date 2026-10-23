@@ -2,7 +2,7 @@ openapi: 3.1.0
 info:
   title: AVGeekDB API
   version: 0.1.0
-  description: Free API for aircraft types, airlines and airports. Requires an API key (x-api-key). Current data is SAMPLE only.
+  description: Free API for aircraft types, airlines and airports. Requires an API key (x-api-key). Includes real airlines, aircraft types and airports (OurAirports); airline hubs are still SAMPLE only.
   license: { name: MIT, identifier: MIT }
 servers: [{ url: "https://example.com/v1", description: "TODO: production domain" }]
 security: [{ ApiKey: [] }]
@@ -50,7 +50,7 @@ paths:
   /airports:
     get:
       summary: List/search airports
-      parameters: [{ $ref: "#/components/parameters/q" }, { $ref: "#/components/parameters/limit" }, { $ref: "#/components/parameters/offset" }, { $ref: "#/components/parameters/iata" }, { $ref: "#/components/parameters/icao" }, { $ref: "#/components/parameters/country" }, { name: type, in: query, schema: { type: string } }]
+      parameters: [{ $ref: "#/components/parameters/q" }, { $ref: "#/components/parameters/limit" }, { $ref: "#/components/parameters/offset" }, { $ref: "#/components/parameters/iata" }, { $ref: "#/components/parameters/icao" }, { $ref: "#/components/parameters/country" }, { name: ident, in: query, schema: { type: string } }, { name: type, in: query, schema: { type: string, enum: [large_airport, medium_airport, small_airport, heliport, seaplane_base, balloonport, closed] } }, { name: continent, in: query, schema: { type: string, enum: [AF, AN, AS, EU, NA, OC, SA] } }, { name: iso_region, in: query, schema: { type: string }, description: "e.g. US-NY" }, { name: scheduled_service, in: query, schema: { type: boolean } }]
       responses:
         "200":
           description: OK

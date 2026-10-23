@@ -1,12 +1,12 @@
 import type { Entity, Row } from "./types";
 
 export const FILTERS: Record<Entity, string[]> = {
-  airports: ["iata", "icao", "country", "type"],
+  airports: ["ident", "iata", "icao", "country", "type", "continent", "iso_region", "scheduled_service"],
   airlines: ["ident", "iata", "icao", "country", "country_code", "active", "major", "hub"],
   aircraft_types: ["ident", "icao", "iata", "family", "manufacturer", "engine_type", "aircraft_type", "status", "in_production", "major", "cargo", "military", "is_primary"],
 };
 const SEARCH_FIELDS: Record<Entity, string[]> = {
-  airports: ["name", "city", "iata", "icao", "ident"],
+  airports: ["name", "municipality", "iata", "icao", "ident", "keywords"],
   airlines: ["name", "callsign", "iata", "icao", "ident"],
   aircraft_types: ["name", "short_name", "alternate_names", "family", "manufacturer", "icao", "iata", "ident"],
 };

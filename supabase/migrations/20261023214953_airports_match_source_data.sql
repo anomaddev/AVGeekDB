@@ -1,4 +1,4 @@
--- Airports alignment to OurAirports layout. Held until Justin is ready to move airports.
+-- Airports alignment to the OurAirports layout (data/temp_data/airports.csv). Approved Oct 23 2026.
 -- airports -------------------------------------------------------------------
 alter table public.airports rename column city to municipality;
 alter table public.airports
