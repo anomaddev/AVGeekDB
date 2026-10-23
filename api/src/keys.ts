@@ -7,7 +7,7 @@ export const DEMO_KEY = "avg_demo_0000000000000000000000000000";
 /** Generate a new key. Return plaintext ONCE to the user; store only hash + prefix. */
 export function generateApiKey(): { key: string; prefix: string } {
   const key = KEY_PREFIX + randomBytes(24).toString("base64url");
-  return { key, prefix: key.slice(0, 12) };
+  return { key, prefix: keyPrefix(key) };
 }
 
 export function hashApiKey(key: string, pepper = process.env.API_KEY_PEPPER ?? ""): string {
@@ -20,7 +20,14 @@ export function safeEqualHex(a: string, b: string): boolean {
 }
 
 export interface KeyRecord { id: string; user_id: string; revoked_at: string | null }
-export interface KeyStore { findByHash(hash: string): Promise<KeyRecord | null>; recordUsage(keyId: string, endpoint: string, status: number): Promise<void> }
+/** Display/lookup prefix stored with each key (`api_keys.prefix`, indexed). */
+export const keyPrefix = (key: string) => key.slice(0, 12);
+export interface KeyStore {
+  findByHash(hash: string): Promise<KeyRecord | null>;
+  /** Optional indexed lookup by stored prefix; verifyApiKey then compares hashes in constant time. */
+  findByPrefix?(prefix: string): Promise<(KeyRecord & { key_hash: string })[]>;
+  recordUsage(keyId: string, endpoint: string, status: number): Promise<void>;
+}
 
 /** In-memory store used in mock mode / tests. */
 export class MemoryKeyStore implements KeyStore {
@@ -36,7 +43,12 @@ export type AuthResult = { ok: true; keyId: string } | { ok: false; status: 401 
 export async function verifyApiKey(key: string | null, store: KeyStore): Promise<AuthResult> {
   if (!key) return { ok: false, status: 401, error: "Missing x-api-key header" };
   if (!key.startsWith(KEY_PREFIX)) return { ok: false, status: 401, error: "Malformed API key" };
-  const rec = await store.findByHash(hashApiKey(key));
+  const hash = hashApiKey(key);
+  let rec: KeyRecord | null;
+  if (store.findByPrefix) {
+    const hit = (await store.findByPrefix(keyPrefix(key))).find((c) => safeEqualHex(c.key_hash, hash));
+    rec = hit ? { id: hit.id, user_id: hit.user_id, revoked_at: hit.revoked_at } : null;
+  } else rec = await store.findByHash(hash);
   if (!rec) return { ok: false, status: 401, error: "Invalid API key" };
   if (rec.revoked_at) return { ok: false, status: 403, error: "API key revoked" };
   return { ok: true, keyId: rec.id };
