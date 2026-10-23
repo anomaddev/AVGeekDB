@@ -10,7 +10,6 @@ const config: NextConfig = {
   // Hostinger runs only `npm run build`; standalone gives a self-contained server at .next/standalone/web/server.js.
   output: "standalone",
   transpilePackages: ["@avgeekdb/api"],
-  serverExternalPackages: ["csv-parse"],
   turbopack: { root: join(__dirname, "..") },
   // npm workspaces: trace from repo root so @avgeekdb/api is bundled. Data files are copied by scripts/postbuild-standalone.mjs.
   outputFileTracingRoot: join(__dirname, ".."),
