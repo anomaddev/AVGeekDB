@@ -38,7 +38,7 @@ export class SupabaseKeyStore implements KeyStore {
 }
 
 const COLUMNS: Record<Entity, string> = {
-  airports: "ident, type, name, latitude, longitude, elevation_ft, continent, country, iso_region, municipality, scheduled_service, icao, iata, gps_code, local_code, home_link, wikipedia_link, keywords",
+  airports: "ident, iata, icao, name, city, country, latitude, longitude, elevation_ft, type",
   airlines: "id, ident, name, iata, icao, callsign, country, country_code, active, major",
   aircraft_types: "ident, icao, iata, family, name, short_name, alternate_names, manufacturer, engine_count, engine_type, aircraft_type, in_production, status, major, cargo, military, wiki_link, is_primary, wake_category",
 };
