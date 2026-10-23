@@ -39,6 +39,10 @@ by an audit trigger, and rows carry `updated_at` + `row_version`.
 
 ## API
 `GET /v1/airports | /v1/airlines | /v1/aircraft` with `q`, entity filters, `limit` (max 100), `offset`.
+Airline fields: `ident, name, iata, icao, callsign, country, country_code, active, major, is_sample, hubs` (filters: `ident, iata, icao, country, country_code, active, major, hub`).
+Aircraft fields: `ident, icao, iata, family, name, short_name, alternate_names[], manufacturer, engine_count, engine_type, aircraft_type, in_production, status, major, cargo, military, wiki_link, is_primary, wake_category, is_sample` (filters: `ident, icao, iata, family, manufacturer, engine_type, aircraft_type, status, in_production, major, cargo, military, is_primary`). One ICAO code can cover several variants; `is_primary` marks the main one.
+
+Load the real lists into Supabase with `npx tsx scripts/import-source-data.ts` (upserts `data/airlines/airlines_full.csv` and `data/aircraft_types/aircraft.csv` on `ident`; `--dry-run` to validate only).
 Auth header `x-api-key`. Responses include `meta.data_version` and the `x-data-version` header, plus `x-ratelimit-*` headers.
 See `/docs` or `web/openapi.yaml`.
 

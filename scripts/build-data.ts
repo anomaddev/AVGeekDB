@@ -33,12 +33,12 @@ for (const entity of DATASETS) {
     if (!validate(r)) { failed = true; console.error(`${entity} row ${i + 2}:`, ajv.errorsText(validate.errors)); }
   });
   writeFileSync(join(dist, "json", `${entity}.json`), JSON.stringify({ data_version: version, sample: true, data: rows }, null, 2));
-  writeFileSync(join(dist, "csv", `${entity}.csv`), `# avgeekdb data_version=${version}\n` + stringify(rows, { header: true, cast: { boolean: (b) => String(b) } }));
+  writeFileSync(join(dist, "csv", `${entity}.csv`), `# avgeekdb data_version=${version}\n` + stringify(rows.map((r) => Object.fromEntries(Object.entries(r).map(([k, v]) => [k, Array.isArray(v) ? v.join(",") : v]))), { header: true, cast: { boolean: (b) => String(b) } }));
 
   const cols = Object.keys(schema.properties as object);
   db.exec(`CREATE TABLE ${entity} (${cols.map((c) => `"${c}"`).join(", ")})`);
   const ins = db.prepare(`INSERT INTO ${entity} VALUES (${cols.map(() => "?").join(", ")})`);
-  db.transaction(() => rows.forEach((r) => ins.run(cols.map((c) => (typeof r[c] === "boolean" ? Number(r[c]) : r[c] ?? null)))))();
+  db.transaction(() => rows.forEach((r) => ins.run(cols.map((c) => (typeof r[c] === "boolean" ? Number(r[c]) : Array.isArray(r[c]) ? (r[c] as string[]).join(",") : r[c] ?? null)))))();
   console.log(`${entity}: ${rows.length} rows`);
 }
 db.close();
