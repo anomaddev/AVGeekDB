@@ -14,7 +14,7 @@
     "lint": "npm run lint -w web",
     "typecheck": "tsc -p tsconfig.json --noEmit && npm run typecheck -w web",
     "test": "vitest run",
-    "build": "npm run data:build && npm run build -w web"
+    "build": "npm run data:build && npm run build -w web && node scripts/postbuild-standalone.mjs"
   },
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.11",
