@@ -38,12 +38,12 @@ export class SupabaseKeyStore implements KeyStore {
 }
 
 const COLUMNS: Record<Entity, string> = {
-  airports: "ident, iata, icao, name, city, country, latitude, longitude, elevation_ft, type, is_sample",
-  airlines: "id, iata, icao, name, callsign, country, active, is_sample",
-  aircraft_types: "icao_code, iata_code, manufacturer, model, engine_type, engine_count, wake_category, is_sample",
+  airports: "ident, type, name, latitude, longitude, elevation_ft, continent, country, iso_region, municipality, scheduled_service, icao, iata, gps_code, local_code, home_link, wikipedia_link, keywords",
+  airlines: "id, ident, name, iata, icao, callsign, country, country_code, active, major",
+  aircraft_types: "ident, icao, iata, family, name, short_name, alternate_names, manufacturer, engine_count, engine_type, aircraft_type, in_production, status, major, cargo, military, wiki_link, is_primary, wake_category",
 };
-const ORDER: Record<Entity, string> = { airports: "ident", airlines: "id", aircraft_types: "icao_code" };
-const trimChars = (r: Record<string, unknown>): Row => Object.fromEntries(Object.entries(r).map(([k, v]) => [k, typeof v === "string" ? v.trim() : (v as Row[string])]));
+const ORDER: Record<Entity, string> = { airports: "ident", airlines: "ident", aircraft_types: "ident" };
+const trimChars = (r: Record<string, unknown>): Row => Object.fromEntries(Object.entries(r).map(([k, v]) => [k, typeof v === "string" ? v.trim() : (v as Row[string])])) as Row;
 
 /**
  * Reads reference tables from Supabase with a short in-memory cache, then reuses the shared queryRows filters.
