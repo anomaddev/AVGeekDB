@@ -1,0 +1,91 @@
+ident,field,current_value,issue,source_url
+GL8T,ident,GL8T,ident equals obsolete/invalid designator; icao corrected to GL7T. Rename ident? (left unchanged as row key),https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+C552,ident,C552,ident equals obsolete/invalid designator; icao corrected to C55B. Rename ident? (left unchanged as row key),https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+S550,ident,S550,ident equals obsolete/invalid designator; icao corrected to C550. Rename ident? (left unchanged as row key),https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+D27,ident,D27,ident equals obsolete/invalid designator; icao corrected to DO27. Rename ident? (left unchanged as row key),https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+D28,ident,D28,ident equals obsolete/invalid designator; icao corrected to DO28. Rename ident? (left unchanged as row key),https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+S210,icao,S210,designator not present in current ICAO Doc 8643 dataset (likely withdrawn/historic or never assigned); verify against archived Doc 8643,https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+A225,icao,A225,designator not present in current ICAO Doc 8643 dataset (likely withdrawn/historic or never assigned); verify against archived Doc 8643,https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+b731_100,icao,B731,designator not present in current ICAO Doc 8643 dataset (likely withdrawn/historic or never assigned); verify against archived Doc 8643,https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+B74D,icao,B74D,designator not present in current ICAO Doc 8643 dataset (likely withdrawn/historic or never assigned); verify against archived Doc 8643,https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+CONC,icao,CONC,designator not present in current ICAO Doc 8643 dataset (likely withdrawn/historic or never assigned); verify against archived Doc 8643,https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+dc1,icao,DC1,designator not present in current ICAO Doc 8643 dataset (likely withdrawn/historic or never assigned); verify against archived Doc 8643,https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+dc5,icao,DC5,designator not present in current ICAO Doc 8643 dataset (likely withdrawn/historic or never assigned); verify against archived Doc 8643,https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+dc85,icao,DC85,designator not present in current ICAO Doc 8643 dataset (likely withdrawn/historic or never assigned); verify against archived Doc 8643,https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+atp_passenger,icao,ATP,designator not present in current ICAO Doc 8643 dataset (likely withdrawn/historic or never assigned); verify against archived Doc 8643,https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+atp_freighter,icao,ATP,designator not present in current ICAO Doc 8643 dataset (likely withdrawn/historic or never assigned); verify against archived Doc 8643,https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+cl44_d4,icao,CL44,designator not present in current ICAO Doc 8643 dataset (likely withdrawn/historic or never assigned); verify against archived Doc 8643,https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+cl44_d4_8,icao,CL44,designator not present in current ICAO Doc 8643 dataset (likely withdrawn/historic or never assigned); verify against archived Doc 8643,https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+cl44_j,icao,CL44,designator not present in current ICAO Doc 8643 dataset (likely withdrawn/historic or never assigned); verify against archived Doc 8643,https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+IL12,icao,IL12,designator not present in current ICAO Doc 8643 dataset (likely withdrawn/historic or never assigned); verify against archived Doc 8643,https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+sa90,icao,S90,designator not present in current ICAO Doc 8643 dataset (likely withdrawn/historic or never assigned); verify against archived Doc 8643,https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+tu104,icao,T104,designator not present in current ICAO Doc 8643 dataset (likely withdrawn/historic or never assigned); verify against archived Doc 8643,https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+tu114,icao,T114,designator not present in current ICAO Doc 8643 dataset (likely withdrawn/historic or never assigned); verify against archived Doc 8643,https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+tu124,icao,T124,designator not present in current ICAO Doc 8643 dataset (likely withdrawn/historic or never assigned); verify against archived Doc 8643,https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+tu144,icao,T144,designator not present in current ICAO Doc 8643 dataset (likely withdrawn/historic or never assigned); verify against archived Doc 8643,https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+tu144_d,icao,T144,designator not present in current ICAO Doc 8643 dataset (likely withdrawn/historic or never assigned); verify against archived Doc 8643,https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+fa5x,icao,FA5X,designator not present in current ICAO Doc 8643 dataset (likely withdrawn/historic or never assigned); verify against archived Doc 8643,https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+A358,icao,A358,"A350-800 never built/cancelled; no Doc 8643 designator, IATA 358 unverified",https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+d328_eco,in_production,TRUE,status=Prototype but in_production=TRUE (D328eco not yet in series production) - inconsistent,
+fa5x,status,Retired,"Falcon 5X programme cancelled 2017 (prototype only, became 6X); Retired vs Conceptual/Prototype?",https://en.wikipedia.org/wiki/Dassault_Falcon_6X
+dove_carstedt600,engine_type,Turboprop,Carstedt Jet Liner 600 is a turboprop conversion but Doc 8643 DOVE is L2P only; keep or reassign?,https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+S58T,engine_count,2,Doc 8643 S58T = H1T (PT6T Twin-Pac counted as 1 power unit); dataset says 2 engines,https://doc8643.icao.int/external/aircrafttypes (ICAO Doc 8643 dataset)
+b778_8f,iata,,Conceptual/certification variant: IATA left blank (388/778 exist for base type only),https://en.wikipedia.org/wiki/List_of_aircraft_type_designators
+a388_800f,iata,,Conceptual/certification variant: IATA left blank (388/778 exist for base type only),https://en.wikipedia.org/wiki/List_of_aircraft_type_designators
+a388_900,iata,,Conceptual/certification variant: IATA left blank (388/778 exist for base type only),https://en.wikipedia.org/wiki/List_of_aircraft_type_designators
+a388_neo,iata,,Conceptual/certification variant: IATA left blank (388/778 exist for base type only),https://en.wikipedia.org/wiki/List_of_aircraft_type_designators
+a388_plus,iata,,Conceptual/certification variant: IATA left blank (388/778 exist for base type only),https://en.wikipedia.org/wiki/List_of_aircraft_type_designators
+e190f,iata,,Freighter/conversion variant: designator-level IATA (E90/E95/DC-10 codes) exists but freighter-specific code unverified; left blank,https://en.wikipedia.org/wiki/List_of_aircraft_type_designators
+e195f,iata,,Freighter/conversion variant: designator-level IATA (E90/E95/DC-10 codes) exists but freighter-specific code unverified; left blank,https://en.wikipedia.org/wiki/List_of_aircraft_type_designators
+md10,iata,,Freighter/conversion variant: designator-level IATA (E90/E95/DC-10 codes) exists but freighter-specific code unverified; left blank,https://en.wikipedia.org/wiki/List_of_aircraft_type_designators
+CL2T,iata,,No IATA code assigned per designator list ({{n/a}}); left blank,https://en.wikipedia.org/wiki/List_of_aircraft_type_designators
+galx,iata,,No IATA code assigned per designator list ({{n/a}}); left blank,https://en.wikipedia.org/wiki/List_of_aircraft_type_designators
+*,iata,(107 rows),"Remaining blank IATA codes (GA piston singles/twins, historic types, bizjets like FA10/FA20/GLF2/GLF3) have no code in available IATA list; left blank. Authoritative IATA SSIM Appendix A is paywalled.",https://en.wikipedia.org/wiki/List_of_aircraft_type_designators
+fa5x,alternate_names,,blank; no authoritative source for alternate names - left blank,
+fa6x,alternate_names,,blank; no authoritative source for alternate names - left blank,
+fa7x,alternate_names,,blank; no authoritative source for alternate names - left blank,
+fa8x,alternate_names,,blank; no authoritative source for alternate names - left blank,
+dc2,alternate_names,,blank; no authoritative source for alternate names - left blank,
+dc5,alternate_names,,blank; no authoritative source for alternate names - left blank,
+dc6b,alternate_names,,blank; no authoritative source for alternate names - left blank,
+md11_cf,alternate_names,,blank; no authoritative source for alternate names - left blank,
+md11_f,alternate_names,,blank; no authoritative source for alternate names - left blank,
+PA24,alternate_names,,blank; no authoritative source for alternate names - left blank,
+PA32,alternate_names,,blank; no authoritative source for alternate names - left blank,
+PA38,alternate_names,,blank; no authoritative source for alternate names - left blank,
+p68_observer,alternate_names,,blank; no authoritative source for alternate names - left blank,
+p68tc_observer,alternate_names,,blank; no authoritative source for alternate names - left blank,
+PC24,alternate_names,,blank; no authoritative source for alternate names - left blank,
+s61_l,alternate_names,,blank; no authoritative source for alternate names - left blank,
+s76_d,alternate_names,,blank; no authoritative source for alternate names - left blank,
+s92_aplus,alternate_names,,blank; no authoritative source for alternate names - left blank,
+S434,alternate_names,,blank; no authoritative source for alternate names - left blank,
+yk40k,alternate_names,,blank; no authoritative source for alternate names - left blank,
+y18t,alternate_names,,blank; no authoritative source for alternate names - left blank,
+yk58,alternate_names,,blank; no authoritative source for alternate names - left blank,
+tu144_d,alternate_names,,blank; no authoritative source for alternate names - left blank,
+tu154_m,alternate_names,,blank; no authoritative source for alternate names - left blank,
+tu214,alternate_names,,blank; no authoritative source for alternate names - left blank,
+tu334,alternate_names,,blank; no authoritative source for alternate names - left blank,
+*,iata,CNJ,33 Cessna Citation rows use generic IATA CNJ; Wikipedia list shows CJ1 for many C5xx types. Both appear in industry use; decide convention,https://en.wikipedia.org/wiki/List_of_aircraft_type_designators
+ba11_*,iata,B12/B13/B14/B15,Variant-level IATA codes vs designator list B11; dataset convention appears variant-level - confirm,https://en.wikipedia.org/wiki/List_of_aircraft_type_designators
+a332_200f,iata,32F,IATA differs from designator list: 33X? (list shows 332/33X),https://en.wikipedia.org/wiki/List_of_aircraft_type_designators
+b462_qt,iata,14F,IATA differs from designator list: 142,https://en.wikipedia.org/wiki/List_of_aircraft_type_designators
+b752_200m,iata,75M,IATA differs from designator list: 752/75F/75W,https://en.wikipedia.org/wiki/List_of_aircraft_type_designators
+B78X,iata,78J,IATA differs from designator list: 781 (list) - 78J is widely used too,https://en.wikipedia.org/wiki/List_of_aircraft_type_designators
+e175_sw,iata,E7W,IATA differs from designator list: E75,https://en.wikipedia.org/wiki/List_of_aircraft_type_designators
+BA11,primary,TRUE,4 rows with primary=TRUE for icao BA11 (expected one),
+B461,primary,TRUE,2 rows with primary=TRUE for icao B461 (expected one),
+B462,primary,TRUE,2 rows with primary=TRUE for icao B462 (expected one),
+GLEX,primary,TRUE,2 rows with primary=TRUE for icao GLEX (expected one),
+GL7T,primary,TRUE,2 rows with primary=TRUE for icao GL7T (expected one),
+ATP,primary,TRUE,2 rows with primary=TRUE for icao ATP (expected one),
+C550,primary,TRUE,2 rows with primary=TRUE for icao C550 (expected one),
+DC10,primary,TRUE,6 rows with primary=TRUE for icao DC10 (expected one),
+E190,primary,TRUE,2 rows with primary=TRUE for icao E190 (expected one),
+E195,primary,TRUE,2 rows with primary=TRUE for icao E195 (expected one),
+E135,primary,TRUE,2 rows with primary=TRUE for icao E135 (expected one),
+MD11,primary,TRUE,3 rows with primary=TRUE for icao MD11 (expected one),
+B753,primary,FALSE,no row with primary=TRUE for icao B753,
+*,schema,,"repo schema/aircraft_types.schema.json (icao_code/model/engine_type jet|turboprop|piston|electric/wake_category) is a placeholder that does not match temp_data columns; CSV vocabulary kept as-is. Only ICAO format ^[A-Z0-9]{2,4}$ applied (all pass).",
+*,ident,,"ident is variant-level (lowercase snake_case) for 400+ rows, ICAO-equal for others; mixed convention",

@@ -2,11 +2,12 @@
 
 Open, easy-to-use data for **aircraft types, airlines and airports**: downloadable dumps (CSV / JSON / SQLite) plus a free API (API key required).
 
-> ⚠️ **Scaffold only.** `data/` holds 3 clearly marked SAMPLE rows per entity (`is_sample=true`). Real sources TBD.
+> ⚠️ **Scaffold only.** Each `data/<entity>/<entity>.csv` holds 3 clearly marked SAMPLE rows (`is_sample=true`). Those are the files the API and `npm run data:build` load. `data/aircraft_types/aircraft.csv` is a verified type list in a wider format and is not that snapshot. Real sources for the schema snapshots are still TBD.
 
 ## Layout
 ```
-data/            canonical CSV per entity + VERSION (dataset version) + LICENSE.md (TODO)
+data/            canonical CSV per entity (`<entity>/<entity>.csv`) + VERSION (dataset version) + LICENSE.md (TODO)
+                 aircraft_types/ also holds aircraft.csv (verified list) plus changes.csv and flags.csv
 schema/          JSON Schema per entity (placeholder fields)
 scripts/         export-from-supabase.ts (Supabase → data/, used by the weekly snapshot workflow)
                  build-data.ts (validate -> dist/{csv,json}, avgeekdb.sqlite, manifest.json)
