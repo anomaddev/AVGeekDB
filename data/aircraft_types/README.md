@@ -13,4 +13,4 @@ Promoted from `data/temp_data/aircraft.csv` (that copy is removed). 651 rows in 
 - `changes.csv` — every applied field edit (`ident`, `field`, `old_value`, `new_value`, `source_url`, `reason`).
 - `flags.csv` — open issues left for a human. Nothing in that file was applied to `aircraft.csv`.
 
-`data/temp_data/airlines.csv`, `airports.csv`, and `bkp/` are unchanged.
+`data/temp_data/airports.csv` and `bkp/` are unchanged. The verified airline list lives at `data/airlines/airlines_full.csv`.

@@ -1,0 +1,1023 @@
+key,category,detail
+N12|12 North,invalid_icao_format,N12
+N12|12 North,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+VA3|3 Valleys Airlines,invalid_icao_format,VA3
+VA3|3 Valleys Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+BSX|Bassaka airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+TLM|Tramm Airlines,name_mismatch_vs_reference,Wikipedia lists TLM as 'Thai Lion Mentari' (Thailand) Associate of Lion Air
+ABJ|Abaet,name_mismatch_vs_reference,Wikipedia lists ABJ as 'Abaeté Linhas Aéreas' (Brazil) defunct
+BOI|Aboitiz Air,name_mismatch_vs_reference,Wikipedia lists BOI as '2GO' (Philippines) 
+ABG|Abakan-Avia,callsign_differs_from_reference,file=ABAKAN-AVIA wikipedia=ROYAL FLIGHT
+ABE|Aban Air,iata_differs_from_reference,file=K5 wikipedia='' note='Former IATA code: K5'
+AIJ|ABC Aerolineas,name_mismatch_vs_reference,Wikipedia lists AIJ as 'Interjet' (Mexico) defunct
+ADJ|Abicar,country_differs_from_reference,file=Ivory Coast wikipedia=Côte d'Ivoire
+TUS|ABSA - Aerolinhas Brasileiras,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ADE|Ada Air,iata_differs_from_reference,"file=ZY wikipedia='' note='defunct, former IATA code: ZY'"
+SAE|SOCHI AIR EXPRESS,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+TUY|Linea Turistica Aerotuy,iata_differs_from_reference,file=LD wikipedia='' note=''
+ACO|Aero Comondu,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+RDN|Dinar,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+DYN|Aero Dynamics,name_mismatch_vs_reference,Wikipedia lists DYN as 'California Pacific Airlines' (United States) Defunct
+MNG|Aero Mongolia,iata_differs_from_reference,file=M0 wikipedia='' note=''
+ACR|Aerocenter,name_mismatch_vs_reference,"Wikipedia lists ACR as 'Aerocenter, Escuela de Formación de Pilotos Privados de Avión' (Spain) "
+ARD|Aerocondor,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ADY|Aerodyne,name_mismatch_vs_reference,Wikipedia lists ADY as 'Air Arabia Abu Dhabi' (United Arab Emirates) 
+GLG|Aerolineas Galapagos (Aerogal),name_mismatch_vs_reference,Wikipedia lists GLG as 'Avianca Ecuador' (Ecuador) Aerolíneas Galápagos SA
+LAG|Aerovias De Lagos,name_mismatch_vs_reference,Wikipedia lists LAG as 'Aviation Legacy' (Gambia) 
+APP|Aerolineas Pacifico Atlantico,name_mismatch_vs_reference,Wikipedia lists APP as 'AlpAvia d.o.o.' (Slovenia) 
+APU|Aeropuma,country_differs_from_reference,file=Venezuela wikipedia=El Salvador
+EAS|Executive Aerospace,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+AEP|Aerotec,name_mismatch_vs_reference,Wikipedia lists AEP as 'Aerotec Escuela de Pilotos' (Spain) 
+AET|Aeronautical Radio of Thailand,name_mismatch_vs_reference,Wikipedia lists AET as 'Aero-Palma' (Spain) defunct
+AAP|Aerovista Airlines,country_differs_from_reference,file=United Arab Emirates wikipedia=Kyrgyzstan
+AFW|Afrique Regional Airways,country_differs_from_reference,file=Ivory Coast wikipedia=Côte d'Ivoire
+AAX|Afric'air Express,country_differs_from_reference,file=Ivory Coast wikipedia=Côte d'Ivoire
+AFI|Africaone,country_differs_from_reference,file=Uganda wikipedia=The Gambia
+AFV|Air Afrique Vacancies,country_differs_from_reference,file=Ivory Coast wikipedia=Côte d'Ivoire
+AI0|Air Indus,invalid_icao_format,AI0
+AI0|Air Indus,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+AOW|Air Andaman,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+VAV|Angkor Air,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ABL|Air Busan,country_differs_from_reference,file=Republic of Korea wikipedia=South Korea
+SEH|Sky Express,iata_differs_from_reference,file=G3 wikipedia='' note=''
+ADO|Hokkaido International Airlines,name_mismatch_vs_reference,Wikipedia lists ADO as 'AIRDO' (Japan) 
+AEL|Air Europe,active_but_reference_defunct,defunct
+FLZ|Air Florida,name_mismatch_vs_reference,Wikipedia lists FLZ as 'Aero Leasing' (United States) dba Air Florida
+AHO|Air Hamburg (AHO),iata_differs_from_reference,file=HH wikipedia='' note=''
+AEY|Air Italy,iata_differs_from_reference,file=I9 wikipedia='IG' note='merged into Meridiana'
+KBZ|Air KBZ,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+KOR|Air Koryo,country_differs_from_reference,file=Democratic People's Republic of Korea wikipedia=North Korea
+MJP|Air Majoro,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+MKG|Air Mekong,callsign_differs_from_reference,file=Air Mekong wikipedia=MEKONG
+AMW|Air Midwest,name_mismatch_vs_reference,Wikipedia lists AMW as 'Armenia Airways' (Armenia) 
+RON|Nauru Air Corporation,name_mismatch_vs_reference,Wikipedia lists RON as 'Our Airline' (Nauru) formerly Air Nauru
+RWZ|Red Wings,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+FDA|African Airlines,name_mismatch_vs_reference,Wikipedia lists FDA as 'Fuji Dream Airlines' (Japan) 
+CQH|Spring Airlines,iata_differs_from_reference,file=9S wikipedia='9C' note=''
+SWN|West Air Sweden,iata_differs_from_reference,file=PT wikipedia='T2' note=''
+JAS|Japan Air System,name_mismatch_vs_reference,Wikipedia lists JAS as 'Jet Aviation Flight Services' (United States) 
+TOP|Top Air,country_differs_from_reference,file=Turkey wikipedia=Indonesia
+AWI|Air Wisconsin,callsign_differs_from_reference,file=AIR WISCONSIN wikipedia=WISCONSIN
+RMU|C.S.P.,name_mismatch_vs_reference,"Wikipedia lists RMU as 'C.S.P., Societe' (Mauritania) "
+RKA|Air Afrique,iata_differs_from_reference,file=RK wikipedia='' note=''
+AIB|Airbus Industrie,iata_differs_from_reference,file=AP wikipedia='4Y' note=''
+CPI|CAI,name_mismatch_vs_reference,Wikipedia lists CPI as 'Compagnia Aeronautica Italiana' (Italy) 
+TPC|Air Cal,name_mismatch_vs_reference,Wikipedia lists TPC as 'Air Calédonie' (France) 
+ZX|Air BC,ident_icao_mismatch,ident=ZX icao=ABL
+KYV|Kibris T,name_mismatch_vs_reference,Wikipedia lists KYV as 'Cyprus Turkish Airlines' (Turkey) Ceased operations 2010
+XBM|CBM America,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ATM|Airlines Of Tasmania,name_mismatch_vs_reference,Wikipedia lists ATM as 'Par Avion' (Australia) 
+AWV|Airwave Transport,country_differs_from_reference,file=United States wikipedia=Canada
+AAS|Askari Aviation,callsign_differs_from_reference,file=AL-AAS wikipedia=AL-ASS
+SMX|Alitalia Express,iata_differs_from_reference,file=XM wikipedia='' note=''
+LLR|Alliance Air,name_mismatch_vs_reference,Wikipedia lists LLR as 'Thai Sky Airlines' (Thailand) 
+ALW|Alas Nacionales,country_differs_from_reference,file=Chile wikipedia=Dominican Republic
+AIH|Alpine Air Chile,name_mismatch_vs_reference,Wikipedia lists AIH as 'Air Incheon' (South Korea) 
+ALV|Alas de Venezuela,callsign_differs_from_reference,file=ALVEN wikipedia=AEROPOSTAL
+AAM|Aviation Management Corporation,name_mismatch_vs_reference,Wikipedia lists AAM as 'Aim Air' (Moldova) 
+AGT|Amadeus Global Travel Distribution,name_mismatch_vs_reference,Wikipedia lists AGT as 'Amadeus IT Group' (Spain) 
+NCL|ACA-Ancargo Air Sociedade de Transporte de Carga Lda,name_mismatch_vs_reference,Wikipedia lists NCL as 'ACA (Ancargo Air)' (Angola) defunct
+ANU|Andalus Lineas Aereas,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+NDN|Transportes Aereos Cielos Andinos,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ANQ|Aerol,name_mismatch_vs_reference,Wikipedia lists ANQ as 'Aerolínea de Antioquia' (Colombia) 
+IWA|Apache Air,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+FEI|Eagle Air Iceland,name_mismatch_vs_reference,Wikipedia lists FEI as 'Eagle Air' (Iceland) 
+AKR|Arctic Air,name_mismatch_vs_reference,Wikipedia lists AKR as 'Aero Clinker' (Mexico) 
+RCT|Ryan Air Service,name_mismatch_vs_reference,Wikipedia lists RCT as 'Skyview Airways' (THAILAND) 2014
+JFU|Jet4You,iata_differs_from_reference,file=8J wikipedia='' note=''
+ARA|Arik Air,iata_differs_from_reference,file=W3 wikipedia='' note=''
+TFL|Arkefly,name_mismatch_vs_reference,Wikipedia lists TFL as 'TUI fly Netherlands' (Netherlands) 
+ARQ|Armstrong Air,country_differs_from_reference,file=United States wikipedia=Canada
+RBX|Arubaexel,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+AXM|AirAsia,callsign_differs_from_reference,file=ASIAN EXPRESS wikipedia=RED CAP
+AWM|Asian Wings Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+AAR|Asiana Airlines,country_differs_from_reference,file=Republic of Korea wikipedia=South Korea
+AOI|Astoria,country_differs_from_reference,file=United States wikipedia=Canada
+ASU|Compania Boliviana de Transporte Aereo Privado Aerosur,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+A1F|Atifly,invalid_icao_format,A1F
+A1F|Atifly,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+AUK|AUOS,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CHP|Consorcio Aviaxsa,name_mismatch_vs_reference,Wikipedia lists CHP as 'Aviacsa' (Mexico) 
+AVA|Avianca - Aerovias Nacionales de Colombia,name_mismatch_vs_reference,Wikipedia lists AVA as 'Avianca' (Colombia) 
+AXV|Aviaxess,name_mismatch_vs_reference,Wikipedia lists AXV as 'AVA Airlines' (Iran) 
+AJA|A J Services,name_mismatch_vs_reference,Wikipedia lists AJA as 'Afghan Jet International Airlines' (Afghanistan) 
+AZT|Azimut,country_differs_from_reference,file=Russia wikipedia=Spain
+ATG|Aerotrans Airline,callsign_differs_from_reference,file=BACHYT wikipedia=MOLDCARGO
+ATG|Aerotrans Airline,country_differs_from_reference,file=Kazakhstan wikipedia=Moldova
+ZTT|ZABAIKAL AIRLINES,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ABP|Aba Air,name_mismatch_vs_reference,Wikipedia lists ABP as 'ABS Jets' (Czech Republic) Named changed from Aba Air
+BAJ|Baker Aviation,callsign_differs_from_reference,file=BAKER AVIATION wikipedia=RODEO
+LZ|Balkan Bulgarian Airlines,ident_icao_mismatch,ident=LZ icao=LZB
+LZ|Balkan Bulgarian Airlines,iata_differs_from_reference,file=LZ wikipedia='FB' note=''
+LZ|Balkan Bulgarian Airlines,callsign_differs_from_reference,file=BALKAN wikipedia=FLYING BULGARIA
+BTL|Baltia Air Lines,callsign_differs_from_reference,file=BALTIA FLIGHT wikipedia=BALTIA
+BA1|Baltic Air lines,invalid_icao_format,BA1
+BA1|Baltic Air lines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+BTV|Metro Batavia,iata_differs_from_reference,"file=7P wikipedia='Y6' note='As of June 1, 2010, IATA code changed to Y6.'"
+EXH|G5 Executive,country_differs_from_reference,file=Germany wikipedia=Switzerland
+BAY|Bayon Airlines,callsign_differs_from_reference,file=BAYON wikipedia=BRAVOAVIANCA
+BAY|Bayon Airlines,country_differs_from_reference,file=Cambodia wikipedia=Ukraine
+BYE|Bayu Indonesia Air,iata_differs_from_reference,file=BM wikipedia='' note=''
+EGH|BBN-Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+TUB|TUI Airlines Belgium,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+JAF|Jetairfly,iata_differs_from_reference,file=JF wikipedia='' note=''
+DAT|Brussels Airlines,name_mismatch_vs_reference,Wikipedia lists DAT as 'Lynx Air' (Canada) 
+BVU|Bellview Airlines,name_mismatch_vs_reference,"Wikipedia lists BVU as 'Bellview Airlines, Sierra Leone' (Sierra Leone) "
+KGZ|Kyrgyz Airlines,iata_differs_from_reference,file=N5 wikipedia='' note=''
+BSK|Miami Air International,iata_differs_from_reference,"file=GL wikipedia='LL' note='Previous IATA Code ""GL""'"
+BBD|Bluebird Cargo,iata_differs_from_reference,file=BF wikipedia='BO' note=''
+JOR|Blue Air,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+LBL|Line Blue,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+VBI|Virgin Blue,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+PYB|All America BOPY,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+BXR|Redding Aero Enterprises,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+BRA|Braathens,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+BRV|Bravo Air Congo,iata_differs_from_reference,file=K6 wikipedia='' note='defunct'
+ROM|Aeromar,name_mismatch_vs_reference,Wikipedia lists ROM as 'Aeromar Lineas Aereas Dominicanas' (Dominican Republic) defunct
+BZE|BRAZIL AIR,name_mismatch_vs_reference,Wikipedia lists BZE as 'Zenith Aviation' (United Kingdom) 2014
+VZA|ViznAir,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+RPA|Republic Airlines,iata_differs_from_reference,file=RW wikipedia='YX' note=''
+BWL|BWA (2002) Ltd,name_mismatch_vs_reference,Wikipedia lists BWL as 'British World Airlines' (United Kingdom) 
+BUC|Bulgarian Air Charter,callsign_differs_from_reference,file=BULGARIAN CHARTER wikipedia=EUROCHARTER
+TCV|TACV,country_differs_from_reference,file=Portugal wikipedia=Cape Verde
+ICL|CAL Cargo Air Lines,name_mismatch_vs_reference,Wikipedia lists ICL as 'Challenge Airlines IL' (Israel) ex CAL-Cargo Air Lines
+CLI|Calima Aviacion,name_mismatch_vs_reference,Wikipedia lists CLI as 'Clickair' (Spain) Merge into Vueling
+MCA|MCA Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+KHM|Cambodia Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CNN|Canadian World,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+YCP|Canadian National Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+RUN|ACT Havayollari,name_mismatch_vs_reference,Wikipedia lists RUN as 'Air ACT' (Turkey) 
+CBC|Caribair,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ZYZ|Caribbean Wings,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CTZ|CATA L,name_mismatch_vs_reference,Wikipedia lists CTZ as 'CATA Línea Aérea' (Argentina) 
+CWY|Woodgate Executive Air Charter,name_mismatch_vs_reference,Wikipedia lists CWY as 'Woodgate Aviation' (United Kingdom) 
+CA1|CanXpress,invalid_icao_format,CA1
+CA1|CanXpress,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CEB|Cebu Pacific,callsign_differs_from_reference,file=CEBU AIR wikipedia=CEBU
+CEL|CEIBA Intercontinental,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CLJ|Cello Aviation,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CNS|Centennial Flight Centre,name_mismatch_vs_reference,Wikipedia lists CNS as 'Cobalt Air LLC' (United States) 
+ATL|Aerocentral,name_mismatch_vs_reference,Wikipedia lists ATL as 'Atlas Air Service AG' (Germany) 
+CLW|Centralwings,iata_differs_from_reference,file=C0 wikipedia='' note=''
+CHK|Chalk's Ocean Airways,name_mismatch_vs_reference,Wikipedia lists CHK as 'Chalk's International Airlines' (United States) 
+CAA|Atlantic Southeast Airlines,name_mismatch_vs_reference,Wikipedia lists CAA as 'Civil Aviation Authority of the Czech Republic' (Czech Republic) 
+CSW|Worldwide Air Charter Systems,name_mismatch_vs_reference,Wikipedia lists CSW as 'Chair Airlines' (Switzerland) 
+FQR|CheapFlyingInternational,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CFN|Church Fenton Flying Training Unit,name_mismatch_vs_reference,Wikipedia lists CFN as 'RAF Church Fenton' (United Kingdom) Church Fenton Flying Training Unit
+YCC|Ciel Canadien,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+GTA|City Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+BCY|CityJet,callsign_differs_from_reference,file=CITY-IRELAND wikipedia=CITY JET
+FCB|COBALT,callsign_differs_from_reference,file=COBALT wikipedia=NEW AGE
+COL|Columbia Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+COH|Coltishall Flying Training Unit,name_mismatch_vs_reference,Wikipedia lists COH as 'RAF Coltishall' (United Kingdom) Coltishall Flying Training Unit
+EVC|Comfort Express Virtual Charters Albany,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CYM|Compass Airlines (Australia),icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+RSR|Aero-Service,country_code_inconsistent,Democratic Republic of the Congo -> CG (majority CD)
+RSR|Aero-Service,country_differs_from_reference,file=Democratic Republic of the Congo wikipedia=Republic of the Congo
+2CO|ConneX European Airline,invalid_icao_format,2CO
+2CO|ConneX European Airline,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+KIS|Contact Air,iata_differs_from_reference,file=C3 wikipedia='' note=''
+PVV|Continental Airways,name_mismatch_vs_reference,Wikipedia lists PVV as 'Fly Pro' (Moldova) 
+ABR|Air Contractors,name_mismatch_vs_reference,"Wikipedia lists ABR as 'ASL Airlines Ireland' (Ireland) Former IATA Code: AG; former names: Hunting Air Cargo Airlines, Air Contractors"
+CX0|Copenhagen Express,invalid_icao_format,CX0
+CX0|Copenhagen Express,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CCW|Coptrade Air Transport,name_mismatch_vs_reference,Wikipedia lists CCW as 'Central Charter' (Czech Republic) 
+SLI|Aerolitoral,name_mismatch_vs_reference,Wikipedia lists SLI as 'Aeroméxico Connect' (Mexico) 
+COT|Cottesmore Flying Training Unit,name_mismatch_vs_reference,Wikipedia lists COT as 'RAF Cottesmore' (United Kingdom) Royal Air Force (Cottesmore Flying Training Unit) - No longer allocated
+COW|Cowi,country_differs_from_reference,file=Netherlands wikipedia=Denmark
+UGX|East African,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CWL|Cranwell Flying Training Unit,name_mismatch_vs_reference,Wikipedia lists CWL as 'RAF Cranwell' (United Kingdom) Royal Air Force (Cranwell Flying Training Unit)
+CUD|Air Cudlua,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CIE|Czech Government Flying Service,callsign_differs_from_reference,file=CZECHIA wikipedia=CZECH REPUBLIC
+DHL|Astar Air Cargo,callsign_differs_from_reference,file=DAHL wikipedia=D-H-L
+DC2|Dense Connection,invalid_icao_format,DC2
+DC2|Dense Connection,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+DER|Deer Jet,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+DLK|Deccan Aviation (Lanka),name_mismatch_vs_reference,Wikipedia lists DLK as 'Millennium Airlines' (Sri Lanka) 
+VKH|Viking Hellas,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+DWA|Dense Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+DXT|Dexter (DXT),icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+DJB|Djibouti Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+DOB|Dobrolet,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+MDO|Domenican Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ADM|Aerolineas Dominicanas,name_mismatch_vs_reference,"Wikipedia lists ADM as 'Dominair' (Dominican Republic) defunct; former IATA code: SS; former name: Aerolíneas Dominicanas, ICAO code no"
+DNV|Aeroflot-Don,name_mismatch_vs_reference,Wikipedia lists DNV as 'Donavia' (Russia) formerly Aeroflot-Don
+THD|611897 Alberta Limited,name_mismatch_vs_reference,Wikipedia lists THD as 'Thai Smile Airways' (Thailand) 
+DCM|FLTPLAN,name_mismatch_vs_reference,Wikipedia lists DCM as 'FLTPLAN (anonymized service)' (United States) 3rd party Privacy ICAO Address (PIA) callsign used to obscure true airplane regi
+HDA|Dragonair,name_mismatch_vs_reference,Wikipedia lists HDA as 'Cathay Dragon' (Hong Kong) Defunct; IATA Code transferred to Aero Nomad Airlines
+DSY|Dennis Sky,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+DCD|Air 26,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+AUL|Aeroflot-Nord,name_mismatch_vs_reference,Wikipedia lists AUL as 'Nordavia' (Russia) 
+EGS|Eagles Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+EHN|East Horizon,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+EFY|EasyFly,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+EAV|Eastern Atlantic Virtual Airlines,name_mismatch_vs_reference,Wikipedia lists EAV as 'Eagle Airlines Luftverkehrsges' (Austria) 
+MSE|EgyptAir Express,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+FVM|Flugfelag Vestmannaeyja,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+EOS|Eliossola,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+MPE|Canadian North,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ENJ|Enerjet,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+RQX|Air Engiadina-BRN,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+IAG|EPAG Groupe Air France,name_mismatch_vs_reference,Wikipedia lists IAG as 'EPAG' (France) 
+4AA|Epic Holiday,invalid_icao_format,4AA
+4AA|Epic Holiday,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+EPS|Epps Air Service,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+EKA|Equaflight Service,country_code_inconsistent,Democratic Republic of the Congo -> CG (majority CD)
+EKA|Equaflight Service,country_differs_from_reference,file=Democratic Republic of the Congo wikipedia=Republic of the Congo
+ERR|Era Alaska,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CMA|Central European Airlines,name_mismatch_vs_reference,Wikipedia lists CMA as 'CMA-CGM AIRCARGO' (France) 
+EEU|Eurofly Service,iata_differs_from_reference,file=GJ wikipedia='' note=''
+EUV|EuropeSky,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+EUP|Euroair,name_mismatch_vs_reference,Wikipedia lists EUP as 'Pan Europeenne Air Service' (France) 
+SWU|Swiss European Air Lines,active_but_reference_defunct,Defunct; Reintegrated into Swiss International Air Lines on 19 April 2018
+BCS|European Air Transport,callsign_differs_from_reference,file=EUROTRANS wikipedia=POSTMAN
+XJC|Xclusive Jet Charter Limited,name_mismatch_vs_reference,Wikipedia lists XJC as 'XJC Limited' (United Kingdom) 
+EXV|Expo Aviation,name_mismatch_vs_reference,Wikipedia lists EXV as 'FitsAir' (Sri Lanka) 
+SXP|Sky Express,name_mismatch_vs_reference,Wikipedia lists SXP as 'Direct Fly' (Poland) defunct
+EZA|Eznis Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+X9F|FRA Air,invalid_icao_format,X9F
+X9F|FRA Air,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+EFA|Far Eastern Air Transport,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+SDI|San Dima Air,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+QFZ|Fars Air Qeshm,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+FYJ|FLYJET,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+FBL|Fly Brasil,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+UFS|UFS,name_mismatch_vs_reference,Wikipedia lists UFS as 'United Feeder Service' (United States) formerly part of United Express
+FNC|Finalair Congo,country_code_inconsistent,Democratic Republic of the Congo -> CG (majority CD)
+FNC|Finalair Congo,country_differs_from_reference,file=Democratic Republic of the Congo wikipedia=Republic of the Congo
+FCM|Flybe Finland Oy,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+FLB|German Air Force - FLB,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+OLS|Sol Lineas Aereas,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+FCP|Flight Corporation,name_mismatch_vs_reference,Wikipedia lists FCP as 'Nelson Aviation College Ltd' (New Zealand) Nelson Aviation College  Archived 2017-06-07 at the Wayback Machine
+FYA|Servicios Aereos Integrales / Flyant,name_mismatch_vs_reference,Wikipedia lists FYA as 'Flyant' (Spain) 
+FLO|Flycom,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+FHI|FlyHigh Airlines Ireland (FH),icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+FPT|FlyPortugal,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+FRD|Ford Motor Company,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+FGN|Gendarmie Nationale,name_mismatch_vs_reference,Wikipedia lists FGN as 'National Gendarmerie' (France) 
+MYW|My Way Airlines,callsign_differs_from_reference,file=FRANKY wikipedia=MYSKY
+MYW|My Way Airlines,country_differs_from_reference,file=Italy wikipedia=Georgia
+FHY|Free Bird Airlines,callsign_differs_from_reference,file=FREE BIRD wikipedia=FREEBIRD AIR
+GF5|Global Freightways,invalid_icao_format,GF5
+GF5|Global Freightways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+AXF|Asian Express Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+TVF|Transavia France,callsign_differs_from_reference,file=FRENCH SUN wikipedia=FRANCE SOLEIL
+FZW|Fly Africa Zimbabwe,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+GBK|Gabon Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+GDR|Gadair European Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+LTF|Lufttaxi Fluggesellschaft,iata_differs_from_reference,file=DV wikipedia='' note=''
+GJS|GoJet Airlines,callsign_differs_from_reference,file=GATEWAY wikipedia=LINDBERGH
+GMG|GM Helicopters,name_mismatch_vs_reference,Wikipedia lists GMG as 'GMG Airlines' (Bangladesh) 
+MJX|Euroline,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+GNN|Georgian International Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+GPL|DLR,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+GES|Gestair,iata_differs_from_reference,file=GP wikipedia='' note=''
+GWY|USA3000 Airlines,iata_differs_from_reference,file=U5 wikipedia='' note='was U5'
+IKM|Aero Survey,callsign_differs_from_reference,file=GHANA SURVEY wikipedia=EASY SHUTTLE
+GLB|Air Castle Corporation / Global Airways,name_mismatch_vs_reference,Wikipedia lists GLB as 'Global Airways (GLB)' (United States) Air Castle Corporation
+GAG|Global Air Operations,name_mismatch_vs_reference,Wikipedia lists GAG as 'Greybird Pilot Academy' (Denmark) 
+GSM|Flyglobespan,iata_differs_from_reference,file=B4 wikipedia='Y2' note='defunct'
+TGW|Tiger Airways,name_mismatch_vs_reference,Wikipedia lists TGW as 'Tigerair Singapore' (Singapore) Merged with Scoot
+TT|Tiger Airways Australia,ident_icao_mismatch,ident=TT icao=TGW
+TT|Tiger Airways Australia,name_mismatch_vs_reference,Wikipedia lists TGW as 'Tigerair Singapore' (Singapore) Merged with Scoot
+GOE|Go Fly (United Kingdom),icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+GOW|Go Air,name_mismatch_vs_reference,Wikipedia lists GOW as 'GoAir' (India) 
+GMR|Golden Myanmar Airlines,country_differs_from_reference,file=Burma wikipedia=Myanmar
+IKA|Gorkha Airlines,name_mismatch_vs_reference,Wikipedia lists IKA as 'Itek Air' (Kyrgyzstan) ?ICAO confirmed; IATA not
+GOT|Walter I Linkoping,name_mismatch_vs_reference,Wikipedia lists GOT as 'WaltAir' (Sweden) 
+WLG|Volga Aviaexpress,name_mismatch_vs_reference,Wikipedia lists WLG as 'Air Volga' (Russia) 
+GDC|Grand China Air,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+GRL|Air Greenland,country_differs_from_reference,file=Denmark wikipedia=Greenland
+SVG|SVG Air,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+AKG|84 Squadron Royal Air Force @ RAF Akrotiri,name_mismatch_vs_reference,Wikipedia lists AKG as 'No. 84 Squadron RAF' (United Kingdom) 
+GFA|Gulf Air,country_differs_from_reference,file=Oman wikipedia=Bahrain
+GBA|Gulf Air Bahrain,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+HCN|Halcyon Air/Bissau Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+HMT|Air Nova,country_differs_from_reference,file=Canada wikipedia=United Kingdom
+HBR|Hebradran Air Services,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+HFR|Heli France,iata_differs_from_reference,file=8H wikipedia='' note=''
+HEJ|Hellas Jet,iata_differs_from_reference,file=T4 wikipedia='HJ' note='ceased operation in 2010'
+HEY|Hellenic Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+HST|Hellenic Star Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+HMS|Hemus Air,iata_differs_from_reference,file=DU wikipedia='' note=''
+HRM|Hermes Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ADH|Air One,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+HYM|Himalayan Airlines,name_mismatch_vs_reference,Wikipedia lists HYM as 'HiSky' (Moldova) 
+HNX|Hankook Airline,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+GUN|Grant Aviation,iata_differs_from_reference,file=GS wikipedia='GV' note=''
+HH|Hope Air,missing_icao,no ICAO code; not verifiable
+IMP|Hellenic Imperial Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ITX|Imair Airlines,iata_differs_from_reference,file=IK wikipedia='' note=''
+IG1|Indya Airline Group,invalid_icao_format,IG1
+IG1|Indya Airline Group,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+IJT|InteliJet Airways,iata_differs_from_reference,file=IJ wikipedia='' note=''
+IJT|InteliJet Airways,country_differs_from_reference,file=Colombia wikipedia=United Kingdom
+IBZ|International Business Air,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+MTF|Interjet,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+IPV|Parmiss Airlines (IPV),icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+IRT|Irtysh Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+FIA|Four Island Air,name_mismatch_vs_reference,Wikipedia lists FIA as 'FlyOne' (Moldova) Allocated in 2016
+ACL|Itali Airlines,iata_differs_from_reference,file=9X wikipedia='FS' note='Former name: Transporti Aerei Italiani; former IATA Code: 9X*; former ICAO code:'
+ACL|Itali Airlines,callsign_differs_from_reference,file=ITALI wikipedia=SPADA
+IAM|Aeronautica Militare,name_mismatch_vs_reference,Wikipedia lists IAM as 'Italian Air Force' (Italy) 
+GI|Itek Air,ident_icao_mismatch,ident=GI icao=IKA
+JLJ|J-Air,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+JGN|Jagson Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+LEE|Leeming Flying Training Unit,name_mismatch_vs_reference,Wikipedia lists LEE as 'RAF Leeming' (United Kingdom) Royal Air Force (Leeming Flying Training Unit)
+JCB|J C Bamford (Excavators),name_mismatch_vs_reference,Wikipedia lists JCB as 'JCB (heavy equipment manufacturer)' (United Kingdom) 
+JDI|Jet Service,name_mismatch_vs_reference,Wikipedia lists JDI as 'Jet Story' (Poland) Formerly: Jet Service
+BTA|ExpressJet,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+JEA|Jet Air,name_mismatch_vs_reference,"Wikipedia lists JEA as 'OLT Express' (Poland) defunct, funded by acquisition of Jet Air and YES Airways"
+JTO|Jettor Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CO|Continental Express,missing_icao,no ICAO code; not verifiable
+FCA|First Choice Airways,name_mismatch_vs_reference,Wikipedia lists FCA as 'Fly-Coop Air Service' (Hungary) 
+JTG|Jettime,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+JTN|Jettrain Corporation,name_mismatch_vs_reference,Wikipedia lists JTN as 'Jet Test Intl.' (United States) 
+JWW|JetWind,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+JOY|Joy Air,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+DKH|Juneyao Airlines,callsign_differs_from_reference,file=JUNEYAO AIRLINES wikipedia=AIR JUNEYAO
+JPU|Jupiter Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+KND|Kan Air,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+VAU|V Australia Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+KZK|Air Kazakhstan,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+KWY|Key Air,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+KIN|Kinloss Flying Training Unit,name_mismatch_vs_reference,Wikipedia lists KIN as 'RAF Kinloss' (United Kingdom) Royal Air Force (Kinloss Flying Training Unit)
+KLM|KLM Royal Dutch Airlines,name_mismatch_vs_reference,Wikipedia lists KLM as 'KLM' (Netherlands) 
+CNT|CNET,name_mismatch_vs_reference,Wikipedia lists CNT as 'Centre national d'études des télécommunications - C.N.E.T.' (France) 
+KNA|Knight Air,callsign_differs_from_reference,file=KNIGHTAIR wikipedia=KUNMING AIR
+KNA|Knight Air,country_differs_from_reference,file=Canada wikipedia=China
+KCU|Skyline Ulasim Ticaret A.S.,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+KBR|KoralBlue Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+KAL|Korean Air,country_differs_from_reference,file=Republic of Korea wikipedia=South Korea
+KGO|Korongo Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+PFL|Pacific Flier,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+KSY|KSY,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+BOA|Boniair,country_differs_from_reference,file=Macedonia wikipedia=North Macedonia
+ZZZ|Zabaykalskii Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+LAN|LAN Airlines,name_mismatch_vs_reference,Wikipedia lists LAN as 'LATAM Chile' (Chile) 
+LNE|Aerolane,name_mismatch_vs_reference,Wikipedia lists LNE as 'LATAM Airlines Ecuador' (Ecuador) Líneas Aéreas Nacionales Del Ecuador
+LPR|L,name_mismatch_vs_reference,Wikipedia lists LPR as 'Líneas Aéreas Privadas Argentinas' (Argentina) defunct
+LER|Linea Aerea de Servicio Ejecutivo Regional,invalid_iata_format,8z
+LER|Linea Aerea de Servicio Ejecutivo Regional,iata_differs_from_reference,file=8z wikipedia='QL' note=''
+LLL|Lao Air Company,name_mismatch_vs_reference,Wikipedia lists LLL as 'Lao Skyway' (Lao People's Democratic Republic) 
+CUA|China United Airlines,iata_differs_from_reference,file=HR wikipedia='KN' note=''
+LTD|Southern Airways Express,name_mismatch_vs_reference,Wikipedia lists LTD as 'Executive Express Aviation/JA Air Charter' (United States) 
+GCB|Lignes Nationales Aeriennes - Linacongo,country_code_inconsistent,Democratic Republic of the Congo -> CG (majority CD)
+GCB|Lignes Nationales Aeriennes - Linacongo,country_differs_from_reference,file=Democratic Republic of the Congo wikipedia=Republic of the Congo
+MXI|MexicanaLink,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+LOP|Linton-on-Ouse Flying Training Unit,name_mismatch_vs_reference,Wikipedia lists LOP as 'RAF Linton-on-Ouse' (United Kingdom) Royal Air Force (Linton-on-Ouse Flying Training Unit)
+LNI|Lion Mentari Airlines,name_mismatch_vs_reference,Wikipedia lists LNI as 'Lion Air' (Indonesia) 
+LTU|Air Lituanica,name_mismatch_vs_reference,Wikipedia lists LTU as 'LTU International' (Germany) 
+LIX|LionXpress,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+LOC|Locair,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+LOS|Lossiemouth Flying Training Unit,name_mismatch_vs_reference,Wikipedia lists LOS as 'RAF Lossiemouth' (United Kingdom) Royal Air Force (Lossiemouth Flying Training Unit)
+LT|LTU International,ident_icao_mismatch,ident=LT icao=LTU
+AML|Air Malawi,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+MAV|Maldivo Airlines,name_mismatch_vs_reference,Wikipedia lists MAV as 'Manta Air' (Maldives) 
+MAH|Malév,name_mismatch_vs_reference,Wikipedia lists MAH as 'Malév Hungarian Airlines' (Hungary) defunct
+MXD|Malindo Air,callsign_differs_from_reference,file=Malindo wikipedia=MALINDO EXPRESS
+CT|Civil Air Transport,ident_icao_mismatch,ident=CT icao=CAT
+MNP|Spirit of Manila Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+MTO|Manitoulin Air Services,name_mismatch_vs_reference,Wikipedia lists MTO as 'Marathon Airlines' (Greece) 
+MYP|Mann Yadanarpon Airlines,country_differs_from_reference,file=Burma wikipedia=Myanmar
+SKV|Sky Regional Airlines,iata_differs_from_reference,file=RS wikipedia='KV' note=''
+MRH|Marham Flying Training Unit,name_mismatch_vs_reference,Wikipedia lists MRH as 'RAF Marham' (United Kingdom) Royal Air Force (Marham Flying Training Unit)
+1QA|Marysya Airlines,invalid_icao_format,1QA
+1QA|Marysya Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+M1F|Maryland Air,invalid_icao_format,M1F
+M1F|Maryland Air,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+MTW|Mauritania Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+MDP|Medallion Air,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+BIE|Air Mediterranee,iata_differs_from_reference,file=DR wikipedia='ML' note='defunct'
+ISS|Meridiana,callsign_differs_from_reference,file=MERAIR wikipedia=MERIDIANA
+MSO|Aerol,name_mismatch_vs_reference,Wikipedia lists MSO as 'Aerolíneas Mesoamericanas' (Mexico) 
+MXA|Mexicana de Aviaci,iata_differs_from_reference,file=MX wikipedia='' note=''
+MDW|Midway Airlines,active_but_reference_defunct,defunct
+DRU|Alrosa Mirny Air Enterprise,name_mismatch_vs_reference,Wikipedia lists DRU as 'Alrosa Air Company' (Russia) 
+MJG|Michael Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ZTF|Mongolian International Air Lines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+MGX|Montenegro Airlines,callsign_differs_from_reference,file=MONTAIR wikipedia=MONTENEGRO
+AMN|Air Montenegro,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+GUI|Aguilar Connect,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+UWW|LSM International,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+YZZ|LSM AIRLINES,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+LAM|Linhas A,name_mismatch_vs_reference,Wikipedia lists LAM as 'Linhas Aéreas de Moçambique' (Mozambique) 
+MWI|Malaysia Wings,name_mismatch_vs_reference,Wikipedia lists MWI as 'Malawian Airlines 2014' (Malawi) 
+IRG|Naft Air Lines,name_mismatch_vs_reference,Wikipedia lists IRG as 'Iranian Naft Airlines' (Iran) 
+LKA|Lao Capricorn Air,name_mismatch_vs_reference,Wikipedia lists LKA as 'Lao Central Airlines' (Lao People's Democratic Republic) Ceased operations in 2014
+NMA|Nesma Airlines,callsign_differs_from_reference,file=Nesma Airlines wikipedia=NESMA
+SNJ|Skynet Asia Airways,name_mismatch_vs_reference,Wikipedia lists SNJ as 'Solaseed Air' (Japan) 
+RNX|1Time Airline,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+FVG|VG Airlines (IV),icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+NAA|National Oceanic and Atmospheric Administration,name_mismatch_vs_reference,Wikipedia lists NAA as 'Norwegian Air Argentina' (Argentina) subsidiary of Norwegian Air Shuttle (Ceased operations 2019)
+NAX|Norwegian Air Shuttle,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+NGB|Nordic Global Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+NVD|Nordic Solutions,name_mismatch_vs_reference,Wikipedia lists NVD as 'Avion Express' (Lithuania) Name changed from Nordic Solutions Air
+NCC|North Coast Air Services Ltd,name_mismatch_vs_reference,"Wikipedia lists NCC as 'T3 Aviation, Inc.' (United States) 2020"
+NTM|North American Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+IBK|Norwegian Air International (D8),country_differs_from_reference,file=Norway wikipedia=Ireland
+NOV|Nova Airline,iata_differs_from_reference,file=M4 wikipedia='O9' note=''
+OAR|Orbit Regional Airlines,name_mismatch_vs_reference,Wikipedia lists OAR as 'ONE AIR' (Spain) 
+OAI|Orbit International Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ONE|Oceanair,name_mismatch_vs_reference,Wikipedia lists ONE as 'Avianca Brasil' (Brazil) Owned by Synergy Group
+OLT|Ostfriesische Lufttransport,name_mismatch_vs_reference,Wikipedia lists OLT as 'OLT Express Germany' (Germany) 
+OMS|Omskavia Airline,name_mismatch_vs_reference,Wikipedia lists OMS as 'SalamAir' (Oman) Oman’s first Low Cost Carrier
+OBS|Orbest,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+OBT|Orbit Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+OAB|Orbit Airlines Azerbaijan,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+GAP|Air Philippines,name_mismatch_vs_reference,Wikipedia lists GAP as 'PAL Express' (Philippines) Regional subsidiary of Philippine Airlines
+OZW|Skywest Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+FJI|Air Pacific,name_mismatch_vs_reference,Wikipedia lists FJI as 'Fiji Airways' (Fiji) 
+PCF|Pacific Air Express,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ABQ|Airblue,iata_differs_from_reference,file=ED wikipedia='PA' note=''
+ABQ|Airblue,callsign_differs_from_reference,file=PAKBLUE wikipedia=AIRBLUE
+PNF|Panafrican Airways,iata_differs_from_reference,file=PQ wikipedia='' note='defunct'
+PEV|Pegasus Aviation,name_mismatch_vs_reference,"Wikipedia lists PEV as 'People's' (Austria) Previously used by Pegaviation, and PeopleExpress (US low cost carrier 1981-87)"
+PDT|Piedmont Airlines,iata_differs_from_reference,file=PI wikipedia='PT' note='part of American Airlines Group'
+PHJ|Pim Air,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+UKP|United Kingdom Home Office,name_mismatch_vs_reference,Wikipedia lists UKP as 'National Police Air Service' (United Kingdom) 
+SPC|Skyworld Airlines,name_mismatch_vs_reference,Wikipedia lists SPC as 'Spark Air Cargo' (United States) 
+POE|Porter Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+PMM|Primair,name_mismatch_vs_reference,Wikipedia lists PMM as 'Paradigm Air Operators' (United States) 
+SDM|Rossiya-Russian Airlines,callsign_differs_from_reference,file=PULKOVO wikipedia=RUSSIA
+IRQ|Qeshm Air,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+QAQ|Qurinea Air Service,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+RAB|Rainbow Air (RAI),icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+RUE|Rainbow Air Euro,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+RPO|Rainbow Air Polynesia,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+RNY|Rainbow Air US,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+RAY|Rainbow Air Canada,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+RPX|BAC Express Airlines,name_mismatch_vs_reference,Wikipedia lists RPX as 'HD Air Ltd' (United Kingdom) 
+RAQ|Rath Aviaton,name_mismatch_vs_reference,Wikipedia lists RAQ as 'Rath Aviation' (Austria) 
+RAW|Royal Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+REB|Rebus,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+SAK|Red Arrows Display Squadron,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+IDX|Indonesa Air Aisa X,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+RHC|Redhill Aviation,iata_differs_from_reference,file=8L wikipedia='' note=''
+VRD|Virgin America,iata_differs_from_reference,file=VX wikipedia='' note=''
+RLT|Reliant Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+RXA|Regional Express,name_mismatch_vs_reference,Wikipedia lists RXA as 'Rex Airlines' (Australia) 
+RXX|Express Air Charter,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+RXR|REXAIR VIRTUEL,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+RTL|Rheintalflug,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+RSL|Rio Sul Servi,name_mismatch_vs_reference,Wikipedia lists RSL as 'Rio Sul Serviços Aéreos Regionais' (Brazil) defunct
+RJD|Rotana Jet,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+RYS|Royal Sky,name_mismatch_vs_reference,Wikipedia lists RYS as 'Buzz (Polish airline)' (Poland) 
+RS1|Royal Southern Airlines.,invalid_icao_format,RS1
+RS1|Royal Southern Airlines.,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CXP|Xtra Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+QER|SOCHI AIR CHATER,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+RSY|I-Fly,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+LJJ|Luchsh Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+RRJ|AirRussia,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+SJM|Svyaz Rossiya,name_mismatch_vs_reference,Wikipedia lists SJM as 'Sino Jet Management' (China) 
+RUC|Rutas Aereas,name_mismatch_vs_reference,Wikipedia lists RUC as 'Rutaca' (Venezuela) 
+SBF|Seven Bar Flying Service,callsign_differs_from_reference,file=S-BAR wikipedia=SEVENAIR
+SBF|Seven Bar Flying Service,country_differs_from_reference,file=United States wikipedia=Tunisia
+SDK|SADELCA - Sociedad Aerea Del Caqueta,name_mismatch_vs_reference,Wikipedia lists SDK as 'SADELCA Ltda.' (Colombia) 
+SET|SAETA,name_mismatch_vs_reference,Wikipedia lists SET as 'SAETA Air Ecuador' (Ecuador) Defunct; Ceased operations in February 2000
+SAJ|Golden Eagle Air Services (FAA),icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+SPS|SPASA,name_mismatch_vs_reference,Wikipedia lists SPS as 'Spark Shuttle' (United States) 
+SLC|Salsa d\\'Haiti,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+EDC|Edinburgh Air Charter,name_mismatch_vs_reference,Wikipedia lists EDC as 'Air Charter Scotland' (United Kingdom) Previously: Edinburgh Air Charter
+XMS|British Airways,major_but_inactive,major=TRUE active=FALSE
+STP|STP Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+SOV|Saratov Aviation Division,name_mismatch_vs_reference,Wikipedia lists SOV as 'Saratov Airlines Joint Stock Company' (Russia) 
+NSE|SATENA,iata_differs_from_reference,file=9R wikipedia='' note=''
+SCE|Scenic Airlines,name_mismatch_vs_reference,Wikipedia lists SCE as 'Grand Canyon Scenic Airlines' (United States) 
+SRQ|South East Asian Airlines,name_mismatch_vs_reference,Wikipedia lists SRQ as 'Cebgo' (Philippines) Subsidiary of Cebu Pacific
+SFE|Sefofane Air Charters,country_differs_from_reference,file=South Africa wikipedia=Botswana
+SHI|Seoul Air International,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+SEN|Sevenair,name_mismatch_vs_reference,Wikipedia lists SEN as 'Servicios de Aviacion Sierra' (Mexico) 2014
+SAI|Shaheen Air International,name_mismatch_vs_reference,Wikipedia lists SAI as 'Shaheen Air' (Pakistan) Defunct; Ceased operations on 8 October 2018
+CXI|Shanxi Airlines,name_mismatch_vs_reference,Wikipedia lists CXI as 'Corendon Airlines Europe' (Malta) Touristic Aviation
+RHA|Robin Hood Aviation,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+SCR|Si-Chang Flying Service,name_mismatch_vs_reference,Wikipedia lists SCR as 'Silver Cloud Air' (Germany) 
+FKA|Flying kangaroo Airline,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+KYB|Skybridge Airops,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+SWM|Sky Angkor Airlines (ZA),icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CHG|AC Challenge Aero,callsign_differs_from_reference,file=SKY CHALLENGER wikipedia=Challenge
+CHG|AC Challenge Aero,country_differs_from_reference,file=Ukraine wikipedia=Belgium
+LMO|Sky Limo Corporation,name_mismatch_vs_reference,"Wikipedia lists LMO as 'Sky One Holdings as Privaira' (United States) Callsign and company name changed from Sky Limo Corporation ""SKY LIMO"" in 2015."
+SJU|Skyjet Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+SKC|Skymaster Air Lines,country_differs_from_reference,file=United States wikipedia=Brazil
+SXR|Sky Express,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+TVS|Travel Service,name_mismatch_vs_reference,Wikipedia lists TVS as 'Smartwings' (Czech Republic) formerly named Travel Service
+KOL|SOCHI AIR,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+LOO|LSM Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+SMW|Carpatair Flight Training,callsign_differs_from_reference,file=Smartwings wikipedia=SMART WINGS
+PSX|Pacific Southwest Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+MRS|Marusya Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+SRB|Solar Air,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+SGB|Sky King,name_mismatch_vs_reference,"Wikipedia lists SGB as 'Songbird Airways, Inc.' (United States) Defunct; Ceased operations on 7 February 2017"
+STV|Southern Aviation,name_mismatch_vs_reference,Wikipedia lists STV as 'Saturn Aviation' (United States) 
+WER|AeroWorld,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+BVV|Spark+ Joint-Stock Company,name_mismatch_vs_reference,Wikipedia lists BVV as 'Spark+' (Russia) 
+SAL|Spike Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CBG|GX Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+BSA|Black Stallion Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+USC|US Check Airlines,name_mismatch_vs_reference,Wikipedia lists USC as 'AirNet Express' (United States) Renamed from US Check Airlines
+IAS|International Air Service,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+STS|Starling Airlines Spain,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+RSD|Russia State Transport,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+LUC|Alninati Aeronautics,callsign_differs_from_reference,file=STEF wikipedia=ALBINATI
+SRY|ViaAir,name_mismatch_vs_reference,Wikipedia lists SRY as 'As-Aero' (Armenia) 
+SAY|ScotAirways,name_mismatch_vs_reference,Wikipedia lists SAY as 'Suckling Airways' (United Kingdom) Defunct; Integrated into Loganair in March 2013
+AUH|Abu Dhabi Amiri Flight,name_mismatch_vs_reference,Wikipedia lists AUH as 'Presidential Flight' (United Arab Emirates) Presidential flight
+SMM|Summit Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+LAU|L,name_mismatch_vs_reference,Wikipedia lists LAU as 'Líneas Aéreas Suramericanas' (Colombia) 
+SZL|Swaziland Airlink,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+SDR|City Airline,iata_differs_from_reference,file=CF wikipedia='' note=''
+FFV|Fly540,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+SR|Swissair,ident_icao_mismatch,ident=SR icao=SWR
+SWZ|Servair,name_mismatch_vs_reference,"Wikipedia lists SWZ as 'Servair, Private Charter' (Switzerland) Code re-allocated"
+AWU|Aeroline GmbH,name_mismatch_vs_reference,Wikipedia lists AWU as 'Sylt Air GmbH' (Germany) 
+TJA|T.J. Air,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+TAT|Grupo TACA,iata_differs_from_reference,file=TA wikipedia='' note=''
+TES|TAES Transportes Aereos de El Salvador,name_mismatch_vs_reference,Wikipedia lists TES as 'Taespejo Portugal LDA' (Portugal) 
+TZK|Tajikstan,name_mismatch_vs_reference,Wikipedia lists TZK as 'Tajikistan International Airlines' (Tajikistan) 
+TLO|Eagle Canyon Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+TML|TAM,name_mismatch_vs_reference,Wikipedia lists TML as 'Transports et Travaux Aériens de Madagascar' (Madagascar) 
+TAK|Tatarstan Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+TAQ|Taunus Air Gmbh,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+TIM|TEAM Transportes Aereos,name_mismatch_vs_reference,Wikipedia lists TIM as 'TEAM Linhas Aéreas' (Brazil) 
+CPF|ATS Private Company,name_mismatch_vs_reference,Wikipedia lists CPF as 'Airtechservice' (Ukraine) defunct
+TOW|Tower Air,iata_differs_from_reference,file=FF wikipedia='' note='Ceased operations'
+OTJ|Fly Romania,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+TKY|Thai Sky Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+TCW|Thomas Cook Airlines,iata_differs_from_reference,file=FQ wikipedia='HQ' note='Defunct'
+TCW|Thomas Cook Airlines,callsign_differs_from_reference,file=THOMAS COOK wikipedia=KESTREL
+TIL|Tajikistan International Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+TDA|TDA Toa Domestic Airlines,name_mismatch_vs_reference,Wikipedia lists TDA as 'Trend Aviation' (United States) 
+TOM|Thomsonfly,name_mismatch_vs_reference,"Wikipedia lists TOM as 'TUI Airways' (United Kingdom) Formerly ""TOMSON"""
+UMS|Unitemp-M,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+TOR|Toronto Airways,name_mismatch_vs_reference,Wikipedia lists TOR as 'FlyGTA Airlines' (Canada) 
+ETC|ATTICO,name_mismatch_vs_reference,Wikipedia lists ETC as 'African Transport Trading and Investment Company' (Sudan) 
+TSR|Trans Service Airlift,name_mismatch_vs_reference,Wikipedia lists TSR as 'TJS San Marino S.r.L.' (San Marino) 
+TSG|Trans-Air-Congo,country_code_inconsistent,Democratic Republic of the Congo -> CG (majority CD)
+TSG|Trans-Air-Congo,country_differs_from_reference,file=Democratic Republic of the Congo wikipedia=Republic of the Congo
+TSC|Air Transat,callsign_differs_from_reference,file=TRANSAT wikipedia=AIR TRANSAT
+TSE|Transmile Air Services,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+TNU|TransNusa Air,iata_differs_from_reference,file=M8 wikipedia='8B' note=''
+XAR|Travel Express Aviation Services,name_mismatch_vs_reference,Wikipedia lists XAR as 'XpressAir' (Indonesia) Renamed from Travel Express  Aviation Services in 2012
+TVL|Travel Service,name_mismatch_vs_reference,Wikipedia lists TVL as 'Smartwings Hungary' (Hungary) formerly named Travel Service Hungary
+TAX|Travelair,country_differs_from_reference,file=Germany wikipedia=United States
+TIB|TRIP Linhas A,iata_differs_from_reference,file=8R wikipedia='T4' note='IATA code 8R changed to T4  (2010)'
+THY|Turkish Airlines,callsign_differs_from_reference,file=TURKAIR wikipedia=TURKISH
+TRK|Turkuaz Airlines,name_mismatch_vs_reference,Wikipedia lists TRK as 'Turkish Airlines General Aviation' (Turkey) 
+TWB|Tway Airlines,country_differs_from_reference,file=South Korea wikipedia=Republic of Korea
+TWD|Turkish Wings Domestic,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+DCS|Daimler Chrysler Aviation,name_mismatch_vs_reference,Wikipedia lists DCS as 'DC Aviation' (Germany) 
+TXW|Texas Wings,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CBY|Coningsby Flying Training Unit,name_mismatch_vs_reference,Wikipedia lists CBY as 'RAF Coningsby' (United Kingdom) Coningsby Flying Training Unit
+USA|US Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+DQ|Coastal Air,missing_icao,no ICAO code; not verifiable
+UAY|University of Birmingham Air Squadron (RAF),icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ES2|Usa Sky Cargo,invalid_icao_format,ES2
+ES2|Usa Sky Cargo,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+UTG|UTAGE,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+VRN|VRG Linhas Aereas,name_mismatch_vs_reference,Wikipedia lists VRN as 'Varig' (Brazil) 
+VFC|Vasco Air,name_mismatch_vs_reference,Wikipedia lists VFC as 'Vietnam Air Services Company (VASCO)' (Vietnam) 
+WEL|Veles,name_mismatch_vs_reference,"Wikipedia lists WEL as 'Veles, Ukrainian Aviation Company' (Ukraine) "
+VLO|Varig Log,active_but_reference_defunct,defunct
+VKJ|VickJet,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+HVN|Vietnam Airlines,callsign_differs_from_reference,file=VIET NAM AIRLINES wikipedia=VIET NAM
+VJC|VietJet Air,callsign_differs_from_reference,file=VIETJETAIR wikipedia=VIETJET
+VIN|Vinair - Helicoptereos,name_mismatch_vs_reference,Wikipedia lists VIN as 'Vinair Aeroserviços' (Portugal) 
+VPP|Vintage Props and Jets,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+VPA|VIP Air,callsign_differs_from_reference,file=VIP TAXI wikipedia=VIAIR
+VPA|VIP Air,country_differs_from_reference,file=Slovakia wikipedia=Kazakhstan
+VUR|Vuelos Internos Privados VIP,name_mismatch_vs_reference,Wikipedia lists VUR as 'VIP Ecuador' (Ecuador) defunct
+VOZ|Virgin Australia,callsign_differs_from_reference,file=VIRGIN wikipedia=VELOCITY
+VSG|Visig Operaciones Aereas,name_mismatch_vs_reference,Wikipedia lists VSG as 'AirClass Airways' (Spain) formerly Visig Operaciones Aéreas
+VLE|Volare Airlines,name_mismatch_vs_reference,Wikipedia lists VLE as 'C.A.I. Second' (Italy) 
+VDA|Volga-Dnepr Airlines,callsign_differs_from_reference,file=VOLGA-DNEPR wikipedia=VOLGA
+VOO|Volotea,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+VTE|Corporate Flight Management,name_mismatch_vs_reference,Wikipedia lists VTE as 'Contour Airlines' (United States) 
+7W|Wayraper,missing_icao,no ICAO code; not verifiable
+WE1|World Experience Airline,invalid_icao_format,WE1
+WE1|World Experience Airline,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+WEB|WebJet Linhas A,iata_differs_from_reference,file=WJ wikipedia='WH' note=''
+WA|Western Airlines,ident_icao_mismatch,ident=WA icao=WAL
+WTJ|Whitejets,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+WLS|Williams Air,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+WRC|Wind Rose Aviation,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+WIA|Windward Islands Airways International,name_mismatch_vs_reference,Wikipedia lists WIA as 'Winair' (Netherlands) 
+WAK|Wings of Alaska,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+WAU|Wizz Air Ukraine,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+WVL|Wizz Air Hungary,active_but_reference_defunct,defunct in 2011
+WGT|Lion Air Services,name_mismatch_vs_reference,Wikipedia lists WGT as 'Volkswagen AirService GmbH' (United Kingdom) 
+XAU|XAIR USA,name_mismatch_vs_reference,Wikipedia lists XAU as 'Aerolink Uganda' (Uganda) 
+NXB|NEXT Brasil,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+BXI|Brussels International Airlines,name_mismatch_vs_reference,Wikipedia lists BXI as 'Brussels Airlines' (Belgium) defunct as Brussels International Airlines in 2001
+XPT|XPTO,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+YZR|Yangtze River Express,name_mismatch_vs_reference,Wikipedia lists YZR as 'Suparna Airlines' (China) Former name: Yangtze River Express
+HLX|TUIfly,name_mismatch_vs_reference,Wikipedia lists HLX as 'Hapag-Lloyd Express' (Germany) Became TUI fly Deutschland in 2007
+WHT|White,callsign_differs_from_reference,file=YOUNG SKY wikipedia=WHITEJET
+CYH|Yunnan Airlines,active_but_reference_defunct,Defunct
+ZNA|Zenith International Airline,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ZXY|Japan Regio,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ZCS|Southjet connect,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+Z9H|All Argentina Express,invalid_icao_format,Z9H
+Z9H|All Argentina Express,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+YEP|YES Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+YEL|Yellowtail,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+XXX|ASL,name_mismatch_vs_reference,Wikipedia lists XXX as 'ASL (Air Service Liege)' (Belgium) 
+XIA|Irving Oil,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+XAN|Southjet cargo,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+WSS|World Scale Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+WGC|Worldways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+WFX|Westfalia Express VA,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+VWA|Virginwings,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+VVC|VivaColombia,iata_differs_from_reference,"file=5Z wikipedia='VH' note='Commenced operations on May 25, 2012'"
+VQI|Flyme (VP),name_mismatch_vs_reference,Wikipedia lists VQI as 'Villa Air' (Maldives) 
+VNP|Virgin Pacific,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+VJE|Avjet International (FZE),name_mismatch_vs_reference,Wikipedia lists VJE as 'AvJet Routing' (United Arab Emirates) 
+VIS|Vision Air International,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+VIA|VIA Líneas Aéreas,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+VI4|Vuola Italia,invalid_icao_format,VI4
+VI4|Vuola Italia,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+VC9|Volotea Costa Rica,invalid_icao_format,VC9
+VC9|Volotea Costa Rica,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+VAX|V Air,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ULA|Zuliana de Aviacion,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+UKZ|Fly Zoom,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+UAT|Ukraine Atlantic,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+UAH|University Air Squadron,name_mismatch_vs_reference,"Wikipedia lists UAH as 'Air Experience Flight, Cranwell' (United Kingdom) Royal Air Force"
+TYS|TransHolding System,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+TXP|Texas Spirit,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+TUI|Tuninter,name_mismatch_vs_reference,Wikipedia lists TUI as 'TUI fly Deutschland' (Germany) 
+TTZ|Transair,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+TP6|Trans Pas Air,invalid_icao_format,TP6
+TP6|Trans Pas Air,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+TP3|TROPICAL LINHAS AEREAS,invalid_icao_format,TP3
+TP3|TROPICAL LINHAS AEREAS,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+TNS|Transilvania,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+TMW|Trans Maldivian Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+TKS|Tomsk-Avia,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+THS|TransBrasil Airlines,name_mismatch_vs_reference,Wikipedia lists THS as 'Turkish Aerospace Industries' (Turkey) 
+THI|TransHolding,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+TDK|Transavia Denmark,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+TBZ|TrasBrasil,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+T9P|Tomp Airlines,invalid_icao_format,T9P
+T9P|Tomp Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+T33|THREE,invalid_icao_format,T33
+T33|THREE,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+SZZ|SUR Lineas Aereas,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+SZB|Aerolineas heredas santa maria,name_mismatch_vs_reference,Wikipedia lists SZB as 'Samoa Air' (Samoa) 
+SSA|All America US,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+SRG|Search and Rescue 202,name_mismatch_vs_reference,Wikipedia lists SRG as 'HM Coastguard' (United Kingdom) Search and Rescue
+SRD|Search and Rescue 22,name_mismatch_vs_reference,Wikipedia lists SRD as 'HM Coastguard' (United Kingdom) 
+SPX|Service People Gesselschaft fur Charter und Service,name_mismatch_vs_reference,Wikipedia lists SPX as 'Spark Express (Glow)' () 
+SOA|Southern Air Charter,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+SJS|Southjet,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+SGG|Senegal Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+SCO|Scoot,name_mismatch_vs_reference,Wikipedia lists SCO as 'Helikopterservice Euro Air' (Sweden) 
+SBD|Snowbird Airlines,name_mismatch_vs_reference,Wikipedia lists SBD as 'SIBIA Aircompany Ltd' (Russia) 
+SA1|Serbian Airlines,invalid_icao_format,SA1
+SA1|Serbian Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+RWW|Fly Europa,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+RSJ|RusJet,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ROB|ROYAL BRITAIN,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+RML|Armenian International Airways,name_mismatch_vs_reference,Wikipedia lists RML as 'Air Mediterranean' (Greece) 
+RMK|Simrik Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+RGG|TransRussiaAirlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+RFJ|Royal Falcon,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+VJ|Royal Air Cambodge,ident_icao_mismatch,ident=VJ icao=RAC
+VJ|Royal Air Cambodge,name_mismatch_vs_reference,Wikipedia lists RAC as 'Icar Air' (Bosnia and Herzegovina) 
+R1R|All America CL,invalid_icao_format,R1R
+R1R|All America CL,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+QQQ|ENTERair,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+QAX|QatXpress,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+PYA|Pouya Air,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+PWD|Pan Am World Airways,name_mismatch_vs_reference,Wikipedia lists PWD as 'CARIBAIR' (Dominican Republic) 
+PSB|Syrian Pearl Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+PQW|PanAm World Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+PPL|Air Pegasus,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+PMK|Palair Macedonia,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ORG|Orenburzhie,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ORC|Orchid Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+OME|Homer Air,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+OAN|Orbit Atlantic Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+NX1|Nihon.jet connect,invalid_icao_format,NX1
+NX1|Nihon.jet connect,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+NWO|Northwood Headquarters (RAF,name_mismatch_vs_reference,Wikipedia lists NWO as 'RAF Northwood' (United Kingdom) Royal Air Force (Northwood Headquarters)
+NFD|Nürnberger Flugdienst,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+N4|National Airlines,ident_icao_mismatch,ident=N4 icao=NCN
+NAK|Arik Niger,name_mismatch_vs_reference,Wikipedia lists NAK as 'École Nationale de l'Aviation Civile' (France) Formerly SFA prior to SEFA ATO being absorbed by the École Nationale de l'Aviati
+N99|All Europe,invalid_icao_format,N99
+N99|All Europe,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+N78|Regional Air Iceland,invalid_icao_format,N78
+N78|Regional Air Iceland,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+N77|All Spain,invalid_icao_format,N77
+N77|All Spain,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+MKU|Island Air (WP),icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+MKD|MAT Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+MAI|Mauritania Airlines International,name_mismatch_vs_reference,Wikipedia lists MAI as 'Max Avia' (Kyrgyzstan) 
+M7A|All America AR,invalid_icao_format,M7A
+M7A|All America AR,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+LTY|Liberty Airways,iata_differs_from_reference,file=LE wikipedia='' note=''
+LTY|Liberty Airways,country_differs_from_reference,file=United States wikipedia=Netherlands
+LMM|LCM AIRLINES,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+LLC|FlyLAL Charters,name_mismatch_vs_reference,Wikipedia lists LLC as 'Small Planet Airlines' (Lithuania) defunct
+LIO|LÍO Flugmennt,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+KYA|Alghanim,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+KW1|Wataniya Airways,invalid_icao_format,KW1
+KW1|Wataniya Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+KUH|Kush Air,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+KSZ|Sunrise Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+KRY|Russkie Krylya,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+KOQ|Kostromskie avialinii,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+KHK|Kharkiv Airlines,iata_differs_from_reference,file=KH wikipedia='KW' note=''
+KEA|Korea Express Air,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+KAR|Kar-Air,country_differs_from_reference,file=Finland wikipedia=Russian Federation
+K88|Voestar,invalid_icao_format,K88
+K88|Voestar,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+JSR|Jusur airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+JRB|Jc royal.britannica,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+J88|Regionalia México,invalid_icao_format,J88
+J88|Regionalia México,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+IXO|OCEAN AIR CARGO,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ISX|Island Spirit,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+INE|International Europe,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ILY|Fly Illi,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ILW|Illinois Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ILC|Island Link,name_mismatch_vs_reference,Wikipedia lists ILC as 'ILAS Air' (Japan) 
+IIR|INAVIA Internacional,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+IIA|AIR INDOCHINE,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+IEA|Inter European Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+IDS|Indonesia Sky,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+HTH|Helitt Líneas Aéreas,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+HPY|Happy Air,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+HA1|Hankook Air US,invalid_icao_format,HA1
+HA1|Hankook Air US,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+GXG|GermanXL,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+GU1|Gulisano airways,invalid_icao_format,GU1
+GU1|Gulisano airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+GOD|GoDutch,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+GIE|Elysian Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+GFY|Greenfly,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+GER|German International Air Lines,name_mismatch_vs_reference,Wikipedia lists GER as 'German Airways' (Germany) 
+GEG|Georgian Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+GCA|Grand Cru Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+GA0|Global Airlines,invalid_icao_format,GA0
+GA0|Global Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+FZA|Fuzhou Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+FXX|Felix Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+FTI|FTI Fluggesellschaft,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+FRF|Fly France,name_mismatch_vs_reference,Wikipedia lists FRF as 'Fleet Air International' (Hungary) 
+FOX|FOX Linhas Aereas,name_mismatch_vs_reference,Wikipedia lists FOX as 'Flyr' (Norway) 
+FOF|Fred. Olsen,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+FN1|Finlandian,invalid_icao_format,FN1
+FN1|Finlandian,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+FI5|Fly One,invalid_icao_format,FI5
+FI5|Fly One,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+FDD|Feeder Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+FDB|Fly Dubai,country_differs_from_reference,file=United Arab Emirates wikipedia=UAE
+EUD|Air Italy Egypt,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+EU9|Europe Jet,invalid_icao_format,EU9
+EU9|Europe Jet,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ELK|ELK Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ELC|Small Planet Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+EHM|Euro Harmony,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+EDI|Eastern Atlantic Charters,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+EAA|Eastok Avia,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+DWD|Deutsche Luftverkehrsgesellschaft (DLT),icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+DSV|Direct Aero Services,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+DME|Royal Flight,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+DLT|Deutsche Luftverkehrsgesellschaft,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+DAN|Dan-Air London,name_mismatch_vs_reference,Wikipedia lists DAN as 'Maersk Air' (Denmark) Defunct
+DAK|First Flying,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CZV|Via Conectia Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CWS|California Western,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CRZ|Cruzeiro do Sul Servicos Aereos,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CR7|Sky Wing Pacific,invalid_icao_format,CR7
+CR7|Sky Wing Pacific,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CR1|Regionalia Chile,invalid_icao_format,CR1
+CR1|Regionalia Chile,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+COE|Comtel Air,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CNF|Canaryfly,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CNA|Centavia,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CIP|City-Air Germany,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CIF|CB Airways UK ( Interliging Flights ),icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CFP|Compania de Aviacion Faucett,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CEY|Air Century,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CEO|Comfort Express Virtual Charters,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CCG|Central Connect Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CCC|CCML Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+CAP|CanXplorer,name_mismatch_vs_reference,Wikipedia lists CAP as 'Civil Air Patrol' (United States) 
+BZL|Aero Brazil,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+BXS|Spantax S.A.,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+BUU|Baikotovitchestrian Airlines,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+BUR|Air Bucharest,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+BTM|Air Batumi,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+BQB|Buquebus Líneas Aéreas,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+BKY|Blue Sky America,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+BGY|Bingo Airways,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+BG1|BudgetAir,invalid_icao_format,BG1
+BG1|BudgetAir,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+BEU|Bateleur Air,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+BCC|BusinessAir,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+BBG|Bluebird Airways (BZ),icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+BAZ|BAE Systems Flight Training,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+AZU|Azul,name_mismatch_vs_reference,Wikipedia lists AZU as 'Azul Brazilian Airlines' (Brazil) 
+AXZ|Aereonautica militare,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+AWA|Asia Wings,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ARP|RPA-Aviataxi Ltd.,name_mismatch_vs_reference,Wikipedia lists ARP as 'Aero Corporate' (Côte d'Ivoire) 
+AO1|AirOne Atlantic,invalid_icao_format,AO1
+AO1|AirOne Atlantic,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+ALS|Naka Nihon Airlines Service,name_mismatch_vs_reference,Wikipedia lists ALS as 'Aeralp' (France) 
+AL3|All Asia,invalid_icao_format,AL3
+AL3|All Asia,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+AL2|All America,invalid_icao_format,AL2
+AL2|All America,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+AL1|All Argentina,invalid_icao_format,AL1
+AL1|All Argentina,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+AEN|Aeroenlaces Nacionales,name_mismatch_vs_reference,"Wikipedia lists AEN as 'Aeroland Airways' (Greece) defunct, ICAO code no longer allocated"
+AEF|Aero Lloyd (YP),name_mismatch_vs_reference,Wikipedia lists AEF as 'Aerea' (Spain) 
+ABI|Aviabus,name_mismatch_vs_reference,Wikipedia lists ABI as 'Antigua and Barbuda Airways' (Antigua and Barbuda) defunct
+AA1|Aerolineas Africanas,invalid_icao_format,AA1
+AA1|Aerolineas Africanas,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+A9B|All America BR,invalid_icao_format,A9B
+A9B|All America BR,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+9XX|Regionalia Venezuela,invalid_icao_format,9XX
+9XX|Regionalia Venezuela,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+99F|All Africa,invalid_icao_format,99F
+99F|All Africa,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+8K8|All Australia,invalid_icao_format,8K8
+8K8|All Australia,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+7ZC|All America CO,invalid_icao_format,7ZC
+7ZC|All America CO,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+7KK|All Colombia,invalid_icao_format,7KK
+7KK|All Colombia,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+6CC|Vuela Cuba,invalid_icao_format,6CC
+6CC|Vuela Cuba,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+4SW|TEA Switzerland,invalid_icao_format,4SW
+4SW|TEA Switzerland,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+3FF|Fly Colombia ( Interliging Flights ),invalid_icao_format,3FF
+3FF|Fly Colombia ( Interliging Flights ),icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+2K2|Regionalia Uruguay,invalid_icao_format,2K2
+2K2|Regionalia Uruguay,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+1Y|Electronic Data Systems,invalid_icao_format,1Y
+1Y|Electronic Data Systems,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+1CH|OneChina,invalid_icao_format,1CH
+1CH|OneChina,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+0MM|All America MX,invalid_icao_format,0MM
+0MM|All America MX,icao_not_in_reference,ICAO not in Wikipedia list of airline codes; unverified
+0J|Jetclub,missing_icao,no ICAO code; not verifiable
+1B|Abacus International,missing_icao,no ICAO code; not verifiable
+1C|Electronic Data Systems,missing_icao,no ICAO code; not verifiable
+1D|Radixx Solutions International,missing_icao,no ICAO code; not verifiable
+1E|Travelsky Technology,missing_icao,no ICAO code; not verifiable
+1F|INFINI Travel Information,missing_icao,no ICAO code; not verifiable
+1G|Galileo International,missing_icao,no ICAO code; not verifiable
+1H|Siren-Travel,missing_icao,no ICAO code; not verifiable
+1M|JSC Transport Automated Information Systems,missing_icao,no ICAO code; not verifiable
+1N|Navitaire,missing_icao,no ICAO code; not verifiable
+1P|Worldspan,missing_icao,no ICAO code; not verifiable
+1Q|Sirena,missing_icao,no ICAO code; not verifiable
+1R|Hainan Phoenix Information Systems,missing_icao,no ICAO code; not verifiable
+1S|Sabre,missing_icao,no ICAO code; not verifiable
+1Z|Sabre Pacific,missing_icao,no ICAO code; not verifiable
+2A|Deutsche Bahn,missing_icao,no ICAO code; not verifiable
+2C|SNCF,missing_icao,no ICAO code; not verifiable
+2H|Thalys,missing_icao,no ICAO code; not verifiable
+2O|Air Salone,missing_icao,no ICAO code; not verifiable
+2R|VIA Rail Canada,missing_icao,no ICAO code; not verifiable
+2S|Star Equatorial Airlines,missing_icao,no ICAO code; not verifiable
+3S|Aeroland Airways,missing_icao,no ICAO code; not verifiable
+4G|Advance Leasing Company,missing_icao,no ICAO code; not verifiable
+7A|Aztec Worldwide Airlines,missing_icao,no ICAO code; not verifiable
+8D|Servant Air,missing_icao,no ICAO code; not verifiable
+8I|Myway Airlines,missing_icao,no ICAO code; not verifiable
+8O|West Coast Air,missing_icao,no ICAO code; not verifiable
+8Q|Princess Air,missing_icao,no ICAO code; not verifiable
+8S|Scorpio Aviation,missing_icao,no ICAO code; not verifiable
+8T|Air Tindi,missing_icao,no ICAO code; not verifiable
+8W|BAX Global,missing_icao,no ICAO code; not verifiable
+9O|National Airways Cameroon,missing_icao,no ICAO code; not verifiable
+BH|Hawkair,missing_icao,no ICAO code; not verifiable
+BM|Air Sicilia,missing_icao,no ICAO code; not verifiable
+BN|Forward Air International Airlines,missing_icao,no ICAO code; not verifiable
+C3|ICAR Airlines,missing_icao,no ICAO code; not verifiable
+CN|Islands Nationair,missing_icao,no ICAO code; not verifiable
+CR|OAG,missing_icao,no ICAO code; not verifiable
+DM|Maersk,missing_icao,no ICAO code; not verifiable
+E6|Bringer Air Cargo Taxi Aereo,missing_icao,no ICAO code; not verifiable
+FF|Airshop,missing_icao,no ICAO code; not verifiable
+FN|Regional Airlines,missing_icao,no ICAO code; not verifiable
+GK|Go One Airways,missing_icao,no ICAO code; not verifiable
+GX|Pacificair,missing_icao,no ICAO code; not verifiable
+GY|Guyana Airways 2000,missing_icao,no ICAO code; not verifiable
+H4|Héli Sécurité Helicopter Airlines,missing_icao,no ICAO code; not verifiable
+H7|Eagle Air,missing_icao,no ICAO code; not verifiable
+HP|Hawaiian Pacific Airlines,missing_icao,no ICAO code; not verifiable
+IH|Falcon Aviation,missing_icao,no ICAO code; not verifiable
+IS|Island Airlines,missing_icao,no ICAO code; not verifiable
+L1|Lufthansa Systems,missing_icao,no ICAO code; not verifiable
+ML|African Transport Trading and Investment Company,missing_icao,no ICAO code; not verifiable
+N9|North Coast Aviation,missing_icao,no ICAO code; not verifiable
+O2|Oceanic Airlines,missing_icao,no ICAO code; not verifiable
+OF|Transports et Travaux A,missing_icao,no ICAO code; not verifiable
+P0|Proflight Commuter Services,missing_icao,no ICAO code; not verifiable
+P9|Nas Air,missing_icao,no ICAO code; not verifiable
+Q4|Mastertop Linhas Aereas,missing_icao,no ICAO code; not verifiable
+QJ|Jet Airways,missing_icao,no ICAO code; not verifiable
+R1|Sirin,missing_icao,no ICAO code; not verifiable
+R4|Rossiya,missing_icao,no ICAO code; not verifiable
+R6|RACSA,missing_icao,no ICAO code; not verifiable
+RZ|Euro Exec Express,missing_icao,no ICAO code; not verifiable
+S6|Star Air,missing_icao,no ICAO code; not verifiable
+TH|BA Connect,missing_icao,no ICAO code; not verifiable
+U2|United Feeder Service,missing_icao,no ICAO code; not verifiable
+U7|Northern Dene Airways,missing_icao,no ICAO code; not verifiable
+UH|US Helicopter Corporation,missing_icao,no ICAO code; not verifiable
+VA|Viasa,missing_icao,no ICAO code; not verifiable
+VD|Air Libert,missing_icao,no ICAO code; not verifiable
+YK|Cyprus Turkish Airlines,missing_icao,no ICAO code; not verifiable
+ABL|Air Busan,duplicate_icao,ABL shared by 2 rows
+ZX|Air BC,duplicate_icao,ABL shared by 2 rows
+CAT|Copenhagen Airtaxi,duplicate_icao,CAT shared by 2 rows
+CT|Civil Air Transport,duplicate_icao,CAT shared by 2 rows
+LZ|Balkan Bulgarian Airlines,duplicate_icao,LZB shared by 2 rows
+LZB|Bulgaria Air,duplicate_icao,LZB shared by 2 rows
+TGW|Tiger Airways,duplicate_icao,TGW shared by 2 rows
+TT|Tiger Airways Australia,duplicate_icao,TGW shared by 2 rows
+IKA|Gorkha Airlines,duplicate_icao,IKA shared by 2 rows
+GI|Itek Air,duplicate_icao,IKA shared by 2 rows
+LTU|Air Lituanica,duplicate_icao,LTU shared by 2 rows
+LT|LTU International,duplicate_icao,LTU shared by 2 rows
+NCN|Nicon Airways,duplicate_icao,NCN shared by 2 rows
+N4|National Airlines,duplicate_icao,NCN shared by 2 rows
+SWR|Swiss International Air Lines,duplicate_icao,SWR shared by 2 rows
+SR|Swissair,duplicate_icao,SWR shared by 2 rows
+RAC|Icar Air,duplicate_icao,RAC shared by 2 rows
+VJ|Royal Air Cambodge,duplicate_icao,RAC shared by 2 rows
+WA|Western Airlines,duplicate_icao,WAL shared by 2 rows
+WAL|Western Arctic Air,duplicate_icao,WAL shared by 2 rows
+ABX|ABX Air,active_iata_reused,GB: ABX Air; BRAZIL AIR
+BZE|BRAZIL AIR,active_iata_reused,GB: ABX Air; BRAZIL AIR
+SEH|Sky Express,active_iata_reused,G3: Sky Express; Gol Transportes Aéreos
+GLO|Gol Transportes Aéreos,active_iata_reused,G3: Sky Express; Gol Transportes Aéreos
+AEY|Air Italy,active_iata_reused,I9: Air Italy; Indigo
+IBU|Indigo,active_iata_reused,I9: Air Italy; Indigo
+RNE|Air Salone,active_iata_reused,2O: Air Salone; Air Salone
+2O|Air Salone,active_iata_reused,2O: Air Salone; Air Salone
+ABD|Air Atlanta Icelandic,active_iata_reused,CC: Air Atlanta Icelandic; Macair Airlines
+MCK|Macair Airlines,active_iata_reused,CC: Air Atlanta Icelandic; Macair Airlines
+ZTT|ZABAIKAL AIRLINES,active_iata_reused,Z6: ZABAIKAL AIRLINES; Dniproavia
+UDN|Dniproavia,active_iata_reused,Z6: ZABAIKAL AIRLINES; Dniproavia
+LZ|Balkan Bulgarian Airlines,active_iata_reused,LZ: Balkan Bulgarian Airlines; Swiss European Air Lines
+SWU|Swiss European Air Lines,active_iata_reused,LZ: Balkan Bulgarian Airlines; Swiss European Air Lines
+BIH|British International Helicopters,active_iata_reused,BS: British International Helicopters; US-Bangla Airlines
+UBG|US-Bangla Airlines,active_iata_reused,BS: British International Helicopters; US-Bangla Airlines
+KIS|Contact Air,active_iata_reused,C3: Contact Air; QatXpress
+QAX|QatXpress,active_iata_reused,C3: Contact Air; QatXpress
+COA|Continental Airlines,active_iata_reused,CO: Continental Airlines; Continental Express
+CO|Continental Express,active_iata_reused,CO: Continental Airlines; Continental Express
+SLI|Aerolitoral,active_iata_reused,5D: Aerolitoral; DonbassAero
+UDC|DonbassAero,active_iata_reused,5D: Aerolitoral; DonbassAero
+EGF|American Eagle Airlines,active_iata_reused,MQ: American Eagle Airlines; Envoy Air
+ENY|Envoy Air,active_iata_reused,MQ: American Eagle Airlines; Envoy Air
+EJA|NetJets,active_iata_reused,1I: NetJets; Novair
+NVR|Novair,active_iata_reused,1I: NetJets; Novair
+FYH|Flyhy Cargo Airlines,active_iata_reused,W3: Flyhy Cargo Airlines; World Scale Airlines
+WSS|World Scale Airlines,active_iata_reused,W3: Flyhy Cargo Airlines; World Scale Airlines
+GMR|Golden Myanmar Airlines,active_iata_reused,Y5: Golden Myanmar Airlines; Asia Wings
+AWA|Asia Wings,active_iata_reused,Y5: Golden Myanmar Airlines; Asia Wings
+GFA|Gulf Air,active_iata_reused,GF: Gulf Air; Gulf Air Bahrain
+GBA|Gulf Air Bahrain,active_iata_reused,GF: Gulf Air; Gulf Air Bahrain
+ADH|Air One,active_iata_reused,AP: Air One; AlbaStar
+LAV|AlbaStar,active_iata_reused,AP: Air One; AlbaStar
+HYM|Himalayan Airlines,active_iata_reused,HC: Himalayan Airlines; Holidays Czech Airlines
+HCC|Holidays Czech Airlines,active_iata_reused,HC: Himalayan Airlines; Holidays Czech Airlines
+FCA|First Choice Airways,active_iata_reused,DP: First Choice Airways; Pobeda
+PBD|Pobeda,active_iata_reused,DP: First Choice Airways; Pobeda
+KNI|KD Avia,active_iata_reused,KD: KD Avia; Kal Star Aviation
+KLS|Kal Star Aviation,active_iata_reused,KD: KD Avia; Kal Star Aviation
+DLH|Lufthansa,active_iata_reused,LH: Lufthansa; Lufthansa Cargo
+GEC|Lufthansa Cargo,active_iata_reused,LH: Lufthansa; Lufthansa Cargo
+NTJ|NextJet,active_iata_reused,2N: NextJet; Yuzhmashavia
+UMK|Yuzhmashavia,active_iata_reused,2N: NextJet; Yuzhmashavia
+ABQ|Airblue,active_iata_reused,ED: Airblue; Air Explore
+AXE|Air Explore,active_iata_reused,ED: Airblue; Air Explore
+PPW|Royal Phnom Penh Airways,active_iata_reused,RL: Royal Phnom Penh Airways; Royal Falcon
+RFJ|Royal Falcon,active_iata_reused,RL: Royal Phnom Penh Airways; Royal Falcon
+SAS|Scandinavian Airlines System,active_iata_reused,SK: Scandinavian Airlines System; SAS Braathens
+CNO|SAS Braathens,active_iata_reused,SK: Scandinavian Airlines System; SAS Braathens
+SIA|Singapore Airlines,active_iata_reused,SQ: Singapore Airlines; Singapore Airlines Cargo
+SQC|Singapore Airlines Cargo,active_iata_reused,SQ: Singapore Airlines; Singapore Airlines Cargo
+SOU|Southern Airways,active_iata_reused,9X: Southern Airways; Regionalia Venezuela
+9XX|Regionalia Venezuela,active_iata_reused,9X: Southern Airways; Regionalia Venezuela
+TMA|Trans Mediterranean Airlines,active_iata_reused,TL: Trans Mediterranean Airlines; Airnorth
+ANO|Airnorth,active_iata_reused,TL: Trans Mediterranean Airlines; Airnorth
+USH|US Helicopter,active_iata_reused,UH: US Helicopter; US Helicopter Corporation
+UH|US Helicopter Corporation,active_iata_reused,UH: US Helicopter; US Helicopter Corporation
+VJC|VietJet Air,active_iata_reused,VJ: VietJet Air; Royal Air Cambodge
+VJ|Royal Air Cambodge,active_iata_reused,VJ: VietJet Air; Royal Air Cambodge
+SSA|All America US,active_iata_reused,AG: All America US; Aruba Airlines
+ARU|Aruba Airlines,active_iata_reused,AG: All America US; Aruba Airlines
+LFA|Air Alfa,active_iata_reused,H7: Air Alfa; Eagle Air
+H7|Eagle Air,active_iata_reused,H7: Air Alfa; Eagle Air
+BMR|British Midland Regional,active_iata_reused,BM: British Midland Regional; Air Sicilia
+BM|Air Sicilia,active_iata_reused,BM: British Midland Regional; Air Sicilia
