@@ -1,9 +1,9 @@
 insert into public.data_versions (version, notes, is_current) values ('2026.10.23-sample', 'SAMPLE data only', true);
 -- SAMPLE rows only (is_sample = true). Real data loaded from dist/ once sources are provided.
-insert into public.airports (ident, iata, icao, name, city, country, latitude, longitude, elevation_ft, type, is_sample) values
- ('SAMPLE-KJFK','JFK','KJFK','John F. Kennedy International Airport (SAMPLE)','New York','US',40.6398,-73.7789,13,'large_airport',true),
- ('SAMPLE-EGLL','LHR','EGLL','London Heathrow Airport (SAMPLE)','London','GB',51.4706,-0.4619,83,'large_airport',true),
- ('SAMPLE-RJTT','HND','RJTT','Tokyo Haneda Airport (SAMPLE)','Tokyo','JP',35.5523,139.78,35,'large_airport',true);
+insert into public.airports (ident, iata, icao, name, municipality, country, latitude, longitude, elevation_ft, type, continent, iso_region, scheduled_service, is_sample) values
+ ('SAMPLE-KJFK','JFK','KJFK','John F. Kennedy International Airport (SAMPLE)','New York','US',40.6398,-73.7789,13,'large_airport','NA','US-NY',true,true),
+ ('SAMPLE-EGLL','LHR','EGLL','London Heathrow Airport (SAMPLE)','London','GB',51.4706,-0.4619,83,'large_airport','EU','GB-ENG',true,true),
+ ('SAMPLE-RJTT','HND','RJTT','Tokyo Haneda Airport (SAMPLE)','Tokyo','JP',35.5523,139.78,35,'large_airport','AS','JP-13',true,true);
 insert into public.airlines (ident, name, iata, icao, callsign, country, country_code, active, major, is_sample) values
  ('UAL','United Airlines (SAMPLE)','UA','UAL','UNITED','United States','US',true,true,true),
  ('BAW','British Airways (SAMPLE)','BA','BAW','SPEEDBIRD','United Kingdom','GB',true,true,true),

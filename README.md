@@ -39,10 +39,11 @@ by an audit trigger, and rows carry `updated_at` + `row_version`.
 
 ## API
 `GET /v1/airports | /v1/airlines | /v1/aircraft` with `q`, entity filters, `limit` (max 100), `offset`.
+Airport fields: `ident, iata, icao, name, municipality, country, latitude, longitude, elevation_ft, type, continent, iso_region, scheduled_service, gps_code, local_code, home_link, wikipedia_link, keywords, is_sample` (filters: `ident, iata, icao, country, type, continent, iso_region, scheduled_service`; `q` searches name, municipality, codes and keywords). `city` was renamed to `municipality`.
 Airline fields: `ident, name, iata, icao, callsign, country, country_code, active, major, is_sample, hubs` (filters: `ident, iata, icao, country, country_code, active, major, hub`).
 Aircraft fields: `ident, icao, iata, family, name, short_name, alternate_names[], manufacturer, engine_count, engine_type, aircraft_type, in_production, status, major, cargo, military, wiki_link, is_primary, wake_category, is_sample` (filters: `ident, icao, iata, family, manufacturer, engine_type, aircraft_type, status, in_production, major, cargo, military, is_primary`). One ICAO code can cover several variants; `is_primary` marks the main one.
 
-Load the real lists into Supabase with `npx tsx scripts/import-source-data.ts` (upserts `data/airlines/airlines_full.csv` and `data/aircraft_types/aircraft.csv` on `ident`; `--dry-run` to validate only).
+Load the real lists into Supabase with `npx tsx scripts/import-source-data.ts` (upserts `data/airlines/airlines_full.csv` `data/aircraft_types/aircraft.csv` and `data/temp_data/airports.csv` (OurAirports) on `ident`; `--dry-run` to validate only, `--only=airports` to limit tables). `airline_hubs` has no real source yet and is not imported.
 Auth header `x-api-key`. Responses include `meta.data_version` and the `x-data-version` header, plus `x-ratelimit-*` headers.
 See `/docs` or `web/openapi.yaml`.
 

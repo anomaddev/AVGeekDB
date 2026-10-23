@@ -33,6 +33,11 @@ describe("api", () => {
     const body = await r.json();
     expect(body.data[0].iata).toBe("LHR");
     expect(body.meta.data_version).toBe("2026.10.23-sample");
+    expect(body.data[0]).toMatchObject({ municipality: "London", continent: "EU", iso_region: "GB-ENG", scheduled_service: true });
+    expect(body.data[0]).not.toHaveProperty("city");
+    const us = queryRows("airports", loadEntity("airports"), new URLSearchParams("country=US&type=large_airport&scheduled_service=true"));
+    expect(us.data.map((a) => a.icao)).toEqual(["KJFK"]);
+    expect(queryRows("airports", loadEntity("airports"), new URLSearchParams("q=tokyo")).data[0].icao).toBe("RJTT");
     const p = queryRows("airlines", loadEntity("airlines"), new URLSearchParams("limit=2"));
     expect(p.data).toHaveLength(2); expect(p.meta.next_offset).toBe(2);
     const ba = queryRows("airlines", loadEntity("airlines"), new URLSearchParams("iata=BA")).data[0];

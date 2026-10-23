@@ -29,7 +29,7 @@ async function rest(path: string): Promise<Row[]> {
 
 // Column order must match schema/<dataset>.schema.json (and the CSV headers in data/).
 const EXPORTS: Record<Dataset, { select: string; order: string; map?: (r: Record<string, unknown>) => Row }> = {
-  airports: { select: "ident,iata,icao,name,city,country,latitude,longitude,elevation_ft,type,is_sample", order: "ident" },
+  airports: { select: "ident,iata,icao,name,municipality,country,latitude,longitude,elevation_ft,type,continent,iso_region,scheduled_service,gps_code,local_code,home_link,wikipedia_link,keywords,is_sample", order: "ident" },
   airlines: { select: "ident,name,iata,icao,callsign,country,country_code,active,major,is_sample", order: "ident" },
   aircraft_types: {
     select: "ident,icao,iata,family,name,short_name,alternate_names,manufacturer,engine_count,engine_type,aircraft_type,in_production,status,major,cargo,military,wiki_link,is_primary,wake_category,is_sample",

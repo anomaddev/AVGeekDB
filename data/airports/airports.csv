@@ -1,4 +1,4 @@
-ident,iata,icao,name,city,country,latitude,longitude,elevation_ft,type,is_sample
-SAMPLE-KJFK,JFK,KJFK,John F. Kennedy International Airport (SAMPLE),New York,US,40.6398,-73.7789,13,large_airport,true
-SAMPLE-EGLL,LHR,EGLL,London Heathrow Airport (SAMPLE),London,GB,51.4706,-0.4619,83,large_airport,true
-SAMPLE-RJTT,HND,RJTT,Tokyo Haneda Airport (SAMPLE),Tokyo,JP,35.5523,139.7800,35,large_airport,true
+ident,iata,icao,name,municipality,country,latitude,longitude,elevation_ft,type,continent,iso_region,scheduled_service,gps_code,local_code,home_link,wikipedia_link,keywords,is_sample
+SAMPLE-KJFK,JFK,KJFK,John F. Kennedy International Airport (SAMPLE),New York,US,40.6398,-73.7789,13,large_airport,NA,US-NY,true,KJFK,JFK,,https://en.wikipedia.org/wiki/John_F._Kennedy_International_Airport,Idlewild,true
+SAMPLE-EGLL,LHR,EGLL,London Heathrow Airport (SAMPLE),London,GB,51.4706,-0.4619,83,large_airport,EU,GB-ENG,true,EGLL,,,https://en.wikipedia.org/wiki/Heathrow_Airport,LON,true
+SAMPLE-RJTT,HND,RJTT,Tokyo Haneda Airport (SAMPLE),Tokyo,JP,35.5523,139.7800,35,large_airport,AS,JP-13,true,RJTT,,,https://en.wikipedia.org/wiki/Haneda_Airport,TYO,true
