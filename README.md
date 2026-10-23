@@ -42,7 +42,7 @@ See `/docs` or `web/openapi.yaml`.
 
 ## Deployment (planned)
 Hostinger Node.js hosting runs `npm run build && npm run start -w web`. Supabase provides Postgres, Auth (signup/login) and Storage (downloads).
-Set the env vars from `.env.example` and `AVGEEKDB_MOCK=false` once the Supabase-backed key store and data source are implemented.
+Set the env vars from `.env.example`. Signup and login use Supabase Auth (cookie session). The dashboard stores only a peppered hash of each API key. With `AVGEEKDB_MOCK=false`, `/v1` checks that hash in `api_keys`. Entity rows still come from the CSV snapshot until a Supabase data source is connected.
 
 ## License
 - **Code:** MIT (see `LICENSE`).

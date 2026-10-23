@@ -1,6 +1,7 @@
 import { loadEntity, currentDataVersion } from "./dataset";
 import { queryRows, QueryError } from "./query";
 import { verifyApiKey, MemoryKeyStore, hashApiKey, DEMO_KEY, type KeyStore } from "./keys";
+import { createServiceClient, SupabaseKeyStore } from "./supabase";
 import { RateLimiter } from "./rateLimit";
 import type { Entity, Row } from "./types";
 
@@ -16,13 +17,15 @@ export function isMock() { return (process.env.AVGEEKDB_MOCK ?? "true") !== "fal
 let defaults: HandlerDeps | null = null;
 export function defaultDeps(): HandlerDeps {
   if (defaults) return defaults;
+  const limiter = new RateLimiter(Number(process.env.RATE_LIMIT_PER_MINUTE ?? 60));
   if (!isMock()) {
-    // TODO: return { store: new SupabaseKeyStore(serviceClient), source: new SupabaseDataSource(...), ... }
-    throw new Error("Supabase-backed KeyStore/DataSource not implemented yet; set AVGEEKDB_MOCK=true");
+    // Key checks use Supabase. Entity rows still come from the CSV snapshot until a SupabaseDataSource is wired.
+    defaults = { store: new SupabaseKeyStore(createServiceClient()), source: csvDataSource, limiter };
+    return defaults;
   }
   const store = new MemoryKeyStore();
   store.add(hashApiKey(DEMO_KEY), { id: "demo", user_id: "demo", revoked_at: null });
-  defaults = { store, source: csvDataSource, limiter: new RateLimiter(Number(process.env.RATE_LIMIT_PER_MINUTE ?? 60)) };
+  defaults = { store, source: csvDataSource, limiter };
   return defaults;
 }
 

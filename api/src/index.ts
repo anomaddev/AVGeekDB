@@ -4,3 +4,4 @@ export * from "./query";
 export * from "./keys";
 export * from "./rateLimit";
 export * from "./handler";
+export * from "./supabase";

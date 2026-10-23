@@ -1,5 +1,9 @@
+import { loadEnvConfig } from "@next/env";
 import type { NextConfig } from "next";
 import { join } from "node:path";
+
+// Scripts and the Next app share the repo-root env file. Next only auto-loads web/.env*.
+loadEnvConfig(join(__dirname, ".."));
 
 const config: NextConfig = {
   transpilePackages: ["@avgeekdb/api"],

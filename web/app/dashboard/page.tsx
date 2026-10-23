@@ -1,35 +1,57 @@
-"use client";
-import { useState } from "react";
+import { redirect } from "next/navigation";
+import { isMock } from "@avgeekdb/api";
+import { KeyManager, type DashboardKey } from "@/components/KeyManager";
+import { isSupabaseConfigured, SUPABASE_SETUP_HINT } from "@/lib/supabase/env";
+import { createClient } from "@/lib/supabase/server";
+import { getAuthUser } from "@/lib/supabase/session";
 
-type Key = { id: string; name: string; prefix: string; created_at: string; revoked_at: string | null; requests_30d: number };
+export const dynamic = "force-dynamic";
 
-/**
- * API key dashboard (STUB). Lists, creates, revokes keys and shows usage.
- * TODO: require Supabase session; create via POST /dashboard/keys (server, service role:
- * generateApiKey() -> insert {prefix, key_hash}); list from api_keys + api_usage_daily; revoke = set revoked_at.
- */
-export default function Dashboard() {
-  const [keys, setKeys] = useState<Key[]>([]);
-  const [shown, setShown] = useState<string | null>(null);
-  function create() {
-    const rand = Array.from(crypto.getRandomValues(new Uint8Array(18)), (b) => b.toString(16).padStart(2, "0")).join("");
-    const key = `avg_${rand}`;
-    setShown(key);
-    setKeys((k) => [...k, { id: crypto.randomUUID(), name: `key ${k.length + 1}`, prefix: key.slice(0, 12), created_at: new Date().toISOString(), revoked_at: null, requests_30d: 0 }]);
+export default async function Dashboard() {
+  if (!isSupabaseConfigured()) {
+    return <main><h1>Your API keys</h1><p>{SUPABASE_SETUP_HINT}</p></main>;
   }
-  const revoke = (id: string) => setKeys((k) => k.map((x) => (x.id === id ? { ...x, revoked_at: new Date().toISOString() } : x)));
+  const user = await getAuthUser();
+  if (!user) redirect("/login?next=/dashboard");
+
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("api_keys")
+    .select("id, name, prefix, created_at, revoked_at")
+    .order("created_at", { ascending: false });
+  if (error) {
+    return <main><h1>Your API keys</h1><p>Could not load keys.</p></main>;
+  }
+
+  const since = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString();
+  const { data: usage, error: usageError } = await supabase
+    .from("api_usage_daily")
+    .select("api_key_id, requests")
+    .gte("day", since);
+  const totals = new Map<string, number>();
+  if (!usageError) {
+    for (const row of usage ?? []) {
+      const id = String(row.api_key_id);
+      totals.set(id, (totals.get(id) ?? 0) + Number(row.requests));
+    }
+  }
+
+  const keys: DashboardKey[] = (data ?? []).map((row) => ({
+    id: String(row.id),
+    name: String(row.name),
+    prefix: String(row.prefix),
+    created_at: String(row.created_at),
+    revoked_at: row.revoked_at ? String(row.revoked_at) : null,
+    requests_30d: usageError ? null : totals.get(String(row.id)) ?? 0,
+  }));
+
   return (
     <main>
       <h1>Your API keys</h1>
-      <p style={{ background: "#fff3cd", padding: 8 }}>Stub: local state only, not connected to Supabase yet.</p>
-      <button onClick={create}>Create key</button>
-      {shown && <p>New key (copy now, it won&apos;t be shown again): <code>{shown}</code></p>}
-      <table><thead><tr><th>Name</th><th>Prefix</th><th>Created</th><th>Requests (30d)</th><th>Status</th><th /></tr></thead><tbody>
-        {keys.map((k) => (
-          <tr key={k.id}><td>{k.name}</td><td><code>{k.prefix}…</code></td><td>{k.created_at.slice(0, 10)}</td><td>{k.requests_30d}</td>
-            <td>{k.revoked_at ? "revoked" : "active"}</td><td>{!k.revoked_at && <button onClick={() => revoke(k.id)}>Revoke</button>}</td></tr>
-        ))}
-      </tbody></table>
+      <p>Signed in as {user.email ?? user.id}.</p>
+      {isMock() && <p>Mock mode is on, so <code>/v1</code> still accepts the demo key. Set <code>AVGEEKDB_MOCK=false</code> to require these keys. Responses still come from the CSV snapshot.</p>}
+      {usageError && <p>Usage counts are unavailable.</p>}
+      <KeyManager keys={keys} />
     </main>
   );
 }
