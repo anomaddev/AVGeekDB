@@ -3,7 +3,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import Database from "better-sqlite3";
 import { describe, expect, it } from "vitest";
-import { buildArtifacts } from "../../scripts/build-artifacts";
+import { buildArtifacts, publishRepoDownloads } from "../../scripts/build-artifacts";
 import { downloadFormat, sortDownloads } from "../../web/lib/downloads";
 
 describe("download artifacts", () => {
@@ -40,6 +40,25 @@ describe("download artifacts", () => {
       expect(sqlite?.rows).toBe(manifest.files.filter((file) => file.format === "json").reduce((sum, file) => sum + file.rows, 0));
       expect(manifest.sample).toBe(true);
       expect(manifest.generated_at).toBe("2026-10-24T16:00:00.000Z");
+
+      const dataDir = mkdtempSync(join(tmpdir(), "avgeekdb-data-"));
+      try {
+        const written = publishRepoDownloads(dir, dataDir);
+        expect(written).toEqual([
+          join("airports", "airports.json"),
+          join("airlines", "airlines.json"),
+          join("aircraft_types", "aircraft_types.json"),
+          join("airline_hubs", "airline_hubs.json"),
+          "avgeekdb.sqlite",
+        ]);
+        const published = JSON.parse(readFileSync(join(dataDir, "airports", "airports.json"), "utf8")) as { data: unknown[] };
+        expect(published.data).toHaveLength(airports.data.length);
+        const publishedDb = new Database(join(dataDir, "avgeekdb.sqlite"), { readonly: true });
+        expect((publishedDb.prepare("SELECT COUNT(*) AS n FROM airlines").get() as { n: number }).n).toBeGreaterThan(0);
+        publishedDb.close();
+      } finally {
+        rmSync(dataDir, { recursive: true, force: true });
+      }
     } finally {
       rmSync(dir, { recursive: true, force: true });
     }

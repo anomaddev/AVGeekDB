@@ -7,11 +7,12 @@ Open, easy-to-use data for **aircraft types, airlines and airports**: downloadab
 ## Layout
 ```
 data/            canonical CSV per entity (`<entity>/<entity>.csv`) + VERSION (dataset version) + LICENSE.md (TODO)
+                 `<entity>/<entity>.json` and `avgeekdb.sqlite` are the committed JSON and SQLite downloads (`npm run data:build` rewrites them)
                  aircraft_types/ also holds aircraft.csv (verified list) plus changes.csv and flags.csv
                  airlines/ also holds airlines_full.csv (verified list) plus changes.csv and flags.csv
 schema/          JSON Schema per entity (placeholder fields)
 scripts/         export-from-supabase.ts (Supabase → data/, used by the weekly snapshot workflow)
-                 build-data.ts (validate -> dist/{csv,json}, avgeekdb.sqlite, manifest.json)
+                 build-data.ts (validate -> dist/{csv,json}, avgeekdb.sqlite, manifest.json, and data/<entity>.json + data/avgeekdb.sqlite)
                  upload-to-storage.ts (STUB: publish dist/ to Supabase Storage)
 api/             @avgeekdb/api: shared logic (key hashing/verify, per-key rate limit, query handler, data version)
 web/             Next.js 16 app: landing, /docs, /downloads, /get-key, /signup, /login, /dashboard, /contribute, /admin, public API /v1/*

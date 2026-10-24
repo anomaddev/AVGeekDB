@@ -9,7 +9,8 @@ if (!existsSync(join(standalone, "web", "server.js"))) throw new Error(`standalo
 const copy = (from, to, filter) => { rmSync(to, { recursive: true, force: true }); cpSync(from, to, { recursive: true, filter }); console.log(`copied ${from} -> ${to}`); };
 copy(join(root, "web", ".next", "static"), join(standalone, "web", ".next", "static"));
 if (existsSync(join(root, "web", "public"))) copy(join(root, "web", "public"), join(standalone, "web", "public"));
-copy(join(root, "data"), join(standalone, "data"), (src) => !src.includes("temp_data"));
+// Runtime only needs the source CSVs. JSON and SQLite dumps in data/ are repo downloads.
+copy(join(root, "data"), join(standalone, "data"), (src) => !src.includes("temp_data") && !src.endsWith(".json") && !src.endsWith(".sqlite"));
 
 // Hostinger's Next.js app type runs server.js from the standalone root, not standalone/web/.
 // Flatten the web app up beside the hoisted node_modules so `next` resolves, keeping web/ for the old entry path.

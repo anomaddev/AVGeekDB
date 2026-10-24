@@ -6,9 +6,10 @@
 import { cpSync } from "node:fs";
 import { join } from "node:path";
 import { findDataDir } from "../api/src";
-import { buildArtifacts } from "./build-artifacts";
+import { buildArtifacts, publishRepoDownloads } from "./build-artifacts";
 
-const root = join(findDataDir(), "..");
+const dataDir = findDataDir();
+const root = join(dataDir, "..");
 const dist = join(root, "dist");
 try {
   buildArtifacts(dist);
@@ -16,5 +17,6 @@ try {
   console.error(err instanceof Error ? err.message : err);
   process.exit(1);
 }
+const repoFiles = publishRepoDownloads(dist, dataDir);
 cpSync(dist, join(root, "web", "public", "downloads"), { recursive: true });
-console.log("Wrote dist/ and web/public/downloads/");
+console.log(`Wrote dist/, web/public/downloads/, and ${repoFiles.map((path) => `data/${path}`).join(", ")}`);

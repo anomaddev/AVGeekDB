@@ -2,9 +2,9 @@
  * Validates data/<entity>/<entity>.csv against schema/<entity>.schema.json and writes
  * CSV, JSON, and SQLite dumps plus manifest.json into outDir.
  */
-import { mkdirSync, writeFileSync, readFileSync, rmSync, statSync } from "node:fs";
+import { cpSync, mkdirSync, writeFileSync, readFileSync, rmSync, statSync } from "node:fs";
 import { createHash } from "node:crypto";
-import { join } from "node:path";
+import { dirname, join } from "node:path";
 import Ajv2020 from "ajv/dist/2020.js";
 import { stringify } from "csv-stringify/sync";
 import Database from "better-sqlite3";
@@ -104,4 +104,19 @@ export function buildArtifacts(outDir: string, now = new Date()): ArtifactManife
   const manifest: ArtifactManifest = { data_version: version, sample, generated_at: now.toISOString(), files };
   writeFileSync(join(outDir, "manifest.json"), JSON.stringify(manifest, null, 2));
   return manifest;
+}
+
+/** Copy the JSON and SQLite dumps into data/ so they are committed beside the source CSVs. */
+export function publishRepoDownloads(distDir: string, dataDir: string): string[] {
+  const written: string[] = [];
+  for (const entity of DATASETS) {
+    const rel = join(entity, `${entity}.json`);
+    const dest = join(dataDir, rel);
+    mkdirSync(dirname(dest), { recursive: true });
+    cpSync(join(distDir, "json", `${entity}.json`), dest);
+    written.push(rel);
+  }
+  cpSync(join(distDir, "avgeekdb.sqlite"), join(dataDir, "avgeekdb.sqlite"));
+  written.push("avgeekdb.sqlite");
+  return written;
 }
