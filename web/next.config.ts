@@ -15,5 +15,14 @@ const config: NextConfig = {
   outputFileTracingRoot: join(__dirname, ".."),
   // Public API lives at /v1/* (app/v1/[entity]/route.ts). Legacy alias:
   async rewrites() { return [{ source: "/api/v1/:path*", destination: "/v1/:path*" }]; },
+  async headers() {
+    return [{
+      source: "/downloads/avgeekdb.sqlite",
+      headers: [
+        { key: "Content-Type", value: "application/vnd.sqlite3" },
+        { key: "Content-Disposition", value: 'attachment; filename="avgeekdb.sqlite"' },
+      ],
+    }];
+  },
 };
 export default config;
