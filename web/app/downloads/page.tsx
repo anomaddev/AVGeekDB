@@ -32,7 +32,7 @@ export default function Downloads() {
         .downloads .table-wrap { overflow-x: auto; }
       `}</style>
       <h1>Downloads</h1>
-      <p>The same dataset is available as CSV, JSON, and SQLite.</p>
+      <p>The same dataset is available as CSV, JSON, and SQLite. JSON and SQLite are committed in the repo at <code>data/&lt;entity&gt;/&lt;entity&gt;.json</code> and <code>data/avgeekdb.sqlite</code>.</p>
       {!m ? <p>No build yet. Run <code>npm run data:build</code> to generate the files.</p> : (
         <>
           <p>Data version <b>{m.data_version}</b>{m.sample && " (SAMPLE data)"}, built {m.generated_at}.</p>

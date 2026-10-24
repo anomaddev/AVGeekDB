@@ -1,0 +1,42 @@
+{
+  "data_version": "2026.10.23-sample",
+  "sample": true,
+  "data": [
+    {
+      "ident": "UAL",
+      "name": "United Airlines (SAMPLE)",
+      "iata": "UA",
+      "icao": "UAL",
+      "callsign": "UNITED",
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "major": true,
+      "is_sample": true
+    },
+    {
+      "ident": "BAW",
+      "name": "British Airways (SAMPLE)",
+      "iata": "BA",
+      "icao": "BAW",
+      "callsign": "SPEEDBIRD",
+      "country": "United Kingdom",
+      "country_code": "GB",
+      "active": true,
+      "major": true,
+      "is_sample": true
+    },
+    {
+      "ident": "ANA",
+      "name": "All Nippon Airways (SAMPLE)",
+      "iata": "NH",
+      "icao": "ANA",
+      "callsign": "ALL NIPPON",
+      "country": "Japan",
+      "country_code": "JP",
+      "active": true,
+      "major": true,
+      "is_sample": true
+    }
+  ]
+}

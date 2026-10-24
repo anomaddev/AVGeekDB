@@ -1,0 +1,24 @@
+{
+  "data_version": "2026.10.23-sample",
+  "sample": true,
+  "data": [
+    {
+      "airline_icao": "BAW",
+      "airport_icao": "EGLL",
+      "is_primary": true,
+      "is_sample": true
+    },
+    {
+      "airline_icao": "ANA",
+      "airport_icao": "RJTT",
+      "is_primary": true,
+      "is_sample": true
+    },
+    {
+      "airline_icao": "UAL",
+      "airport_icao": "KJFK",
+      "is_primary": false,
+      "is_sample": true
+    }
+  ]
+}

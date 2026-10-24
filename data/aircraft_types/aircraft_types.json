@@ -1,0 +1,80 @@
+{
+  "data_version": "2026.10.23-sample",
+  "sample": true,
+  "data": [
+    {
+      "ident": "B77W",
+      "icao": "B77W",
+      "iata": "77W",
+      "family": "777",
+      "name": "Boeing 777-300ER (SAMPLE)",
+      "short_name": "777-300ER",
+      "alternate_names": [
+        "777-300ER",
+        "Triple Seven"
+      ],
+      "manufacturer": "Boeing",
+      "engine_count": 2,
+      "engine_type": "Turbofan",
+      "aircraft_type": "jet_aircraft",
+      "in_production": true,
+      "status": "Operational",
+      "major": true,
+      "cargo": false,
+      "military": false,
+      "wiki_link": "https://en.wikipedia.org/wiki/Boeing_777",
+      "is_primary": true,
+      "wake_category": "H",
+      "is_sample": true
+    },
+    {
+      "ident": "A359",
+      "icao": "A359",
+      "iata": "359",
+      "family": "A350",
+      "name": "Airbus A350-900 (SAMPLE)",
+      "short_name": "A350-900",
+      "alternate_names": [
+        "A350"
+      ],
+      "manufacturer": "Airbus",
+      "engine_count": 2,
+      "engine_type": "Turbofan",
+      "aircraft_type": "jet_aircraft",
+      "in_production": true,
+      "status": "Operational",
+      "major": true,
+      "cargo": false,
+      "military": false,
+      "wiki_link": "https://en.wikipedia.org/wiki/Airbus_A350",
+      "is_primary": true,
+      "wake_category": "H",
+      "is_sample": true
+    },
+    {
+      "ident": "B38M",
+      "icao": "B38M",
+      "iata": "7M8",
+      "family": "737 MAX",
+      "name": "Boeing 737 MAX 8 (SAMPLE)",
+      "short_name": "737 MAX 8",
+      "alternate_names": [
+        "737-8",
+        "737 MAX"
+      ],
+      "manufacturer": "Boeing",
+      "engine_count": 2,
+      "engine_type": "Turbofan",
+      "aircraft_type": "jet_aircraft",
+      "in_production": true,
+      "status": "Operational",
+      "major": true,
+      "cargo": false,
+      "military": false,
+      "wiki_link": "https://en.wikipedia.org/wiki/Boeing_737_MAX",
+      "is_primary": true,
+      "wake_category": "M",
+      "is_sample": true
+    }
+  ]
+}

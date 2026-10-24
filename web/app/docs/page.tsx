@@ -22,7 +22,7 @@ export default function Docs() {
       <pre>{`{ "data": [...], "meta": { "total": 3, "limit": 25, "offset": 0, "next_offset": null, "data_version": "2026.10.23" } }`}</pre>
       <p>Every response carries <code>x-data-version</code>. Errors: 400 bad params, 401 missing/invalid key, 403 revoked key, 429 rate limited.</p>
       <h2>Downloads</h2>
-      <p>Full dumps of this dataset are on the <Link href="/downloads">downloads page</Link> as CSV (one file per table), JSON (one file per table), and a single SQLite database (<code>avgeekdb.sqlite</code>). Each file carries the same <code>data_version</code> as <code>x-data-version</code>.</p>
+      <p>Full dumps of this dataset are on the <Link href="/downloads">downloads page</Link> as CSV (one file per table), JSON (one file per table), and a single SQLite database (<code>avgeekdb.sqlite</code>). The JSON and SQLite files are also committed in the repo at <code>data/&lt;entity&gt;/&lt;entity&gt;.json</code> and <code>data/avgeekdb.sqlite</code>. Each file carries the same <code>data_version</code> as <code>x-data-version</code>.</p>
       <h2>Rate limits</h2>
       <p>{limit} requests/minute per key. Headers: <code>x-ratelimit-limit</code>, <code>x-ratelimit-remaining</code>, <code>x-ratelimit-reset</code>, and <code>retry-after</code> on 429.</p>
     </main>
