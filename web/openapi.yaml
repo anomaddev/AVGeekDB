@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
   title: AVGeekDB API
-  version: 0.1.0
+  version: 0.2.0
   description: Free API for aircraft types, airlines and airports. Requires an API key (x-api-key). Includes real airlines, aircraft types and airports (OurAirports); airline hubs are still SAMPLE only.
   license: { name: MIT, identifier: MIT }
 servers: [{ url: "https://example.com/v1", description: "TODO: production domain" }]
