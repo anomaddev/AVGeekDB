@@ -36,24 +36,31 @@ async function rest(path: string): Promise<Row[]> {
   }
 }
 
-const rows: SqliteRows = {};
-for (const table of SQLITE_TABLES) {
-  if ((EXCLUDED_TABLES as readonly string[]).includes(table.name)) throw new Error(`refusing to dump ${table.name}`);
-  const select = table.columns.map((col) => col.name).join(",");
-  rows[table.name] = await rest(`${table.name}?select=${encodeURIComponent(select)}&order=${table.order}`);
-  console.log(`${table.name}: ${rows[table.name].length} rows`);
-}
+async function main(): Promise<void> {
+  const rows: SqliteRows = {};
+  for (const table of SQLITE_TABLES) {
+    if ((EXCLUDED_TABLES as readonly string[]).includes(table.name)) throw new Error(`refusing to dump ${table.name}`);
+    const select = table.columns.map((col) => col.name).join(",");
+    rows[table.name] = await rest(`${table.name}?select=${encodeURIComponent(select)}&order=${table.order}`);
+    console.log(`${table.name}: ${rows[table.name].length} rows`);
+  }
 
-const current = rows.data_versions.find((row) => row.is_current === true);
-const dataVersion = String(current?.version ?? "unversioned");
-const generatedAt = new Date().toISOString();
-console.log(`api_version: ${API_VERSION}`);
-console.log(`data_version: ${dataVersion}`);
+  const current = rows.data_versions.find((row) => row.is_current === true);
+  const dataVersion = String(current?.version ?? "unversioned");
+  const generatedAt = new Date().toISOString();
+  console.log(`api_version: ${API_VERSION}`);
+  console.log(`data_version: ${dataVersion}`);
 
-if (dryRun) {
-  console.log("dry-run: wrote nothing");
-} else {
+  if (dryRun) {
+    console.log("dry-run: wrote nothing");
+    return;
+  }
   const dest = join(findDataDir(), "avgeekdb.sqlite");
   const total = writeSqliteDump(dest, rows, { api_version: API_VERSION, data_version: dataVersion, generated_at: generatedAt });
   console.log(`wrote ${dest} (${total} rows)`);
 }
+
+main().catch((err) => {
+  console.error(err instanceof Error ? err.message : err);
+  process.exit(1);
+});

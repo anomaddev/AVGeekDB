@@ -55,14 +55,21 @@ const EXPORTS: Record<Dataset, { select: string; order: string; map?: (r: Record
   },
 };
 
-const dataDir = findDataDir();
-for (const [ds, spec] of Object.entries(EXPORTS) as [Dataset, (typeof EXPORTS)[Dataset]][]) {
-  const raw = await rest(`${ds}?select=${encodeURIComponent(spec.select)}&order=${spec.order}`);
-  const rows = spec.map ? raw.map((r) => spec.map!(r as Record<string, unknown>)) : raw;
-  console.log(`${ds}: ${rows.length} rows`);
-  if (!dryRun) writeFileSync(join(dataDir, ds, `${ds}.csv`), stringify(rows, { header: true, cast: { boolean: (b) => String(b) } }));
+async function main(): Promise<void> {
+  const dataDir = findDataDir();
+  for (const [ds, spec] of Object.entries(EXPORTS) as [Dataset, (typeof EXPORTS)[Dataset]][]) {
+    const raw = await rest(`${ds}?select=${encodeURIComponent(spec.select)}&order=${spec.order}`);
+    const rows = spec.map ? raw.map((r) => spec.map!(r as Record<string, unknown>)) : raw;
+    console.log(`${ds}: ${rows.length} rows`);
+    if (!dryRun) writeFileSync(join(dataDir, ds, `${ds}.csv`), stringify(rows, { header: true, cast: { boolean: (b) => String(b) } }));
+  }
+  const [current] = await rest("data_versions?select=version&is_current=eq.true");
+  const version = String(current?.version ?? new Date().toISOString().slice(0, 10).replaceAll("-", "."));
+  console.log(`data_version: ${version}`);
+  if (!dryRun) writeFileSync(join(dataDir, "VERSION"), version + "\n");
 }
-const [current] = await rest("data_versions?select=version&is_current=eq.true");
-const version = String(current?.version ?? new Date().toISOString().slice(0, 10).replaceAll("-", "."));
-console.log(`data_version: ${version}`);
-if (!dryRun) writeFileSync(join(dataDir, "VERSION"), version + "\n");
+
+main().catch((err) => {
+  console.error(err instanceof Error ? err.message : err);
+  process.exit(1);
+});
