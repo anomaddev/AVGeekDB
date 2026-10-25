@@ -13,4 +13,5 @@ export interface AircraftType {
   manufacturer: string | null; engine_count: number | null; engine_type: string | null; aircraft_type: string | null; in_production: boolean;
   status: string | null; major: boolean; cargo: boolean; military: boolean; wiki_link: string | null; is_primary: boolean; wake_category: string | null; is_sample: boolean;
 }
-export type Row = Record<string, string | number | boolean | null | string[]>;
+export type Cell = string | number | boolean | null | Cell[] | { [key: string]: Cell };
+export type Row = Record<string, Cell>;

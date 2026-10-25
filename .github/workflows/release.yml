@@ -1,0 +1,92 @@
+# Cut an API release: bump the semver, dump Supabase into data/avgeekdb.sqlite, open a PR.
+# Squash-merge that PR so the commit subject stays `release: vX.Y.Z`.
+# The push to main then tags vX.Y.Z and uploads avgeekdb-X.Y.Z.sqlite.
+# Required repo secrets: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY.
+name: Release
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Semver without a leading v (for example 0.2.0)
+        required: true
+        type: string
+  push:
+    branches: [main]
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  prepare:
+    if: github.event_name == 'workflow_dispatch'
+    concurrency:
+      group: sqlite-dump
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Check semver and bump the API version
+        env:
+          RELEASE_VERSION: ${{ inputs.version }}
+        run: |
+          if [[ ! "$RELEASE_VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "version must be x.y.z"
+            exit 1
+          fi
+          npm run version:set -- "$RELEASE_VERSION"
+      - name: Dump Supabase reference tables
+        run: npm run data:sqlite
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+      - name: Open release PR
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: release/v${{ inputs.version }}
+          base: main
+          add-paths: |
+            package.json
+            package-lock.json
+            api/package.json
+            api/src/version.ts
+            web/package.json
+            web/openapi.yaml
+            web/public/openapi.yaml
+            data/avgeekdb.sqlite
+          commit-message: "release: v${{ inputs.version }}"
+          title: "release: v${{ inputs.version }}"
+          body: |
+            Bumps the API to `${{ inputs.version }}` and replaces `data/avgeekdb.sqlite` with a dump of the current Supabase reference tables.
+
+            Squash-merge this pull request so the commit subject stays `release: v${{ inputs.version }}`. That push tags the release and attaches `avgeekdb-${{ inputs.version }}.sqlite`.
+          author: "AVGeekDB Bot <anomaddev@users.noreply.github.com>"
+          delete-branch: true
+  publish:
+    if: github.event_name == 'push' && startsWith(github.event.head_commit.message, 'release: v')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tag and attach the sqlite dump
+        env:
+          GH_TOKEN: ${{ github.token }}
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
+        run: |
+          ver=$(printf '%s\n' "$COMMIT_MSG" | sed -n '1s/^release: v\([0-9][0-9]*\.[0-9][0-9]*\.[0-9][0-9]*\).*/\1/p')
+          if [ -z "$ver" ]; then
+            echo "could not read semver from: $COMMIT_MSG"
+            exit 1
+          fi
+          if git ls-remote --exit-code --tags origin "refs/tags/v$ver" >/dev/null 2>&1; then
+            echo "v$ver already exists"
+            exit 0
+          fi
+          cp data/avgeekdb.sqlite "avgeekdb-$ver.sqlite"
+          git tag "v$ver"
+          git push origin "v$ver"
+          gh release create "v$ver" "avgeekdb-$ver.sqlite" \
+            --title "v$ver" \
+            --notes "AVGeekDB API v$ver. SQLite dump of the Supabase reference tables at this release."

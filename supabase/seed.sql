@@ -1,9 +1,18 @@
 insert into public.data_versions (version, notes, is_current) values ('2026.10.23-sample', 'SAMPLE data only', true);
--- SAMPLE rows only (is_sample = true). Real data loaded from dist/ once sources are provided.
-insert into public.airports (ident, iata, icao, name, municipality, country, latitude, longitude, elevation_ft, type, continent, iso_region, scheduled_service, is_sample) values
- ('SAMPLE-KJFK','JFK','KJFK','John F. Kennedy International Airport (SAMPLE)','New York','US',40.6398,-73.7789,13,'large_airport','NA','US-NY',true,true),
- ('SAMPLE-EGLL','LHR','EGLL','London Heathrow Airport (SAMPLE)','London','GB',51.4706,-0.4619,83,'large_airport','EU','GB-ENG',true,true),
- ('SAMPLE-RJTT','HND','RJTT','Tokyo Haneda Airport (SAMPLE)','Tokyo','JP',35.5523,139.78,35,'large_airport','AS','JP-13',true,true);
+-- SAMPLE rows only (is_sample = true). Real airport data is loaded from data/airports/.
+-- Country and region ids match data/airports so a later full load upserts the same keys.
+insert into public.countries (id, code, name, continent) values
+ (302755,'US','United States','NA'),
+ (302688,'GB','United Kingdom','EU'),
+ (302639,'JP','Japan','AS');
+insert into public.regions (id, code, local_code, name, continent, iso_country) values
+ (306110,'US-NY','NY','New York','NA','US'),
+ (306374,'GB-ENG','ENG','England','EU','GB'),
+ (304298,'JP-13','13','Tōkyō Prefecture','AS','JP');
+insert into public.airports (id, ident, type, name, municipality, iso_country, latitude_deg, longitude_deg, elevation_ft, continent, iso_region, scheduled_service, icao_code, iata_code, is_sample) values
+ (9000001,'SAMPLE-KJFK','large_airport','John F. Kennedy International Airport (SAMPLE)','New York','US',40.6398,-73.7789,13,'NA','US-NY',true,'KJFK','JFK',true),
+ (9000002,'SAMPLE-EGLL','large_airport','London Heathrow Airport (SAMPLE)','London','GB',51.4706,-0.4619,83,'EU','GB-ENG',true,'EGLL','LHR',true),
+ (9000003,'SAMPLE-RJTT','large_airport','Tokyo Haneda Airport (SAMPLE)','Tokyo','JP',35.5523,139.78,35,'AS','JP-13',true,'RJTT','HND',true);
 insert into public.airlines (ident, name, iata, icao, callsign, country, country_code, active, major, is_sample) values
  ('UAL','United Airlines (SAMPLE)','UA','UAL','UNITED','United States','US',true,true,true),
  ('BAW','British Airways (SAMPLE)','BA','BAW','SPEEDBIRD','United Kingdom','GB',true,true,true),
@@ -17,4 +26,4 @@ insert into public.airline_hubs (airline_id, airport_id, is_primary)
 select al.id, ap.id, v.is_primary
 from (values ('BAW','EGLL',true), ('ANA','RJTT',true), ('UAL','KJFK',false)) as v(airline_icao, airport_icao, is_primary)
 join public.airlines al on al.ident = v.airline_icao
-join public.airports ap on ap.icao = v.airport_icao;
+join public.airports ap on ap.icao_code = v.airport_icao;

@@ -1,6 +1,6 @@
 /**
  * Export the current Supabase data (source of truth) into data/ as CSV, and set data/VERSION
- * to the current data_versions row. Used by docs/ci-drafts/data-snapshot.yml.
+ * to the current data_versions row. The SQLite download is a separate dump (`npm run data:sqlite`).
  * Env: NEXT_PUBLIC_SUPABASE_URL (or SUPABASE_URL), SUPABASE_SERVICE_ROLE_KEY. Read-only against Supabase.
  * --dry-run prints row counts without writing.
  */
@@ -29,7 +29,17 @@ async function rest(path: string): Promise<Row[]> {
 
 // Column order must match schema/<dataset>.schema.json (and the CSV headers in data/).
 const EXPORTS: Record<Dataset, { select: string; order: string; map?: (r: Record<string, unknown>) => Row }> = {
-  airports: { select: "ident,iata,icao,name,municipality,country,latitude,longitude,elevation_ft,type,continent,iso_region,scheduled_service,gps_code,local_code,home_link,wikipedia_link,keywords,is_sample", order: "ident" },
+  airports: {
+    select: "ident,iata_code,icao_code,name,municipality,iso_country,latitude_deg,longitude_deg,elevation_ft,type,continent,iso_region,scheduled_service,gps_code,local_code,home_link,wikipedia_link,keywords,is_sample",
+    order: "ident",
+    map: (r) => ({
+      ident: r.ident as string, iata: r.iata_code as string | null, icao: r.icao_code as string | null, name: r.name as string,
+      municipality: r.municipality as string | null, country: r.iso_country as string, latitude: r.latitude_deg as number, longitude: r.longitude_deg as number,
+      elevation_ft: r.elevation_ft as number | null, type: r.type as string, continent: r.continent as string | null, iso_region: r.iso_region as string | null,
+      scheduled_service: r.scheduled_service as boolean, gps_code: r.gps_code as string | null, local_code: r.local_code as string | null,
+      home_link: r.home_link as string | null, wikipedia_link: r.wikipedia_link as string | null, keywords: r.keywords as string | null, is_sample: r.is_sample as boolean,
+    }),
+  },
   airlines: { select: "ident,name,iata,icao,callsign,country,country_code,active,major,is_sample", order: "ident" },
   aircraft_types: {
     select: "ident,icao,iata,family,name,short_name,alternate_names,manufacturer,engine_count,engine_type,aircraft_type,in_production,status,major,cargo,military,wiki_link,is_primary,wake_category,is_sample",
@@ -37,10 +47,10 @@ const EXPORTS: Record<Dataset, { select: string; order: string; map?: (r: Record
     map: (r) => ({ ...(r as Row), alternate_names: ((r.alternate_names as string[] | null) ?? []).join(",") }),
   },
   airline_hubs: {
-    select: "is_primary,airline:airlines(icao,is_sample),airport:airports(icao)", order: "airline_id",
+    select: "is_primary,airline:airlines(icao,is_sample),airport:airports(icao_code)", order: "airline_id",
     map: (r) => {
-      const al = r.airline as { icao: string; is_sample: boolean }, ap = r.airport as { icao: string };
-      return { airline_icao: al.icao, airport_icao: ap.icao, is_primary: r.is_primary as boolean, is_sample: al.is_sample };
+      const al = r.airline as { icao: string; is_sample: boolean }, ap = r.airport as { icao_code: string };
+      return { airline_icao: al.icao, airport_icao: ap.icao_code, is_primary: r.is_primary as boolean, is_sample: al.is_sample };
     },
   },
 };

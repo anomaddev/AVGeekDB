@@ -11,6 +11,8 @@
     "data:build": "tsx scripts/build-data.ts",
     "data:upload": "tsx scripts/upload-to-storage.ts",
     "data:export": "tsx scripts/export-from-supabase.ts",
+    "data:sqlite": "tsx scripts/dump-supabase-sqlite.ts",
+    "version:set": "tsx scripts/set-api-version.ts",
     "lint": "npm run lint -w web",
     "typecheck": "tsc -p tsconfig.json --noEmit && npm run typecheck -w web",
     "test": "vitest run",

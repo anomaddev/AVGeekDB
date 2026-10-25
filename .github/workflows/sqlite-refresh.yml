@@ -1,0 +1,43 @@
+# Dump the current Supabase reference tables into data/avgeekdb.sqlite and open a PR.
+# Does not bump the API version. No schedule.
+# Required repo secrets: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY.
+# Settings → Actions → General → Allow GitHub Actions to create pull requests.
+name: SQLite refresh
+on:
+  workflow_dispatch: {}
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: sqlite-dump
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Dump Supabase reference tables
+        run: npm run data:sqlite
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+      - id: date
+        run: echo "date=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+      - name: Open PR with the sqlite dump
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: sqlite-refresh/${{ steps.date.outputs.date }}
+          base: main
+          add-paths: data/avgeekdb.sqlite
+          commit-message: "data: refresh avgeekdb.sqlite ${{ steps.date.outputs.date }}"
+          title: "SQLite refresh ${{ steps.date.outputs.date }}"
+          body: |
+            Direct dump of the current Supabase reference tables into `data/avgeekdb.sqlite`.
+            The API version is unchanged. Review before merging.
+          author: "AVGeekDB Bot <anomaddev@users.noreply.github.com>"
+          delete-branch: true

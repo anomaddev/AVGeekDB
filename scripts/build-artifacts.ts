@@ -8,7 +8,8 @@ import { dirname, join } from "node:path";
 import Ajv2020 from "ajv/dist/2020.js";
 import { stringify } from "csv-stringify/sync";
 import Database from "better-sqlite3";
-import { DATASETS, loadDataset, findDataDir, currentDataVersion, type Dataset, type Row } from "../api/src";
+import { API_VERSION, DATASETS, loadDataset, findDataDir, currentDataVersion, type Dataset, type Row } from "../api/src";
+import { sqliteFileStats } from "./sqlite-dump";
 
 export type DownloadFormat = "csv" | "json" | "sqlite";
 
@@ -22,6 +23,7 @@ export interface ArtifactFile {
 }
 
 export interface ArtifactManifest {
+  api_version: string;
   data_version: string;
   sample: boolean;
   generated_at: string;
@@ -101,12 +103,12 @@ export function buildArtifacts(outDir: string, now = new Date()): ArtifactManife
     const buf = readFileSync(join(outDir, item.path));
     return { ...item, bytes: statSync(join(outDir, item.path)).size, sha256: createHash("sha256").update(buf).digest("hex") };
   });
-  const manifest: ArtifactManifest = { data_version: version, sample, generated_at: now.toISOString(), files };
+  const manifest: ArtifactManifest = { api_version: API_VERSION, data_version: version, sample, generated_at: now.toISOString(), files };
   writeFileSync(join(outDir, "manifest.json"), JSON.stringify(manifest, null, 2));
   return manifest;
 }
 
-/** Copy the JSON and SQLite dumps into data/ so they are committed beside the source CSVs. */
+/** Copy the JSON dumps into data/. The committed sqlite file is the Supabase dump, not this CSV build. */
 export function publishRepoDownloads(distDir: string, dataDir: string): string[] {
   const written: string[] = [];
   for (const entity of DATASETS) {
@@ -116,7 +118,16 @@ export function publishRepoDownloads(distDir: string, dataDir: string): string[]
     cpSync(join(distDir, "json", `${entity}.json`), dest);
     written.push(rel);
   }
-  cpSync(join(distDir, "avgeekdb.sqlite"), join(dataDir, "avgeekdb.sqlite"));
-  written.push("avgeekdb.sqlite");
   return written;
+}
+
+/** Point the manifest's sqlite entry at the committed Supabase dump. */
+export function mergeRepoSqlite(manifest: ArtifactManifest, sqlitePath: string): ArtifactManifest {
+  const stats = sqliteFileStats(sqlitePath);
+  return {
+    ...manifest,
+    files: manifest.files.map((file) => file.format === "sqlite"
+      ? { path: "avgeekdb.sqlite", format: "sqlite", dataset: "avgeekdb", ...stats }
+      : file),
+  };
 }

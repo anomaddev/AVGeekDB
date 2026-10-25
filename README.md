@@ -7,18 +7,22 @@ Open, easy-to-use data for **aircraft types, airlines and airports**: downloadab
 ## Layout
 ```
 data/            canonical CSV per entity (`<entity>/<entity>.csv`) + VERSION (dataset version) + LICENSE.md (TODO)
-                 `<entity>/<entity>.json` and `avgeekdb.sqlite` are the committed JSON and SQLite downloads (`npm run data:build` rewrites them)
+                 `<entity>/<entity>.json` is the committed JSON download (`npm run data:build` rewrites it)
+                 `avgeekdb.sqlite` is a direct dump of the Supabase reference tables (`npm run data:sqlite`), not a build of these CSVs
                  aircraft_types/ also holds aircraft.csv (verified list) plus changes.csv and flags.csv
                  airlines/ also holds airlines_full.csv (verified list) plus changes.csv and flags.csv
 schema/          JSON Schema per entity (placeholder fields)
-scripts/         export-from-supabase.ts (Supabase → data/, used by the weekly snapshot workflow)
-                 build-data.ts (validate -> dist/{csv,json}, avgeekdb.sqlite, manifest.json, and data/<entity>.json + data/avgeekdb.sqlite)
+scripts/         export-from-supabase.ts (Supabase → data/ CSV snapshots)
+                 dump-supabase-sqlite.ts (Supabase reference tables → data/avgeekdb.sqlite)
+                 build-data.ts (validate -> dist/{csv,json}, a CSV-shaped dist sqlite, manifest.json, and data/<entity>.json)
+                 set-api-version.ts (write the API semver into package.json, OpenAPI, and api/src/version.ts)
                  upload-to-storage.ts (STUB: publish dist/ to Supabase Storage)
-api/             @avgeekdb/api: shared logic (key hashing/verify, per-key rate limit, query handler, data version)
+api/             @avgeekdb/api: shared logic (key hashing/verify, per-key rate limit, query handler, API version, data version)
 web/             Next.js 16 app: landing, /docs, /downloads, /get-key, /signup, /login, /dashboard, /contribute, /admin, public API /v1/*
 web/openapi.yaml OpenAPI 3.1 spec (also served at /openapi.yaml)
 supabase/        migrations/ (Postgres schema + RLS) and seed.sql (sample rows)
-docs/ci-drafts/  GitHub Actions drafts: ci.yml, data-snapshot.yml (move to .github/workflows/)
+docs/ci-drafts/  GitHub Actions draft: ci.yml
+.github/workflows/  sqlite-refresh.yml (manual Supabase → sqlite PR), release.yml (version bump + sqlite, tag on merge)
 ```
 
 ## Quick start
@@ -30,8 +34,7 @@ curl -H "x-api-key: avg_demo_0000000000000000000000000000" "localhost:3000/v1/ai
 ```
 
 ## Source of truth
-Supabase Postgres is canonical. `data/` is a versioned snapshot exported weekly (`npm run data:export`, draft workflow
-`docs/ci-drafts/data-snapshot.yml`) and opened as a PR. Every change to reference tables is recorded in `change_log`
+Supabase Postgres is canonical. `data/avgeekdb.sqlite` is a dump of the reference tables (Postgres column names), refreshed by the manual SQLite workflow or when the API is released. `npm run data:export` can still write CSV snapshots. Every change to reference tables is recorded in `change_log`
 by an audit trigger, and rows carry `updated_at` + `row_version`.
 
 ## Data model
@@ -45,7 +48,7 @@ Airline fields: `ident, name, iata, icao, callsign, country, country_code, activ
 Aircraft fields: `ident, icao, iata, family, name, short_name, alternate_names[], manufacturer, engine_count, engine_type, aircraft_type, in_production, status, major, cargo, military, wiki_link, is_primary, wake_category, is_sample` (filters: `ident, icao, iata, family, manufacturer, engine_type, aircraft_type, status, in_production, major, cargo, military, is_primary`). One ICAO code can cover several variants; `is_primary` marks the main one.
 
 Load the real lists into Supabase with `npx tsx scripts/import-source-data.ts` (upserts `data/airlines/airlines_full.csv` `data/aircraft_types/aircraft.csv` and `data/temp_data/airports.csv` (OurAirports) on `ident`; `--dry-run` to validate only, `--only=airports` to limit tables). `airline_hubs` has no real source yet and is not imported.
-Auth header `x-api-key`. Responses include `meta.data_version` and the `x-data-version` header, plus `x-ratelimit-*` headers.
+Auth header `x-api-key`. `GET /v1/version` needs no key and returns `api_version` and `data_version`. Other responses include `meta.data_version`, `x-api-version`, `x-data-version`, and `x-ratelimit-*` headers. The API semver is `api/src/version.ts` (`npm run version:set`). `/v1` stays until a breaking change.
 See `/docs` or `web/openapi.yaml`.
 
 ## Deployment (planned)

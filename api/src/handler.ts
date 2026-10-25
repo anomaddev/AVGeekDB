@@ -1,4 +1,5 @@
 import { loadEntity, currentDataVersion } from "./dataset";
+import { API_VERSION } from "./version";
 import { queryRows, QueryError, type QueryResult } from "./query";
 import { verifyApiKey, KEY_PREFIX, MemoryKeyStore, hashApiKey, DEMO_KEY, type KeyStore } from "./keys";
 import { createServiceClient, SupabaseKeyStore, SupabaseDataSource } from "./supabase";
@@ -51,7 +52,7 @@ export async function handleEntityRequest(entity: Entity, req: Request, deps: Ha
   pending?.catch(() => {}); // surfaced below once auth passes
   const [version, auth] = await Promise.all([deps.source.version(), verifyApiKey(apiKey, deps.store)]);
   const json = (body: Record<string, unknown>, status: number, headers: Record<string, string> = {}) =>
-    baseJson(body, status, { "x-data-version": version, ...NO_STORE, ...headers });
+    baseJson(body, status, { "x-api-version": API_VERSION, "x-data-version": version, ...NO_STORE, ...headers });
   if (!auth.ok) return json({ error: auth.error }, auth.status);
   const rl = deps.limiter.check(auth.keyId);
   const rlHeaders = { "x-ratelimit-limit": String(deps.limiter.limit), "x-ratelimit-remaining": String(rl.remaining), "x-ratelimit-reset": String(Math.ceil(rl.resetMs / 1000)) };
@@ -66,4 +67,14 @@ export async function handleEntityRequest(entity: Entity, req: Request, deps: Ha
     console.error(`${endpoint} failed:`, e instanceof Error ? e.message : e);
     return json({ error: "Internal error" }, 500, rlHeaders);
   }
+}
+
+/** Unauthenticated. Reports the API semver and the current dataset version. */
+export async function handleVersionRequest(deps: HandlerDeps = defaultDeps()): Promise<Response> {
+  const data_version = await deps.source.version();
+  return baseJson(
+    { api_version: API_VERSION, data_version },
+    200,
+    { "x-api-version": API_VERSION, "x-data-version": data_version, ...NO_STORE },
+  );
 }

@@ -1,3 +1,5 @@
+import { formatAirports } from "./airportDocument";
+import { airportRelations } from "./dataset";
 import type { Entity, Row } from "./types";
 
 export const FILTERS: Record<Entity, string[]> = {
@@ -35,10 +37,16 @@ export function queryRows(entity: Entity, rows: Row[], params: URLSearchParams):
   for (const f of FILTERS[entity]) {
     const v = params.get(f);
     if (v == null) continue;
-    if (f === "hub") out = out.filter((r) => Array.isArray(r.hubs) && r.hubs.some((h) => h.toLowerCase() === v.toLowerCase()));
-    else out = out.filter((r) => String(r[f] ?? "").toLowerCase() === v.toLowerCase());
+    if (f === "hub") out = out.filter((r) => Array.isArray(r.hubs) && (r.hubs as string[]).some((h) => h.toLowerCase() === v.toLowerCase()));
+    else if (entity === "airports" && f === "scheduled_service") {
+      const t = v.toLowerCase();
+      const yes = t === "true" || t === "yes";
+      const no = t === "false" || t === "no";
+      out = yes || no ? out.filter((r) => r.scheduled_service === yes) : [];
+    } else out = out.filter((r) => String(r[f] ?? "").toLowerCase() === v.toLowerCase());
   }
   const total = out.length;
-  const data = out.slice(offset, offset + limit);
+  const page = out.slice(offset, offset + limit);
+  const data = entity === "airports" ? formatAirports(page, airportRelations()) : page;
   return { data, meta: { total, limit, offset, next_offset: offset + limit < total ? offset + limit : null } };
 }

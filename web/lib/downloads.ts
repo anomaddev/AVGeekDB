@@ -56,3 +56,11 @@ export function formatBytes(bytes: number): string {
 export function downloadName(path: string): string {
   return path.split("/").pop() ?? path;
 }
+
+/** The committed Supabase dump. Tracks main between site deploys. */
+export const SQLITE_REPO_URL = "https://github.com/anomaddev/AVGeekDB/raw/main/data/avgeekdb.sqlite";
+
+export function downloadHref(file: { path: string; format?: string }): string {
+  if (downloadFormat(file) === "sqlite") return SQLITE_REPO_URL;
+  return `/downloads/${file.path}`;
+}

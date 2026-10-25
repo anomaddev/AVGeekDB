@@ -1,6 +1,7 @@
 import { readFileSync, existsSync } from "node:fs";
-import { join, dirname, resolve } from "node:path";
+import { join, resolve } from "node:path";
 import { parse } from "csv-parse/sync";
+import { indexRelations, type AirportRelations, type DocRow } from "./airportDocument";
 import type { Dataset, Entity, Row } from "./types";
 
 /** Column type hints used to coerce CSV strings. Keep in sync with schema/*.schema.json. */
@@ -49,8 +50,78 @@ export function loadDataset(entity: Dataset, dataDir = findDataDir()): Row[] {
   return records.map((r) => coerceRow(entity, r));
 }
 
-/** API-shaped rows: airlines get `hubs` (airport ICAO codes, primary first) from airline_hubs. */
+const airportBundles = new Map<string, { rows: Row[]; relations: AirportRelations }>();
+
+function readAirportCsv(dataDir: string, file: string): DocRow[] {
+  const csv = readFileSync(join(dataDir, "airports", file), "utf8");
+  return parse(csv, { columns: true, skip_empty_lines: true, trim: true }) as DocRow[];
+}
+
+function blank(value: unknown): string | null {
+  const text = String(value ?? "").trim();
+  return text === "" ? null : text;
+}
+
+/** Flat filter rows (iata, icao, country, boolean scheduled_service) plus the source columns the document formatter reads. */
+function airportFilterRow(raw: DocRow): Row {
+  const our = "latitude_deg" in raw || "iata_code" in raw || "iso_country" in raw;
+  const scheduled = String(raw.scheduled_service ?? "").trim().toLowerCase();
+  if (!our) {
+    const row = coerceRow("airports", raw as Record<string, string>);
+    row.id = raw.id == null ? null : String(raw.id);
+    return row;
+  }
+  return {
+    id: raw.id == null ? null : String(raw.id),
+    ident: String(raw.ident ?? ""),
+    type: String(raw.type ?? ""),
+    name: String(raw.name ?? ""),
+    municipality: blank(raw.municipality),
+    iata: blank(raw.iata_code),
+    icao: blank(raw.icao_code),
+    country: String(raw.iso_country ?? "").trim(),
+    continent: String(raw.continent ?? "").trim(),
+    iso_region: String(raw.iso_region ?? "").trim(),
+    scheduled_service: scheduled === "yes" || scheduled === "true" || scheduled === "1",
+    keywords: blank(raw.keywords),
+    iata_code: String(raw.iata_code ?? ""),
+    icao_code: String(raw.icao_code ?? ""),
+    iso_country: String(raw.iso_country ?? "").trim(),
+    latitude_deg: String(raw.latitude_deg ?? ""),
+    longitude_deg: String(raw.longitude_deg ?? ""),
+    elevation_ft: String(raw.elevation_ft ?? ""),
+    gps_code: String(raw.gps_code ?? ""),
+    local_code: String(raw.local_code ?? ""),
+    home_link: String(raw.home_link ?? ""),
+    wikipedia_link: String(raw.wikipedia_link ?? ""),
+    is_sample: String(raw.is_sample ?? "").toLowerCase() === "true",
+  };
+}
+
+function airportBundle(dataDir: string): { rows: Row[]; relations: AirportRelations } {
+  const hit = airportBundles.get(dataDir);
+  if (hit) return hit;
+  const rows = readAirportCsv(dataDir, "airports.csv").map(airportFilterRow);
+  const relations = indexRelations({
+    countries: readAirportCsv(dataDir, "countries.csv"),
+    regions: readAirportCsv(dataDir, "regions.csv"),
+    runways: readAirportCsv(dataDir, "runways.csv"),
+    freqs: readAirportCsv(dataDir, "airport-frequencies.csv"),
+    navaids: readAirportCsv(dataDir, "navaids.csv"),
+  });
+  const bundle = { rows, relations };
+  airportBundles.set(dataDir, bundle);
+  return bundle;
+}
+
+/** Country, region, runway, frequency, and navaid rows for the in-memory airport documents. */
+export function airportRelations(dataDir = findDataDir()): AirportRelations {
+  return airportBundle(dataDir).relations;
+}
+
+/** API-shaped rows: airlines get `hubs` (airport ICAO codes, primary first) from airline_hubs. Airports keep filter aliases plus source columns. */
 export function loadEntity(entity: Entity, dataDir = findDataDir()): Row[] {
+  if (entity === "airports") return airportBundle(dataDir).rows;
   const rows = loadDataset(entity, dataDir);
   if (entity !== "airlines") return rows;
   const hubs = loadDataset("airline_hubs", dataDir).sort((a, b) => Number(b.is_primary === true) - Number(a.is_primary === true));

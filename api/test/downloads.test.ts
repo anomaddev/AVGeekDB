@@ -1,10 +1,12 @@
-import { mkdtempSync, readFileSync, rmSync } from "node:fs";
+import { existsSync, mkdtempSync, readFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import Database from "better-sqlite3";
 import { describe, expect, it } from "vitest";
-import { buildArtifacts, publishRepoDownloads } from "../../scripts/build-artifacts";
-import { downloadFormat, sortDownloads } from "../../web/lib/downloads";
+import { buildArtifacts, mergeRepoSqlite, publishRepoDownloads } from "../../scripts/build-artifacts";
+import { writeSqliteDump } from "../../scripts/sqlite-dump";
+import { API_VERSION } from "../src";
+import { downloadFormat, downloadHref, sortDownloads, SQLITE_REPO_URL } from "../../web/lib/downloads";
 
 describe("download artifacts", () => {
   it("writes csv, json, and sqlite for every dataset", () => {
@@ -38,6 +40,7 @@ describe("download artifacts", () => {
 
       const sqlite = manifest.files.find((file) => file.format === "sqlite");
       expect(sqlite?.rows).toBe(manifest.files.filter((file) => file.format === "json").reduce((sum, file) => sum + file.rows, 0));
+      expect(manifest.api_version).toBe(API_VERSION);
       expect(manifest.sample).toBe(true);
       expect(manifest.generated_at).toBe("2026-10-24T16:00:00.000Z");
 
@@ -49,16 +52,40 @@ describe("download artifacts", () => {
           join("airlines", "airlines.json"),
           join("aircraft_types", "aircraft_types.json"),
           join("airline_hubs", "airline_hubs.json"),
-          "avgeekdb.sqlite",
         ]);
         const published = JSON.parse(readFileSync(join(dataDir, "airports", "airports.json"), "utf8")) as { data: unknown[] };
         expect(published.data).toHaveLength(airports.data.length);
-        const publishedDb = new Database(join(dataDir, "avgeekdb.sqlite"), { readonly: true });
-        expect((publishedDb.prepare("SELECT COUNT(*) AS n FROM airlines").get() as { n: number }).n).toBeGreaterThan(0);
-        publishedDb.close();
+        expect(existsSync(join(dataDir, "avgeekdb.sqlite"))).toBe(false);
       } finally {
         rmSync(dataDir, { recursive: true, force: true });
       }
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  });
+});
+
+describe("repo sqlite manifest", () => {
+  it("describes the Supabase dump instead of the CSV-shaped sqlite", () => {
+    const dir = mkdtempSync(join(tmpdir(), "avgeekdb-manifest-"));
+    try {
+      const manifest = buildArtifacts(dir, new Date("2026-10-24T16:00:00Z"));
+      const repo = join(dir, "repo.sqlite");
+      const rows = writeSqliteDump(repo, {
+        countries: [{ id: 1, code: "US", name: "United States", continent: "NA", updated_at: "2026-10-25T00:00:00.000Z", row_version: 1 }],
+      }, { api_version: API_VERSION, data_version: "from-supabase", generated_at: "2026-10-25T00:00:00.000Z" });
+      expect(rows).toBe(1);
+      const merged = mergeRepoSqlite(manifest, repo);
+      const csvSqlite = manifest.files.find((file) => file.format === "sqlite");
+      const repoSqlite = merged.files.find((file) => file.format === "sqlite");
+      expect(repoSqlite?.rows).toBe(1);
+      expect(repoSqlite?.sha256).not.toBe(csvSqlite?.sha256);
+      expect(repoSqlite?.bytes).toBeGreaterThan(0);
+      const db = new Database(repo, { readonly: true });
+      const columns = (db.prepare("PRAGMA table_info(countries)").all() as { name: string }[]).map((col) => col.name);
+      expect(columns).toContain("code");
+      expect((db.prepare("SELECT name FROM sqlite_master WHERE type = 'table' AND name = 'api_keys'").get())).toBeUndefined();
+      db.close();
     } finally {
       rmSync(dir, { recursive: true, force: true });
     }
@@ -76,6 +103,8 @@ describe("download classification", () => {
       { path: "csv/aircraft_types.csv", bytes: 1, sha256: "f" },
     ];
     expect(files.map(downloadFormat)).toEqual(["csv", "json", "sqlite", null, "csv", "csv"]);
+    expect(downloadHref(files[2])).toBe(SQLITE_REPO_URL);
+    expect(downloadHref(files[0])).toBe("/downloads/csv/airline_hubs.csv");
     expect(sortDownloads(files.filter((file) => downloadFormat(file) === "csv")).map((file) => file.path)).toEqual([
       "csv/airports.csv",
       "csv/aircraft_types.csv",

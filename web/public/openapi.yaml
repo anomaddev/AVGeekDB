@@ -18,6 +18,7 @@ components:
     icao: { name: icao, in: query, schema: { type: string } }
   headers:
     DataVersion: { schema: { type: string }, description: Current dataset version }
+    ApiVersion: { schema: { type: string }, description: API contract semver }
     RateLimitLimit: { schema: { type: integer } }
     RateLimitRemaining: { schema: { type: integer } }
     RateLimitReset: { schema: { type: integer }, description: Seconds until window resets }
@@ -54,7 +55,7 @@ paths:
       responses:
         "200":
           description: OK
-          headers: { x-data-version: { $ref: "#/components/headers/DataVersion" }, x-ratelimit-limit: { $ref: "#/components/headers/RateLimitLimit" }, x-ratelimit-remaining: { $ref: "#/components/headers/RateLimitRemaining" }, x-ratelimit-reset: { $ref: "#/components/headers/RateLimitReset" } }
+          headers: { x-api-version: { $ref: "#/components/headers/ApiVersion" }, x-data-version: { $ref: "#/components/headers/DataVersion" }, x-ratelimit-limit: { $ref: "#/components/headers/RateLimitLimit" }, x-ratelimit-remaining: { $ref: "#/components/headers/RateLimitRemaining" }, x-ratelimit-reset: { $ref: "#/components/headers/RateLimitReset" } }
           content: { application/json: { schema: { type: object, properties: { data: { type: array, items: { $ref: "#/components/schemas/Airport" } }, meta: { $ref: "#/components/schemas/Meta" } } } } }
         "400": { $ref: "#/components/responses/BadRequest" }
         "401": { $ref: "#/components/responses/Unauthorized" }
@@ -67,7 +68,7 @@ paths:
       responses:
         "200":
           description: OK
-          headers: { x-data-version: { $ref: "#/components/headers/DataVersion" } }
+          headers: { x-api-version: { $ref: "#/components/headers/ApiVersion" }, x-data-version: { $ref: "#/components/headers/DataVersion" } }
           content: { application/json: { schema: { type: object, properties: { data: { type: array, items: { $ref: "#/components/schemas/Airline" } }, meta: { $ref: "#/components/schemas/Meta" } } } } }
         "401": { $ref: "#/components/responses/Unauthorized" }
         "429": { $ref: "#/components/responses/RateLimited" }
@@ -78,7 +79,23 @@ paths:
       responses:
         "200":
           description: OK
-          headers: { x-data-version: { $ref: "#/components/headers/DataVersion" } }
+          headers: { x-api-version: { $ref: "#/components/headers/ApiVersion" }, x-data-version: { $ref: "#/components/headers/DataVersion" } }
           content: { application/json: { schema: { type: object, properties: { data: { type: array, items: { $ref: "#/components/schemas/AircraftType" } }, meta: { $ref: "#/components/schemas/Meta" } } } } }
         "401": { $ref: "#/components/responses/Unauthorized" }
         "429": { $ref: "#/components/responses/RateLimited" }
+  /version:
+    get:
+      summary: API and dataset versions
+      security: []
+      responses:
+        "200":
+          description: OK
+          headers: { x-api-version: { $ref: "#/components/headers/ApiVersion" }, x-data-version: { $ref: "#/components/headers/DataVersion" } }
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [api_version, data_version]
+                properties:
+                  api_version: { type: string, description: API contract semver }
+                  data_version: { type: string, description: Current dataset version }

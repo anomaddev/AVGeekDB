@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { DEMO_KEY, MAX_LIMIT, FILTERS } from "@avgeekdb/api";
+import { API_VERSION, DEMO_KEY, MAX_LIMIT, FILTERS } from "@avgeekdb/api";
 
 export default function Docs() {
   const limit = process.env.RATE_LIMIT_PER_MINUTE ?? "60";
@@ -13,6 +13,7 @@ export default function Docs() {
       <p>Local dev (mock mode) accepts <code>{DEMO_KEY}</code>.</p>
       <h2>Endpoints</h2>
       <ul>
+        <li><code>GET /v1/version</code>: no API key. Returns <code>api_version</code> and <code>data_version</code>.</li>
         <li><code>GET /v1/airports</code>: filters {FILTERS.airports.join(", ")}</li>
         <li><code>GET /v1/airlines</code>: filters {FILTERS.airlines.join(", ")}. Each airline includes <code>hubs</code>: an array of hub airport ICAO codes, primary first (<code>?hub=EGLL</code> filters by hub).</li>
         <li><code>GET /v1/aircraft</code>: filters {FILTERS.aircraft_types.join(", ")}</li>
@@ -20,9 +21,9 @@ export default function Docs() {
       <p>Common params: <code>q</code> (free-text search), <code>limit</code> (1-{MAX_LIMIT}, default 25), <code>offset</code>.</p>
       <h2>Responses</h2>
       <pre>{`{ "data": [...], "meta": { "total": 3, "limit": 25, "offset": 0, "next_offset": null, "data_version": "2026.10.23" } }`}</pre>
-      <p>Every response carries <code>x-data-version</code>. Errors: 400 bad params, 401 missing/invalid key, 403 revoked key, 429 rate limited.</p>
+      <p>Every response carries <code>x-api-version</code> (currently <code>{API_VERSION}</code>) and <code>x-data-version</code>. Errors: 400 bad params, 401 missing/invalid key, 403 revoked key, 429 rate limited.</p>
       <h2>Downloads</h2>
-      <p>Full dumps of this dataset are on the <Link href="/downloads">downloads page</Link> as CSV (one file per table), JSON (one file per table), and a single SQLite database (<code>avgeekdb.sqlite</code>). The JSON and SQLite files are also committed in the repo at <code>data/&lt;entity&gt;/&lt;entity&gt;.json</code> and <code>data/avgeekdb.sqlite</code>. Each file carries the same <code>data_version</code> as <code>x-data-version</code>.</p>
+      <p>CSV and JSON dumps of the API datasets are on the <Link href="/downloads">downloads page</Link>. <code>avgeekdb.sqlite</code> is a separate dump of the Supabase reference tables (Postgres column names), committed at <code>data/avgeekdb.sqlite</code>. Its <code>meta</code> table stores <code>api_version</code>, <code>data_version</code>, and <code>generated_at</code>.</p>
       <h2>Rate limits</h2>
       <p>{limit} requests/minute per key. Headers: <code>x-ratelimit-limit</code>, <code>x-ratelimit-remaining</code>, <code>x-ratelimit-reset</code>, and <code>retry-after</code> on 429.</p>
     </main>
